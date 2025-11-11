@@ -21,7 +21,7 @@ pip install lidar_core_dist/lidar_core-1.0.0-py3-none-any.whl
 
 The wheel command copies the bundled `.so/.pyi` assets into a temporary staging area, writes a minimal `setup.py`, and drops the resulting wheel into `dist/`. Install the produced wheel if you want to import the packaged modules elsewhere.
 
-## Generate Augmented Data
+## Generate Data
 
 ```bash
 # Insert three copies of Car_1 into frame 1
