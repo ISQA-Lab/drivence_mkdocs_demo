@@ -1,0 +1,16 @@
+project_structure:
+    project_name: "DRIVENCE"
+    # TODO
+    root_dir:  "/home/atri/Blue_Passport/Selda"
+
+    config_dir: "${project_structure.root_dir}/configs"
+    output_dir: "${project_structure.root_dir}/_outputs"
+    object_assets_dir: "${project_structure.root_dir}/_assets"
+    data_dir: "${project_structure.root_dir}/_data"
+    configs:
+        project_config: "${project_structure.config_dir}/projects/semantic_kitti_project.yml"
+    module:
+        data_gen:
+            name: "data_gen"
+            dir: "${project_structure.root_dir}/drivence/${project_structure.module.data_gen.name}"
+            output_dir: "${project_structure.root_dir}/drivence/data_gen"

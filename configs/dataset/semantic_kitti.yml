@@ -1,0 +1,39 @@
+directory_tree: &directory_tree
+  point_cloud_dirname: velodyne
+
+  lidar_scene_info: lidar_scene_info
+  instance_mask: instance_mask
+  road_split_label: road_split_label
+  road_split_log: road_split_log
+  semantic_label_3d: labels
+  label_2: label_2
+
+  dataset_type: "SemanticKITTI"
+  dataset_output_type: "SemanticKITTI"
+
+  depth_format: "real_distance"
+
+
+dataset:
+  name: semantic_kitti
+  root_dir: "_data/semanticKITTI/dataset"
+  split: "sequences/08"
+  <<: *directory_tree
+  occlusion_th: 0.95
+
+
+aug_dataset:
+  name: semantic_kitti_aug
+  root_dir: "_outputs/semanticKITTI"
+  split: "sequences/08"
+  output_dir: "_outputs/semanticKITTI/sequences/08"
+  <<: *directory_tree
+
+
+demo_dataset:
+  name: semantic_kitti_demo
+  root_dir: "_data/semanticKITTI/dataset"
+  split: "sequences/08"
+  <<: *directory_tree
+  occlusion_th: 0.95
+  obj_insert_config_path: "configs/obj_insert_config.yml"

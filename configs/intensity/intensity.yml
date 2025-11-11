@@ -1,0 +1,190 @@
+# 物体类别反射强度配置文件
+# 物理模型参数：p_lambda(反射率), kd(漫反射系数), m(粗糙度系数), theta_T(阈值角度)
+# 基于LiDAR (905nm) 特性与真实世界材料进行修正
+
+intensity_config:
+  vehicles:
+    cars:
+      p_lambda: 0.6
+      kd: 0.6
+      m: 0.15
+      theta_T: 25
+      models: [Car_1, Car_2, Car_3, Car_4, Car_5]
+    trucks:
+      p_lambda: 0.7
+      kd: 0.6
+      m: 0.4
+      theta_T: 15
+      models: [Truck_1, Truck_2, Truck_3, Truck_4, Truck_5]
+    buses:
+      p_lambda: 0.6
+      kd: 0.45
+      m: 0.18
+      theta_T: 18
+      models: [Bus_1, Bus_2, Bus_3, Bus_4, Bus_5]
+    motorcycles:
+      p_lambda: 0.6
+      kd: 0.45
+      m: 0.18
+      theta_T: 18
+      models: [MotorMan, Motor, Motorcycle_1, Motorcycle_2, Motorcycle_3, Motorcycle_4, Motorcycle_5]
+    bicycles:
+      p_lambda: 0.4
+      kd: 0.7
+      m: 0.4
+      theta_T: 15
+      models: [Bicycle, Bicycle_1, Bicycle_2, Bicycle_3, Bicycle_4, Bicycle_5]
+    scooters:
+      p_lambda: 0.6
+      kd: 0.45
+      m: 0.18
+      theta_T: 18
+      models: [Scooter_1, Scooter_2, Scooter_3, Scooter_4, Scooter_5]
+    tractors:
+      p_lambda: 0.6
+      kd: 0.45
+      m: 0.18
+      theta_T: 18
+      models: [Tractor_1, Tractor_2, Tractor_3, Tractor_4, Tractor_5]
+    ambulances:
+      p_lambda: 0.6
+      kd: 0.45
+      m: 0.18
+      theta_T: 18
+      models: [Ambulance_1, Ambulance_2, Ambulance_3, Ambulance_4, Ambulance_5]
+
+  pedestrians:
+    adults:
+      p_lambda: 0.5
+      kd: 0.9
+      m: 0.6
+      theta_T: 40
+      models: [Pedestrian, Police_1, Worker_1, Man_1, Man_2, Man_3, Man_4, Man_5]
+    kids:
+      p_lambda: 0.5
+      kd: 0.9
+      m: 0.6
+      theta_T: 40
+      models: [Kid_1, Kid_2, Kid_3, Kid_4, Kid_5]
+    seniors:
+      p_lambda: 0.4
+      kd: 0.85
+      m: 0.5
+      theta_T: 40
+      models: [Senior_1, Senior_2, Senior_3, Senior_4, Senior_5]
+    motorcyclists:
+      p_lambda: 0.4
+      kd: 0.85
+      m: 0.5
+      theta_T: 40
+      models: []
+    cyclists:
+      p_lambda: 0.4
+      kd: 0.85
+      m: 0.5
+      theta_T: 40
+      models: [Bicyclist]
+    with_objects:
+      p_lambda: 0.4
+      kd: 0.85
+      m: 0.5
+      theta_T: 40
+      models: [PersonPullingLuggage, PersonPushingBicycle, PersonPushingStroller]
+
+  animals:
+    dogs:
+      p_lambda: 0.5
+      kd: 0.9
+      m: 0.1
+      theta_T: 50
+      models: [Dog, Dog_1, Dog_2, Dog_3, Dog_4, Dog_5]
+    cats:
+      p_lambda: 0.4
+      kd: 0.7
+      m: 0.3
+      theta_T: 20
+      models: [Cat_1, Cat_2, Cat_3, Cat_4, Cat_5]
+    boars:
+      p_lambda: 0.4
+      kd: 0.7
+      m: 0.3
+      theta_T: 20
+      models: [Boar_1, Boar_2, Boar_3, Boar_4, Boar_5]
+
+  infrastructure:
+    traffic_signs:
+      p_lambda: 0.9
+      kd: 0.9
+      m: 0.1
+      theta_T: 60
+      models: [Sign_1, Sign_2, Sign_3, Sign_4, Sign_5]
+    poles:
+      p_lambda: 0.3
+      kd: 0.5
+      m: 0.3
+      theta_T: 20
+      models: [Pole_1, Pole_2, Pole_3, Pole_4, Pole_5]
+    lights:
+      p_lambda: 0.3
+      kd: 0.5
+      m: 0.3
+      theta_T: 20
+      models: [StreetLight_1, StreetLight_2, StreetLight_3, StreetLight_4, StreetLight_5]
+    barriers:
+      p_lambda: 0.2
+      kd: 0.85
+      m: 0.5
+      theta_T: 40
+      models: [Barrier_1, Barrier_2, Barrier_3, Barrier_4, Barrier_5]
+    trafficcones:
+      p_lambda: 0.2
+      kd: 0.85
+      m: 0.5
+      theta_T: 40
+      models: [Trafficcone_1, Trafficcone_2, Trafficcone_3, Trafficcone_4, Trafficcone_5]
+
+  vegetation:
+    leaves:
+      p_lambda: 0.5
+      kd: 0.9
+      m: 0.1
+      theta_T: 50
+      models: [Leaves_1, Leaves_2, Leaves_3, Leaves_4, Leaves_5]
+    trunk:
+      p_lambda: 0.63
+      kd: 0.8
+      m: 0.1
+      theta_T: 40
+      models: [ Trunk_1, Trunk_2, Trunk_3, Trunk_4, Trunk_5]
+    shrubbery:
+      p_lambda: 0.5
+      kd: 0.9
+      m: 0.1
+      theta_T: 60
+      models: [Shrubbery_1, Shrubbery_2, Shrubbery_3, Shrubbery_4, Shrubbery_5]
+
+  others:
+    luggage:
+      p_lambda: 0.35
+      kd: 0.8
+      m: 0.3
+      theta_T: 25
+      models: [Luggage, Luggage_1, Luggage_2, Luggage_3, Luggage_4, Luggage_5]
+    strollers:
+      p_lambda: 0.4
+      kd: 0.7
+      m: 0.3
+      theta_T: 20
+      models: [Stroller, Stroller_1, Stroller_2, Stroller_3, Stroller_4, Stroller_5]
+    wheelchairs:
+      p_lambda: 0.4
+      kd: 0.7
+      m: 0.3
+      theta_T: 20
+      models: [Wheelchair_1, Wheelchair_2, Wheelchair_3, Wheelchair_4, Wheelchair_5]
+
+default_physics_params:
+  p_lambda: 0.5
+  kd: 0.8
+  m: 0.2
+  theta_T: 15

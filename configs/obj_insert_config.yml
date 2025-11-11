@@ -1,0 +1,45 @@
+# Object insertion configuration
+# Defines the groups of 3D assets to be inserted into a scene.
+# Detailed member properties (relative displacement, semantic label, etc.) are stored in obj_insert_config.json.
+
+groups:
+# Single-object groups
+    - group_name: "car_1"
+
+# Composite groups
+#    - group_name: "traffic_sign_1"
+#    - group_name: "person-riding-bicycle_1"
+#    - group_name: "person-riding-motor_1"
+#    - group_name: "tree_1"
+#    - group_name: "dog-walker_1"
+#    - group_name: "person-pushing-bicycle_1"
+#    - group_name: "person-pulling-luggage_1"
+
+
+# Object attribute mapping file
+config_file: "obj_insert_config.json"
+
+# Semantic label reference:
+#  0: "unlabeled"
+#  1: "outlier"
+# 10: "car"
+# 11: "bicycle"
+# 13: "bus"
+# 15: "motorcycle"
+# 16: "on-rails"
+# 18: "truck"
+# 20: "other-vehicle"
+# 30: "person"
+# 31: "bicyclist"
+# 32: "motorcyclist"
+# 40: "road"
+# 44: "parking"
+# 48: "sidewalk"
+# 49: "other-ground"
+# 50: "building"
+# 51: "fence"
+# 52: "other-structure"
+# 60: "lane-marking"
+# 70: "vegetation"
+# 71: "trunk"
+# 72: "terrain"

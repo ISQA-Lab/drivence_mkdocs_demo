@@ -1,0 +1,22 @@
+lidar:
+  type: "Uniform"
+  sensor:
+    lidar_position: [0, 0, 0]
+    beam_number: 64  # vertical_resolution = (vertical_up - vertical_down)/beam_number
+    angular_resolution: 0.09  # horizontal_resolution
+    horizontal_left: 0 #  counterclockwise from the positive x-axis, starting position is 0 degree
+    horizontal_right: 360 #
+    vertical_down: -11.8 # z<0
+    vertical_up: 15 # z>0
+    range: 120
+    # 插入物体的yaw角的是否逆时针旋转
+    yaw_rotation_counterclockwise: true
+  render:
+    extent_range: 0
+  measurement:
+    enable: false
+    noise_average: 0
+    noise_variance: 0.05
+    noise_severity: 0.1
+    loss_rate: 0.1
+

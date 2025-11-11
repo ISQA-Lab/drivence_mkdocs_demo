@@ -1,0 +1,230 @@
+shapenet:
+  name: "objects"
+  assets_path: "_assets/objects"
+  object_dir_name: "models"
+  object_file_name: "model_normalized.obj"
+
+  strategy: "select"
+  scale_ratio: auto
+
+  categories:
+    vehicles:
+      cars: ["Car_1", "Car_2", "Car_3", "Car_4", "Car_5"]
+      buses: ["Bus_1", "Bus_2", "Bus_3", "Bus_4", "Bus_5"]
+      trucks: ["Truck_1", "Truck_2", "Truck_3", "Truck_4", "Truck_5"]
+      motorcycles: ["Motor", "Motorcycle_1", "Motorcycle_2", "Motorcycle_3", "Motorcycle_4", "Motorcycle_5"]
+      bicycles: ["Bicycle", "Bicycle_1", "Bicycle_2", "Bicycle_3", "Bicycle_4", "Bicycle_5"]
+      scooters: ["Scooter_1", "Scooter_2", "Scooter_3", "Scooter_4", "Scooter_5"]
+      tractors: ["Tractor_1", "Tractor_2", "Tractor_3", "Tractor_4", "Tractor_5"]
+      ambulances: ["Ambulance_1", "Ambulance_2", "Ambulance_3", "Ambulance_4", "Ambulance_5"]
+
+    
+    pedestrians:
+      adults: ["Pedestrian", "Police_1", "Worker_1", "Man_1", "Man_2", "Man_3", "Man_4", "Man_5"]
+      kids: ["Kid_1", "Kid_2", "Kid_3", "Kid_4", "Kid_5"]
+      seniors: ["Senior_1", "Senior_2", "Senior_3", "Senior_4", "Senior_5"]
+      motorcyclists: ["MotorMan"]
+      cyclists: ["Bicyclist"]
+      with_objects: ["PersonPullingLuggage", "PersonPushingBicycle", "PersonPushingStroller"]
+    
+    animals:
+      dogs: ["Dog", "Dog_1", "Dog_2", "Dog_3", "Dog_4", "Dog_5"]
+      cats: ["Cat_1", "Cat_2", "Cat_3", "Cat_4", "Cat_5"]
+      boars: ["Boar_1", "Boar_2", "Boar_3", "Boar_4", "Boar_5"]
+    
+    infrastructure:
+      fences: ["Barrier_1", "Barrier_2", "Barrier_3", "Barrier_4", "Barrier_5"]
+      street_lights: ["StreetLight_1", "StreetLight_2", "StreetLight_3", "StreetLight_4", "StreetLight_5"]
+      traffic_signs: ["Pole_1", "Pole_2", "Pole_3", "Pole_4", "Pole_5", "Sign_1", "Sign_2", "Sign_3", "Sign_4", "Sign_5"]
+      trafficcones: ["Trafficcone_1", "Trafficcone_2", "Trafficcone_3", "Trafficcone_4", "Trafficcone_5"]
+      telephone_poles: ["TelephonePole_1", "TelephonePole_2", "TelephonePole_3", "TelephonePole_4", "TelephonePole_5"]
+
+    vegetation:
+      trees: ["Trunk_1", "Trunk_2", "Trunk_3", "Trunk_4", "Trunk_5","Leaves_1", "Leaves_2", "Leaves_3", "Leaves_4", "Leaves_5"]
+      shrubbery: ["Shrubbery_1", "Shrubbery_2", "Shrubbery_3", "Shrubbery_4", "Shrubbery_5"]
+
+    others:
+      luggage: ["Luggage", "Luggage_1", "Luggage_2", "Luggage_3", "Luggage_4", "Luggage_5"]
+      strollers: ["Stroller", "Stroller_1", "Stroller_2", "Stroller_3", "Stroller_4", "Stroller_5"]
+      wheelchairs: ["Wheelchair_1", "Wheelchair_2", "Wheelchair_3", "Wheelchair_4", "Wheelchair_5"]
+
+  target_lwh_by_type:
+    "Car_0": [4.0, 1.8, 1.45]
+    "Car_1": [4.0, 1.87, 1.15]
+    "Car_2": [4.05, 2.01, 1.33]
+    "Car_3": [4.04, 1.75, 1.24]
+    "Car_4": [4.0, 1.82, 1.19]
+    "Car_5": [4.0, 2.12, 1.03]
+
+    "Bus_1": [ 8.28, 1.57, 2.09 ]
+    "Bus_2": [ 7.02, 1.58, 1.93 ]
+    "Bus_3": [ 7.3, 1.99, 1.9 ]
+    "Bus_4": [ 7.32, 1.65, 1.87 ]
+    "Bus_5": [ 6.91, 2.23, 2.04 ]
+
+    "Truck_1": [ 6.41, 2.51, 2.48 ]
+    "Truck_2": [ 5.27, 2.41, 2.4 ]
+    "Truck_3": [ 6.41, 2.51, 2.48 ]
+    "Truck_4": [ 6.41, 2.51, 2.48 ]
+    "Truck_5": [ 5.27, 2.41, 2.4 ]
+
+    "Motor": [ 1.87, 0.62, 1.07 ]
+    "Motorcycle_1": [ 2.1672, 0.693, 1.0836 ]
+    "Motorcycle_2": [ 2.1798, 0.756, 1.1718 ]
+    "Motorcycle_3": [ 2.0664, 0.567, 1.008 ]
+    "Motorcycle_4": [ 2.205, 0.5808, 0.9978 ]
+    "Motorcycle_5": [ 2.1042, 0.5214, 1.01152 ]
+
+    "Bicycle": [ 1.87, 0.34, 0.95 ]
+    "Bicycle_1": [ 1.69, 0.67, 1.02 ]
+    "Bicycle_2": [ 1.64, 0.66, 0.94 ]
+    "Bicycle_3": [ 1.62, 0.66, 0.98 ]
+    "Bicycle_4": [ 1.43, 0.58, 0.82 ]
+    "Bicycle_5": [ 1.64, 0.50, 0.96 ]
+
+    "Scooter_1": [ 0.97, 0.51, 1.0 ]
+    "Scooter_2": [ 1.04, 0.37, 0.82 ]
+    "Scooter_3": [ 1.01, 0.39, 1.02 ]
+    "Scooter_4": [ 0.98, 0.56, 1.08 ]
+    "Scooter_5": [ 1, 0.78, 1.09 ]
+
+    "Tractor_1": [ 3.92, 1.86, 2.2 ]
+    "Tractor_2": [ 3.92, 1.86, 2.2 ]
+    "Tractor_3": [ 3.92, 1.86, 2.2 ]
+    "Tractor_4": [ 3.92, 1.86, 2.2 ]
+    "Tractor_5": [ 3.92, 1.86, 2.2 ]
+
+    "Ambulance_1": [ 6.03, 2.48, 2.38 ]
+    "Ambulance_2": [ 6.03, 2.48, 2.38 ]
+    "Ambulance_3": [ 6.03, 2.48, 2.38 ]
+    "Ambulance_4": [ 6.03, 2.48, 2.38 ]
+    "Ambulance_5": [ 6.03, 2.48, 2.38 ]
+
+    "Police_1": [ 0.44, 0.62, 1.75 ]
+    "Worker_1": [ 0.37, 0.72, 1.75 ]
+    "Man_1": [ 0.74, 0.52, 1.76 ]
+    "Man_2": [ 0.84, 0.44, 1.65 ]
+    "Man_3": [ 0.68, 0.56, 1.73 ]
+    "Man_4": [ 0.77, 0.75, 1.75 ]
+    "Man_5": [ 0.46, 0.73, 1.73 ]
+
+    "Kid_1": [ 0.23, 1.01, 1.49 ]
+    "Kid_2": [ 0.23, 1.01, 1.49 ]
+    "Kid_3": [ 0.23, 1.01, 1.49 ]
+    "Kid_4": [ 0.23, 1.01, 1.49 ]
+    "Kid_5": [ 0.23, 1.01, 1.49 ]
+
+    "Senior_1": [ 0.28, 1.12, 1.65 ]
+    "Senior_2": [ 0.28, 1.12, 1.65 ]
+    "Senior_3": [ 0.28, 1.12, 1.65 ]
+    "Senior_4": [ 0.28, 1.12, 1.65 ]
+    "Senior_5": [ 0.28, 1.12, 1.65 ]
+
+    "Pedestrian": [0.66, 0.50, 1.71]
+    "MotorMan": [1.06, 0.79, 1.41]
+    "Bicyclist": [0.76, 0.64, 1.57]
+    "PersonPullingLuggage": [0.59, 0.89, 1.62]
+    "PersonPushingBicycle": [0.74, 0.75, 1.69]
+    "PersonPushingStroller": [0.76, 0.52, 1.72]
+    "Stroller": [0.81, 0.48, 0.99]
+
+    "Dog": [ 1.6, 0.8, 1.2 ]
+    "Dog_1": [ 0.86, 0.65, 0.64 ]
+    "Dog_2": [ 0.42, 0.85, 0.62 ]
+    "Dog_3": [ 0.79, 0.66, 0.8 ]
+    "Dog_4": [ 0.82, 0.54, 0.54 ]
+    "Dog_5": [ 0.84, 0.21, 0.43 ]
+
+    "Cat_1": [ 0.86, 0.2, 0.59 ]
+    "Cat_2": [ 0.86, 0.2, 0.59 ]
+    "Cat_3": [ 0.86, 0.2, 0.59 ]
+    "Cat_4": [ 0.49, 0.87, 0.5 ]
+    "Cat_5": [ 0.85, 0.49, 0.62 ]
+
+    "Boar_1": [ 1.16, 0.4, 0.77 ]
+    "Boar_2": [ 1.12, 0.41, 0.78 ]
+    "Boar_3": [ 1.06, 1, 0.71 ]
+    "Boar_4": [ 1, 0.37, 0.69 ]
+    "Boar_5": [ 1.13, 0.38, 0.75 ]
+
+    "Barrier_1": [ 2.0, 0.2, 1.0 ]
+    "Barrier_2": [ 2.0, 0.2, 1.0 ]
+    "Barrier_3": [ 2.0, 0.2, 1.0 ]
+    "Barrier_4": [ 2.0, 0.2, 1.0 ]
+    "Barrier_5": [ 2.0, 0.2, 1.0 ]
+
+    "StreetLight_1": [ 0.42, 3.27, 7.81 ]
+    "StreetLight_2": [ 0.43, 3.52, 9.02 ]
+    "StreetLight_3": [ 0.42, 3.27, 7.81 ]
+    "StreetLight_4": [ 0.42, 3.27, 7.81 ]
+    "StreetLight_5": [ 3.46, 4.06, 8.43 ]
+
+    "Pole_1": [ 0.2, 0.2, 3.0 ]
+    "Pole_2": [ 0.2, 0.2, 3.0 ]
+    "Pole_3": [ 0.2, 0.2, 3.0 ]
+    "Pole_4": [ 0.2, 0.2, 3.0 ]
+    "Pole_5": [ 0.2, 0.2, 3.0 ]
+
+    "Sign_1": [ 1.0, 0.1, 0.8 ]
+    "Sign_2": [ 1.0, 0.1, 0.8 ]
+    "Sign_3": [ 1.0, 0.1, 0.8 ]
+    "Sign_4": [ 1.0, 0.1, 0.8 ]
+    "Sign_5": [ 1.0, 0.1, 0.8 ]
+
+    "Trafficcone_1": [ 0.6, 0.6, 0.8 ]
+    "Trafficcone_2": [ 0.6, 0.6, 0.8 ]
+    "Trafficcone_3": [ 0.6, 0.6, 0.8 ]
+    "Trafficcone_4": [ 0.6, 0.6, 0.8 ]
+    "Trafficcone_5": [ 0.6, 0.6, 0.8 ]
+
+    "TelephonePole_1": [ 0.63, 2.8, 6.85 ]
+    "TelephonePole_2": [ 0.63, 2.8, 6.85 ]
+    "TelephonePole_3": [ 0.63, 2.8, 6.85 ]
+    "TelephonePole_4": [ 0.63, 2.8, 6.85 ]
+    "TelephonePole_5": [ 0.63, 2.8, 6.85 ]
+
+    "Trunk_1": [ 4.23, 3.97, 6.27 ]
+    "Trunk_2": [ 1.3, 0.41, 1.33 ]
+    "Trunk_3": [ 4.23, 3.97, 6.27 ]
+    "Trunk_4": [ 4.23, 3.97, 6.27 ]
+    "Trunk_5": [ 0.38, 0.24, 0.9 ]
+
+    "Leaves_1": [ 4.41, 4.17, 4.79 ]
+    "Leaves_2": [ 3.12, 3.11, 2.98 ]
+    "Leaves_3": [ 4.41, 4.17, 4.79 ]
+    "Leaves_4": [ 4.41, 4.17, 4.79 ]
+    "Leaves_5": [ 3.25, 3.19, 2.75 ]
+
+    "Shrubbery_1": [ 1.28, 1.24, 0.96 ]
+    "Shrubbery_2": [ 1.58, 1.53, 1.18 ]
+    "Shrubbery_3": [ 1.29, 1.22, 1.33 ]
+    "Shrubbery_4": [ 1.03, 1.09, 1.15 ]
+    "Shrubbery_5": [ 1.02, 1.24, 0.97 ]
+
+    "Luggage": [ 0.7, 0.4, 0.5 ]
+    "Luggage_1": [ 0.447, 0.273, 1.05 ]
+    "Luggage_2": [ 0.28, 0.61, 1.13 ]
+    "Luggage_3": [ 0.27, 0.41, 0.86 ]
+    "Luggage_4": [ 0.7, 0.4, 0.5 ]
+    "Luggage_5": [ 0.28, 0.61, 1.13 ]
+
+    "Stroller_1": [ 0.94, 0.56, 1.15 ]
+    "Stroller_2": [ 0.51, 1.12, 1.34 ]
+    "Stroller_3": [ 1.0, 0.7, 1.2 ]
+    "Stroller_4": [ 0.94, 0.56, 1.15 ]
+    "Stroller_5": [ 0.94, 0.56, 1.15 ]
+
+    "Wheelchair_1": [ 1.28, 0.86, 1.27 ]
+    "Wheelchair_2": [ 1.28, 0.86, 1.27 ]
+    "Wheelchair_3": [ 1.28, 0.86, 1.27 ]
+    "Wheelchair_4": [ 1.28, 0.86, 1.27 ]
+    "Wheelchair_5": [ 1.28, 0.86, 1.27 ]
+
+  # default
+  target_lwh: [4, 1.8, 1.45]
+
+  # 坐标系对齐配置
+  align_in_camera_coordinate: [0, pi/2, pi]
+  align_in_lidar_coordinate:
+    - [pi/2, 0, 0]
+    - [0, 0, 3*pi/2] 

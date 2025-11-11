@@ -1,0 +1,21 @@
+{
+    "dataset": "SemanticKITTI",
+    "weather": "sunny",
+    "bg_index": 1,
+    "assets": "objects",
+    "nums_vehicles": 1,
+    "sequence": "",
+    "vehicles": [
+        {
+            "obj_index": 1,
+            "obj_name": "Car_1",
+            "location": [
+                13.66,
+                5.3,
+                -1.22
+            ],
+            "rotation": -2.0,
+            "scale": 4.562543305717502
+        }
+    ]
+}

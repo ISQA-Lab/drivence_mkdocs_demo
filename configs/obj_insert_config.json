@@ -1,0 +1,2929 @@
+{
+  "groups": {
+    "car_1": {
+      "description": "Auto-generated group for Car_1",
+      "members": [
+        {
+          "name": "Car_1",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 252
+        }
+      ]
+    },
+    "car_2": {
+      "description": "Auto-generated group for Car_2",
+      "members": [
+        {
+          "name": "Car_2",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 252
+        }
+      ]
+    },
+    "car_3": {
+      "description": "Auto-generated group for Car_3",
+      "members": [
+        {
+          "name": "Car_3",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 252
+        }
+      ]
+    },
+    "car_4": {
+      "description": "Auto-generated group for Car_4",
+      "members": [
+        {
+          "name": "Car_4",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 252
+        }
+      ]
+    },
+    "car_5": {
+      "description": "Auto-generated group for Car_5",
+      "members": [
+        {
+          "name": "Car_5",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 252
+        }
+      ]
+    },
+    "truck_1": {
+      "description": "Auto-generated group for Truck_1",
+      "members": [
+        {
+          "name": "Truck_1",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 258
+        }
+      ]
+    },
+    "truck_2": {
+      "description": "Auto-generated group for Truck_2",
+      "members": [
+        {
+          "name": "Truck_2",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 258
+        }
+      ]
+    },
+    "truck_3": {
+      "description": "Auto-generated group for Truck_3",
+      "members": [
+        {
+          "name": "Truck_3",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 258
+        }
+      ]
+    },
+    "truck_4": {
+      "description": "Auto-generated group for Truck_4",
+      "members": [
+        {
+          "name": "Truck_4",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 258
+        }
+      ]
+    },
+    "truck_5": {
+      "description": "Auto-generated group for Truck_5",
+      "members": [
+        {
+          "name": "Truck_5",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 258
+        }
+      ]
+    },
+    "motorcycle_1": {
+      "description": "Auto-generated group for Motorcycle_1",
+      "members": [
+        {
+          "name": "Motorcycle_1",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 15
+        }
+      ]
+    },
+    "motorcycle_2": {
+      "description": "Auto-generated group for Motorcycle_2",
+      "members": [
+        {
+          "name": "Motorcycle_2",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 15
+        }
+      ]
+    },
+    "motorcycle_3": {
+      "description": "Auto-generated group for Motorcycle_3",
+      "members": [
+        {
+          "name": "Motorcycle_3",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 15
+        }
+      ]
+    },
+    "motorcycle_4": {
+      "description": "Auto-generated group for Motorcycle_4",
+      "members": [
+        {
+          "name": "Motorcycle_4",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 15
+        }
+      ]
+    },
+    "motorcycle_5": {
+      "description": "Auto-generated group for Motorcycle_5",
+      "members": [
+        {
+          "name": "Motorcycle_5",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 15
+        }
+      ]
+    },
+    "bicycle_1": {
+      "description": "Auto-generated group for Bicycle_1",
+      "members": [
+        {
+          "name": "Bicycle_1",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 11
+        }
+      ]
+    },
+    "bicycle_2": {
+      "description": "Auto-generated group for Bicycle_2",
+      "members": [
+        {
+          "name": "Bicycle_2",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 11
+        }
+      ]
+    },
+    "bicycle_3": {
+      "description": "Auto-generated group for Bicycle_3",
+      "members": [
+        {
+          "name": "Bicycle_3",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 11
+        }
+      ]
+    },
+    "bicycle_4": {
+      "description": "Auto-generated group for Bicycle_4",
+      "members": [
+        {
+          "name": "Bicycle_4",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 11
+        }
+      ]
+    },
+    "bicycle_5": {
+      "description": "Auto-generated group for Bicycle_5",
+      "members": [
+        {
+          "name": "Bicycle_5",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 11
+        }
+      ]
+    },
+    "bus_1": {
+      "description": "Auto-generated group for Bus_1",
+      "members": [
+        {
+          "name": "Bus_1",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 257
+        }
+      ]
+    },
+    "bus_2": {
+      "description": "Auto-generated group for Bus_2",
+      "members": [
+        {
+          "name": "Bus_2",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 257
+        }
+      ]
+    },
+    "bus_3": {
+      "description": "Auto-generated group for Bus_3",
+      "members": [
+        {
+          "name": "Bus_3",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 257
+        }
+      ]
+    },
+    "bus_4": {
+      "description": "Auto-generated group for Bus_4",
+      "members": [
+        {
+          "name": "Bus_4",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 257
+        }
+      ]
+    },
+    "bus_5": {
+      "description": "Auto-generated group for Bus_5",
+      "members": [
+        {
+          "name": "Bus_5",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 257
+        }
+      ]
+    },
+    "tractor_1": {
+      "description": "Auto-generated group for Tractor_1",
+      "members": [
+        {
+          "name": "Tractor_1",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 259
+        }
+      ]
+    },
+    "tractor_2": {
+      "description": "Auto-generated group for Tractor_2",
+      "members": [
+        {
+          "name": "Tractor_2",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 259
+        }
+      ]
+    },
+    "tractor_3": {
+      "description": "Auto-generated group for Tractor_3",
+      "members": [
+        {
+          "name": "Tractor_3",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 259
+        }
+      ]
+    },
+    "tractor_4": {
+      "description": "Auto-generated group for Tractor_4",
+      "members": [
+        {
+          "name": "Tractor_4",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 259
+        }
+      ]
+    },
+    "tractor_5": {
+      "description": "Auto-generated group for Tractor_5",
+      "members": [
+        {
+          "name": "Tractor_5",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 259
+        }
+      ]
+    },
+    "scooter_1": {
+      "description": "Auto-generated group for Scooter_1",
+      "members": [
+        {
+          "name": "Scooter_1",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 20
+        }
+      ]
+    },
+    "scooter_2": {
+      "description": "Auto-generated group for Scooter_2",
+      "members": [
+        {
+          "name": "Scooter_2",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 20
+        }
+      ]
+    },
+    "scooter_3": {
+      "description": "Auto-generated group for Scooter_3",
+      "members": [
+        {
+          "name": "Scooter_3",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 20
+        }
+      ]
+    },
+    "scooter_4": {
+      "description": "Auto-generated group for Scooter_4",
+      "members": [
+        {
+          "name": "Scooter_4",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 20
+        }
+      ]
+    },
+    "scooter_5": {
+      "description": "Auto-generated group for Scooter_5",
+      "members": [
+        {
+          "name": "Scooter_5",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 20
+        }
+      ]
+    },
+    "ambulance_1": {
+      "description": "Auto-generated group for Ambulance_1",
+      "members": [
+        {
+          "name": "Ambulance_1",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 259
+        }
+      ]
+    },
+    "ambulance_2": {
+      "description": "Auto-generated group for Ambulance_2",
+      "members": [
+        {
+          "name": "Ambulance_2",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 259
+        }
+      ]
+    },
+    "ambulance_3": {
+      "description": "Auto-generated group for Ambulance_3",
+      "members": [
+        {
+          "name": "Ambulance_3",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 259
+        }
+      ]
+    },
+    "ambulance_4": {
+      "description": "Auto-generated group for Ambulance_4",
+      "members": [
+        {
+          "name": "Ambulance_4",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 259
+        }
+      ]
+    },
+    "ambulance_5": {
+      "description": "Auto-generated group for Ambulance_5",
+      "members": [
+        {
+          "name": "Ambulance_5",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 259
+        }
+      ]
+    },
+    "tree_1": {
+      "description": "Auto-generated tree group 1 (Trunk + Leaves)",
+      "members": [
+        {
+          "name": "Trunk_1",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 71
+        },
+        {
+          "name": "Leaves_1",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 70
+        }
+      ]
+    },
+    "tree_2": {
+      "description": "Auto-generated tree group 2 (Trunk + Leaves)",
+      "members": [
+        {
+          "name": "Trunk_2",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 71
+        },
+        {
+          "name": "Leaves_2",
+          "relative_displacement": [
+            0,
+            0,
+            2.3
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 70
+        }
+      ]
+    },
+    "tree_3": {
+      "description": "Auto-generated tree group 3 (Trunk + Leaves)",
+      "members": [
+        {
+          "name": "Trunk_3",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 71
+        },
+        {
+          "name": "Leaves_3",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 70
+        }
+      ]
+    },
+    "tree_4": {
+      "description": "Auto-generated tree group 4 (Trunk + Leaves)",
+      "members": [
+        {
+          "name": "Trunk_4",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 71
+        },
+        {
+          "name": "Leaves_4",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 70
+        }
+      ]
+    },
+    "tree_5": {
+      "description": "Auto-generated tree group 5 (Trunk + Leaves)",
+      "members": [
+        {
+          "name": "Trunk_5",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 71
+        },
+        {
+          "name": "Leaves_5",
+          "relative_displacement": [
+            0,
+            0,
+            2.3
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 70
+        }
+      ]
+    },
+    "shrubbery_1": {
+      "description": "Auto-generated shrubbery group 1",
+      "members": [
+        {
+          "name": "Shrubbery_1",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 70
+        }
+      ]
+    },
+    "shrubbery_2": {
+      "description": "Auto-generated shrubbery group 2",
+      "members": [
+        {
+          "name": "Shrubbery_2",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 70
+        }
+      ]
+    },
+    "shrubbery_3": {
+      "description": "Auto-generated shrubbery group 3",
+      "members": [
+        {
+          "name": "Shrubbery_3",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 70
+        }
+      ]
+    },
+    "shrubbery_4": {
+      "description": "Auto-generated shrubbery group 4",
+      "members": [
+        {
+          "name": "Shrubbery_4",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 70
+        }
+      ]
+    },
+    "shrubbery_5": {
+      "description": "Auto-generated shrubbery group 5",
+      "members": [
+        {
+          "name": "Shrubbery_5",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 70
+        }
+      ]
+    },
+    "luggage_1": {
+      "description": "Auto-generated group for Luggage_1",
+      "members": [
+        {
+          "name": "Luggage_1",
+          "relative_displacement": [
+            0,
+            0,
+            -0.25
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "luggage_2": {
+      "description": "Auto-generated group for Luggage_2",
+      "members": [
+        {
+          "name": "Luggage_2",
+          "relative_displacement": [
+            0,
+            0,
+            -0.25
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "luggage_3": {
+      "description": "Auto-generated group for Luggage_3",
+      "members": [
+        {
+          "name": "Luggage_3",
+          "relative_displacement": [
+            0,
+            0,
+            -0.25
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "luggage_4": {
+      "description": "Auto-generated group for Luggage_4",
+      "members": [
+        {
+          "name": "Luggage_4",
+          "relative_displacement": [
+            0,
+            0,
+            -0.25
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "luggage_5": {
+      "description": "Auto-generated group for Luggage_5",
+      "members": [
+        {
+          "name": "Luggage_5",
+          "relative_displacement": [
+            0,
+            0,
+            -0.25
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "stroller_1": {
+      "description": "Auto-generated group for Stroller_1",
+      "members": [
+        {
+          "name": "Stroller_1",
+          "relative_displacement": [
+            0,
+            0,
+            -0.25
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "stroller_2": {
+      "description": "Auto-generated group for Stroller_2",
+      "members": [
+        {
+          "name": "Stroller_2",
+          "relative_displacement": [
+            0,
+            0,
+            -0.25
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "stroller_3": {
+      "description": "Auto-generated group for Stroller_3",
+      "members": [
+        {
+          "name": "Stroller_3",
+          "relative_displacement": [
+            0,
+            0,
+            -0.25
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "stroller_4": {
+      "description": "Auto-generated group for Stroller_4",
+      "members": [
+        {
+          "name": "Stroller_4",
+          "relative_displacement": [
+            0,
+            0,
+            -0.25
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "stroller_5": {
+      "description": "Auto-generated group for Stroller_5",
+      "members": [
+        {
+          "name": "Stroller_5",
+          "relative_displacement": [
+            0,
+            0,
+            -0.25
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "wheelchair_1": {
+      "description": "Auto-generated group for Wheelchair_1",
+      "members": [
+        {
+          "name": "Wheelchair_1",
+          "relative_displacement": [
+            0,
+            0,
+            -0.25
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "wheelchair_2": {
+      "description": "Auto-generated group for Wheelchair_2",
+      "members": [
+        {
+          "name": "Wheelchair_2",
+          "relative_displacement": [
+            0,
+            0,
+            -0.25
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "wheelchair_3": {
+      "description": "Auto-generated group for Wheelchair_3",
+      "members": [
+        {
+          "name": "Wheelchair_3",
+          "relative_displacement": [
+            0,
+            0,
+            -0.25
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "wheelchair_4": {
+      "description": "Auto-generated group for Wheelchair_4",
+      "members": [
+        {
+          "name": "Wheelchair_4",
+          "relative_displacement": [
+            0,
+            0,
+            -0.25
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "wheelchair_5": {
+      "description": "Auto-generated group for Wheelchair_5",
+      "members": [
+        {
+          "name": "Wheelchair_5",
+          "relative_displacement": [
+            0,
+            0,
+            -0.25
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "fence_1": {
+      "description": "Auto-generated fence group 1",
+      "members": [
+        {
+          "name": "Barrier_1",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 51
+        }
+      ]
+    },
+    "fence_2": {
+      "description": "Auto-generated fence group 2",
+      "members": [
+        {
+          "name": "Barrier_2",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 51
+        }
+      ]
+    },
+    "fence_3": {
+      "description": "Auto-generated fence group 3",
+      "members": [
+        {
+          "name": "Barrier_3",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 51
+        }
+      ]
+    },
+    "fence_4": {
+      "description": "Auto-generated fence group 4",
+      "members": [
+        {
+          "name": "Barrier_4",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 51
+        }
+      ]
+    },
+    "fence_5": {
+      "description": "Auto-generated fence group 5",
+      "members": [
+        {
+          "name": "Barrier_5",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 51
+        }
+      ]
+    },
+    "street_light_1": {
+      "description": "Auto-generated street light group 1",
+      "members": [
+        {
+          "name": "StreetLight_1",
+          "relative_displacement": [
+            0,
+            0,
+            2.5
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 80
+        }
+      ]
+    },
+    "street_light_2": {
+      "description": "Auto-generated street light group 2",
+      "members": [
+        {
+          "name": "StreetLight_2",
+          "relative_displacement": [
+            0,
+            0,
+            2.5
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 80
+        }
+      ]
+    },
+    "street_light_3": {
+      "description": "Auto-generated street light group 3",
+      "members": [
+        {
+          "name": "StreetLight_3",
+          "relative_displacement": [
+            0,
+            0,
+            2.5
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 80
+        }
+      ]
+    },
+    "street_light_4": {
+      "description": "Auto-generated street light group 4",
+      "members": [
+        {
+          "name": "StreetLight_4",
+          "relative_displacement": [
+            0,
+            0,
+            2.5
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 80
+        }
+      ]
+    },
+    "street_light_5": {
+      "description": "Auto-generated street light group 5",
+      "members": [
+        {
+          "name": "StreetLight_5",
+          "relative_displacement": [
+            0,
+            0,
+            2.5
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 80
+        }
+      ]
+    },
+    "traffic_sign_1": {
+      "description": "Auto-generated traffic sign group 1 (Pole + Sign)",
+      "members": [
+        {
+          "name": "Pole_1",
+          "relative_displacement": [
+            0,
+            0,
+            1.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 80
+        },
+        {
+          "name": "Sign_1",
+          "relative_displacement": [
+            0,
+            0,
+            1.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 81
+        }
+      ]
+    },
+    "traffic_sign_2": {
+      "description": "Auto-generated traffic sign group 2 (Pole + Sign)",
+      "members": [
+        {
+          "name": "Pole_2",
+          "relative_displacement": [
+            0,
+            0,
+            1.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 80
+        },
+        {
+          "name": "Sign_2",
+          "relative_displacement": [
+            0,
+            0,
+            1.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 81
+        }
+      ]
+    },
+    "traffic_sign_3": {
+      "description": "Auto-generated traffic sign group 3 (Pole + Sign)",
+      "members": [
+        {
+          "name": "Pole_3",
+          "relative_displacement": [
+            0,
+            0,
+            1.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 80
+        },
+        {
+          "name": "Sign_3",
+          "relative_displacement": [
+            0,
+            0,
+            1.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 81
+        }
+      ]
+    },
+    "traffic_sign_4": {
+      "description": "Auto-generated traffic sign group 4 (Pole + Sign)",
+      "members": [
+        {
+          "name": "Pole_4",
+          "relative_displacement": [
+            0,
+            0,
+            1.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 80
+        },
+        {
+          "name": "Sign_4",
+          "relative_displacement": [
+            0,
+            0,
+            1.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 81
+        }
+      ]
+    },
+    "traffic_sign_5": {
+      "description": "Auto-generated traffic sign group 5 (Pole + Sign)",
+      "members": [
+        {
+          "name": "Pole_5",
+          "relative_displacement": [
+            0,
+            0,
+            1.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 80
+        },
+        {
+          "name": "Sign_5",
+          "relative_displacement": [
+            0,
+            0,
+            1.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 81
+        }
+      ]
+    },
+    "telephone_pole_1": {
+      "description": "Auto-generated telephone pole group 1",
+      "members": [
+        {
+          "name": "TelephonePole_1",
+          "relative_displacement": [
+            0,
+            0,
+            1.7
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 80
+        }
+      ]
+    },
+    "telephone_pole_2": {
+      "description": "Auto-generated telephone pole group 2",
+      "members": [
+        {
+          "name": "TelephonePole_2",
+          "relative_displacement": [
+            0,
+            0,
+            1.7
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 80
+        }
+      ]
+    },
+    "telephone_pole_3": {
+      "description": "Auto-generated telephone pole group 3",
+      "members": [
+        {
+          "name": "TelephonePole_3",
+          "relative_displacement": [
+            0,
+            0,
+            1.7
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 80
+        }
+      ]
+    },
+    "telephone_pole_4": {
+      "description": "Auto-generated telephone pole group 4",
+      "members": [
+        {
+          "name": "TelephonePole_4",
+          "relative_displacement": [
+            0,
+            0,
+            1.7
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 80
+        }
+      ]
+    },
+    "telephone_pole_5": {
+      "description": "Auto-generated telephone pole group 5",
+      "members": [
+        {
+          "name": "TelephonePole_5",
+          "relative_displacement": [
+            0,
+            0,
+            1.7
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 80
+        }
+      ]
+    },
+    "trafficcone_1": {
+      "description": "Auto-generated traffic cone group 1",
+      "members": [
+        {
+          "name": "Trafficcone_1",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "trafficcone_2": {
+      "description": "Auto-generated traffic cone group 2",
+      "members": [
+        {
+          "name": "Trafficcone_2",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "trafficcone_3": {
+      "description": "Auto-generated traffic cone group 3",
+      "members": [
+        {
+          "name": "Trafficcone_3",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "trafficcone_4": {
+      "description": "Auto-generated traffic cone group 4",
+      "members": [
+        {
+          "name": "Trafficcone_4",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "trafficcone_5": {
+      "description": "Auto-generated traffic cone group 5",
+      "members": [
+        {
+          "name": "Trafficcone_5",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "dog_1": {
+      "description": "Auto-generated group for Dog_1",
+      "members": [
+        {
+          "name": "Dog_1",
+          "relative_displacement": [
+            0,
+            0,
+            -0.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "dog_2": {
+      "description": "Auto-generated group for Dog_2",
+      "members": [
+        {
+          "name": "Dog_2",
+          "relative_displacement": [
+            0,
+            0,
+            -0.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "dog_3": {
+      "description": "Auto-generated group for Dog_3",
+      "members": [
+        {
+          "name": "Dog_3",
+          "relative_displacement": [
+            0,
+            0,
+            -0.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "dog_4": {
+      "description": "Auto-generated group for Dog_4",
+      "members": [
+        {
+          "name": "Dog_4",
+          "relative_displacement": [
+            0,
+            0,
+            -0.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "dog_5": {
+      "description": "Auto-generated group for Dog_5",
+      "members": [
+        {
+          "name": "Dog_5",
+          "relative_displacement": [
+            0,
+            0,
+            -0.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "cat_1": {
+      "description": "Auto-generated group for Cat_1",
+      "members": [
+        {
+          "name": "Cat_1",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "cat_2": {
+      "description": "Auto-generated group for Cat_2",
+      "members": [
+        {
+          "name": "Cat_2",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "cat_3": {
+      "description": "Auto-generated group for Cat_3",
+      "members": [
+        {
+          "name": "Cat_3",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "cat_4": {
+      "description": "Auto-generated group for Cat_4",
+      "members": [
+        {
+          "name": "Cat_4",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "cat_5": {
+      "description": "Auto-generated group for Cat_5",
+      "members": [
+        {
+          "name": "Cat_5",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "boar_1": {
+      "description": "Auto-generated group for Boar_1",
+      "members": [
+        {
+          "name": "Boar_1",
+          "relative_displacement": [
+            0,
+            0,
+            -0.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "boar_2": {
+      "description": "Auto-generated group for Boar_2",
+      "members": [
+        {
+          "name": "Boar_2",
+          "relative_displacement": [
+            0,
+            0,
+            -0.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "boar_3": {
+      "description": "Auto-generated group for Boar_3",
+      "members": [
+        {
+          "name": "Boar_3",
+          "relative_displacement": [
+            0,
+            0,
+            -0.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "boar_4": {
+      "description": "Auto-generated group for Boar_4",
+      "members": [
+        {
+          "name": "Boar_4",
+          "relative_displacement": [
+            0,
+            0,
+            -0.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "boar_5": {
+      "description": "Auto-generated group for Boar_5",
+      "members": [
+        {
+          "name": "Boar_5",
+          "relative_displacement": [
+            0,
+            0,
+            -0.1
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "worker_1": {
+      "description": "Auto-generated group for Man_1",
+      "members": [
+        {
+          "name": "Worker_1",
+          "relative_displacement": [
+            0,
+            0,
+            0.3
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "worker_2": {
+      "description": "Auto-generated group for Man_1",
+      "members": [
+        {
+          "name": "Worker_1",
+          "relative_displacement": [
+            0,
+            0,
+            0.3
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "worker_3": {
+      "description": "Auto-generated group for Man_1",
+      "members": [
+        {
+          "name": "Worker_1",
+          "relative_displacement": [
+            0,
+            0,
+            0.3
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "worker_4": {
+      "description": "Auto-generated group for Man_1",
+      "members": [
+        {
+          "name": "Worker_1",
+          "relative_displacement": [
+            0,
+            0,
+            0.3
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "worker_5": {
+      "description": "Auto-generated group for Man_1",
+      "members": [
+        {
+          "name": "Worker_1",
+          "relative_displacement": [
+            0,
+            0,
+            0.3
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "police_1": {
+      "description": "Auto-generated group for Man_1",
+      "members": [
+        {
+          "name": "Police_1",
+          "relative_displacement": [
+            0,
+            0,
+            0.3
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "police_2": {
+      "description": "Auto-generated group for Man_1",
+      "members": [
+        {
+          "name": "Police_1",
+          "relative_displacement": [
+            0,
+            0,
+            0.3
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "police_3": {
+      "description": "Auto-generated group for Man_1",
+      "members": [
+        {
+          "name": "Police_1",
+          "relative_displacement": [
+            0,
+            0,
+            0.3
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "police_4": {
+      "description": "Auto-generated group for Man_1",
+      "members": [
+        {
+          "name": "Police_1",
+          "relative_displacement": [
+            0,
+            0,
+            0.3
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "police_5": {
+      "description": "Auto-generated group for Man_1",
+      "members": [
+        {
+          "name": "Police_1",
+          "relative_displacement": [
+            0,
+            0,
+            0.3
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "adult_1": {
+      "description": "Auto-generated group for Man_1",
+      "members": [
+        {
+          "name": "Man_1",
+          "relative_displacement": [
+            0,
+            0,
+            0.5
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "adult_2": {
+      "description": "Auto-generated group for Man_2",
+      "members": [
+        {
+          "name": "Man_2",
+          "relative_displacement": [
+            0,
+            0,
+            0.5
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "adult_3": {
+      "description": "Auto-generated group for Man_3",
+      "members": [
+        {
+          "name": "Man_3",
+          "relative_displacement": [
+            0,
+            0,
+            0.5
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "adult_4": {
+      "description": "Auto-generated group for Man_4",
+      "members": [
+        {
+          "name": "Man_4",
+          "relative_displacement": [
+            0,
+            0,
+            0.5
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "adult_5": {
+      "description": "Auto-generated group for Man_5",
+      "members": [
+        {
+          "name": "Man_5",
+          "relative_displacement": [
+            0,
+            0,
+            0.5
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "kid_1": {
+      "description": "Auto-generated group for Kid_1",
+      "members": [
+        {
+          "name": "Kid_1",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "kid_2": {
+      "description": "Auto-generated group for Kid_2",
+      "members": [
+        {
+          "name": "Kid_2",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "kid_3": {
+      "description": "Auto-generated group for Kid_3",
+      "members": [
+        {
+          "name": "Kid_3",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "kid_4": {
+      "description": "Auto-generated group for Kid_4",
+      "members": [
+        {
+          "name": "Kid_4",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "kid_5": {
+      "description": "Auto-generated group for Kid_5",
+      "members": [
+        {
+          "name": "Kid_5",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "senior_1": {
+      "description": "Auto-generated group for Senior_1",
+      "members": [
+        {
+          "name": "Senior_1",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "senior_2": {
+      "description": "Auto-generated group for Senior_2",
+      "members": [
+        {
+          "name": "Senior_2",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "senior_3": {
+      "description": "Auto-generated group for Senior_3",
+      "members": [
+        {
+          "name": "Senior_3",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "senior_4": {
+      "description": "Auto-generated group for Senior_4",
+      "members": [
+        {
+          "name": "Senior_4",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "senior_5": {
+      "description": "Auto-generated group for Senior_5",
+      "members": [
+        {
+          "name": "Senior_5",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 30
+        }
+      ]
+    },
+    "person-riding-bicycle_1": {
+      "description": "行人骑乘自行车的组合",
+      "members": [
+        {
+          "name": "Bicycle",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        },
+        {
+          "name": "Bicyclist",
+          "relative_displacement": [
+            0.34,
+            0,
+            0.72
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        }
+      ]
+    },
+    "person-riding-bicycle_2": {
+      "description": "行人骑乘自行车的组合",
+      "members": [
+        {
+          "name": "Bicycle",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        },
+        {
+          "name": "Bicyclist",
+          "relative_displacement": [
+            0.34,
+            0,
+            0.72
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        }
+      ]
+    },
+    "person-riding-bicycle_3": {
+      "description": "行人骑乘自行车的组合",
+      "members": [
+        {
+          "name": "Bicycle",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        },
+        {
+          "name": "Bicyclist",
+          "relative_displacement": [
+            0.34,
+            0,
+            0.72
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        }
+      ]
+    },
+    "person-riding-bicycle_4": {
+      "description": "行人骑乘自行车的组合",
+      "members": [
+        {
+          "name": "Bicycle",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        },
+        {
+          "name": "Bicyclist",
+          "relative_displacement": [
+            0.34,
+            0,
+            0.72
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        }
+      ]
+    },
+    "person-riding-bicycle_5": {
+      "description": "行人骑乘自行车的组合",
+      "members": [
+        {
+          "name": "Bicycle",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        },
+        {
+          "name": "Bicyclist",
+          "relative_displacement": [
+            0.34,
+            0,
+            0.72
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        }
+      ]
+    },
+    "person-riding-motor_1": {
+      "description": "行人骑乘摩托车的组合",
+      "members": [
+        {
+          "name": "Motor",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        },
+        {
+          "name": "MotorMan",
+          "relative_displacement": [
+            0,
+            0,
+            0.59
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        }
+      ]
+    },
+    "person-riding-motor_2": {
+      "description": "行人骑乘摩托车的组合",
+      "members": [
+        {
+          "name": "Motor",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        },
+        {
+          "name": "MotorMan",
+          "relative_displacement": [
+            0,
+            0,
+            0.59
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        }
+      ]
+    },
+    "person-riding-motor_3": {
+      "description": "行人骑乘摩托车的组合",
+      "members": [
+        {
+          "name": "Motor",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        },
+        {
+          "name": "MotorMan",
+          "relative_displacement": [
+            0,
+            0,
+            0.59
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        }
+      ]
+    },
+    "person-riding-motor_4": {
+      "description": "行人骑乘摩托车的组合",
+      "members": [
+        {
+          "name": "Motor",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        },
+        {
+          "name": "MotorMan",
+          "relative_displacement": [
+            0,
+            0,
+            0.59
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        }
+      ]
+    },
+    "person-riding-motor_5": {
+      "description": "行人骑乘摩托车的组合",
+      "members": [
+        {
+          "name": "Motor",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        },
+        {
+          "name": "MotorMan",
+          "relative_displacement": [
+            0,
+            0,
+            0.59
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        }
+      ]
+    },
+    "dog-walker_1": {
+      "description": "行人与狗同行（遛狗场景）",
+      "members": [
+        {
+          "name": "Pedestrian",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 254
+        },
+        {
+          "name": "Dog",
+          "relative_displacement": [
+            1.4,
+            0.5,
+            -0.64
+          ],
+          "relative_rotation": 0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "dog-walker_2": {
+      "description": "行人与狗同行（遛狗场景）",
+      "members": [
+        {
+          "name": "Pedestrian",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 254
+        },
+        {
+          "name": "Dog",
+          "relative_displacement": [
+            1.4,
+            0.5,
+            -0.64
+          ],
+          "relative_rotation": 0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "dog-walker_3": {
+      "description": "行人与狗同行（遛狗场景）",
+      "members": [
+        {
+          "name": "Pedestrian",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 254
+        },
+        {
+          "name": "Dog",
+          "relative_displacement": [
+            1.4,
+            0.5,
+            -0.64
+          ],
+          "relative_rotation": 0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "dog-walker_4": {
+      "description": "行人与狗同行（遛狗场景）",
+      "members": [
+        {
+          "name": "Pedestrian",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 254
+        },
+        {
+          "name": "Dog",
+          "relative_displacement": [
+            1.4,
+            0.5,
+            -0.64
+          ],
+          "relative_rotation": 0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "dog-walker_5": {
+      "description": "行人与狗同行（遛狗场景）",
+      "members": [
+        {
+          "name": "Pedestrian",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 254
+        },
+        {
+          "name": "Dog",
+          "relative_displacement": [
+            1.4,
+            0.5,
+            -0.64
+          ],
+          "relative_rotation": 0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "person-pushing-bicycle_1": {
+      "description": "行人推行自行车",
+      "members": [
+        {
+          "name": "Bicycle",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        },
+        {
+          "name": "PersonPushingBicycle",
+          "relative_displacement": [
+            0.45,
+            -0.15,
+            0.76
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        }
+      ]
+    },
+    "person-pushing-bicycle_2": {
+      "description": "行人推行自行车",
+      "members": [
+        {
+          "name": "Bicycle",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        },
+        {
+          "name": "PersonPushingBicycle",
+          "relative_displacement": [
+            0.45,
+            -0.15,
+            0.76
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        }
+      ]
+    },
+    "person-pushing-bicycle_3": {
+      "description": "行人推行自行车",
+      "members": [
+        {
+          "name": "Bicycle",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        },
+        {
+          "name": "PersonPushingBicycle",
+          "relative_displacement": [
+            0.45,
+            -0.15,
+            0.76
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        }
+      ]
+    },
+    "person-pushing-bicycle_4": {
+      "description": "行人推行自行车",
+      "members": [
+        {
+          "name": "Bicycle",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        },
+        {
+          "name": "PersonPushingBicycle",
+          "relative_displacement": [
+            0.45,
+            -0.15,
+            0.76
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        }
+      ]
+    },
+    "person-pushing-bicycle_5": {
+      "description": "行人推行自行车",
+      "members": [
+        {
+          "name": "Bicycle",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        },
+        {
+          "name": "PersonPushingBicycle",
+          "relative_displacement": [
+            0.45,
+            -0.15,
+            0.76
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 253
+        }
+      ]
+    },
+    "person-pushing-motorcycle_1": {
+      "description": "行人推行自行车",
+      "members": [
+        {
+          "name": "Motor",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        },
+        {
+          "name": "PersonPushingBicycle",
+          "relative_displacement": [
+            0.12,
+            -0.22,
+            0.54
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        }
+      ]
+    },
+    "person-pushing-motorcycle_2": {
+      "description": "行人推行自行车",
+      "members": [
+        {
+          "name": "Motor",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        },
+        {
+          "name": "PersonPushingBicycle",
+          "relative_displacement": [
+            0.12,
+            -0.22,
+            0.54
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        }
+      ]
+    },
+    "person-pushing-motorcycle_3": {
+      "description": "行人推行自行车",
+      "members": [
+        {
+          "name": "Motor",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        },
+        {
+          "name": "PersonPushingBicycle",
+          "relative_displacement": [
+            0.12,
+            -0.22,
+            0.54
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        }
+      ]
+    },
+    "person-pushing-motorcycle_4": {
+      "description": "行人推行自行车",
+      "members": [
+        {
+          "name": "Motor",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        },
+        {
+          "name": "PersonPushingBicycle",
+          "relative_displacement": [
+            0.12,
+            -0.22,
+            0.54
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        }
+      ]
+    },
+    "person-pushing-motorcycle_5": {
+      "description": "行人推行自行车",
+      "members": [
+        {
+          "name": "Motor",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        },
+        {
+          "name": "PersonPushingBicycle",
+          "relative_displacement": [
+            0.12,
+            -0.22,
+            0.54
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 255
+        }
+      ]
+    },
+    "person-pulling-luggage_1": {
+      "description": "行人拉行李箱",
+      "members": [
+        {
+          "name": "PersonPullingLuggage",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 254
+        },
+        {
+          "name": "Luggage",
+          "relative_displacement": [
+            0.04,
+            0.57,
+            -0.72
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "person-pulling-luggage_2": {
+      "description": "行人拉行李箱",
+      "members": [
+        {
+          "name": "PersonPullingLuggage",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 254
+        },
+        {
+          "name": "Luggage",
+          "relative_displacement": [
+            0.04,
+            0.57,
+            -0.72
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "person-pulling-luggage_3": {
+      "description": "行人拉行李箱",
+      "members": [
+        {
+          "name": "PersonPullingLuggage",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 254
+        },
+        {
+          "name": "Luggage",
+          "relative_displacement": [
+            0.04,
+            0.57,
+            -0.72
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "person-pulling-luggage_4": {
+      "description": "行人拉行李箱",
+      "members": [
+        {
+          "name": "PersonPullingLuggage",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 254
+        },
+        {
+          "name": "Luggage",
+          "relative_displacement": [
+            0.04,
+            0.57,
+            -0.72
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "person-pulling-luggage_5": {
+      "description": "行人拉行李箱",
+      "members": [
+        {
+          "name": "PersonPullingLuggage",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 254
+        },
+        {
+          "name": "Luggage",
+          "relative_displacement": [
+            0.04,
+            0.57,
+            -0.72
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 98
+        }
+      ]
+    },
+    "person-pushing-stroller_1": {
+      "description": "人推行婴儿车的组合",
+      "members": [
+        {
+          "name": "PersonPushingStroller",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 254
+        },
+        {
+          "name": "Stroller",
+          "relative_displacement": [
+            0.58,
+            0,
+            -0.73
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 20
+        }
+      ]
+    },
+    "person-pushing-stroller_2": {
+      "description": "人推行婴儿车的组合",
+      "members": [
+        {
+          "name": "PersonPushingStroller",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 254
+        },
+        {
+          "name": "Stroller",
+          "relative_displacement": [
+            0.58,
+            0,
+            -0.73
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 20
+        }
+      ]
+    },
+    "person-pushing-stroller_3": {
+      "description": "人推行婴儿车的组合",
+      "members": [
+        {
+          "name": "PersonPushingStroller",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 254
+        },
+        {
+          "name": "Stroller",
+          "relative_displacement": [
+            0.58,
+            0,
+            -0.73
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 20
+        }
+      ]
+    },
+    "person-pushing-stroller_4": {
+      "description": "人推行婴儿车的组合",
+      "members": [
+        {
+          "name": "PersonPushingStroller",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 254
+        },
+        {
+          "name": "Stroller",
+          "relative_displacement": [
+            0.58,
+            0,
+            -0.73
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 20
+        }
+      ]
+    },
+    "person-pushing-stroller_5": {
+      "description": "人推行婴儿车的组合",
+      "members": [
+        {
+          "name": "PersonPushingStroller",
+          "relative_displacement": [
+            0,
+            0,
+            0
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 254
+        },
+        {
+          "name": "Stroller",
+          "relative_displacement": [
+            0.58,
+            0,
+            -0.73
+          ],
+          "relative_rotation": 0.0,
+          "semantic_label": 20
+        }
+      ]
+    }
+  }
+}

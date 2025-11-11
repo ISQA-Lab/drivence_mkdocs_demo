@@ -1,0 +1,43 @@
+project:
+  dataset:
+    name: "demo_dataset"
+    config: "configs.dataset.semantic_kitti.yml"
+
+  assets:
+    name: "objects"
+    config: "configs.assets.objects.yml"
+
+  data_gen:
+    sensor:
+      lidar:
+        name: "virtual_lidar"
+        classpath: "lidar_core.sensors.lidar.casting_lidar"
+        classname: "RayCastingLidar"
+        config: "configs.sensors.lidar.kitti_lidar.yml"
+
+    intensity:
+      config: "configs.intensity.intensity.yml"
+
+    label:
+      lidar:
+        name: "lidar_label_generator"
+        classpath: "lidar_core.label_generator.lidar_label_semantickitti"
+        classname: "SemanticKITTILidarLabelGenerator"
+
+    loader:
+      shapenet:
+        name: "shapenet_loader"
+        classpath: "drivence.assets.objects.loader"
+        classname: "ObjectsLoader"
+        config: "configs.assets.objects.yml"
+
+    occlusion_handler:
+      lidar:
+        name: "lidar_occlusion_handler"
+        classpath: "lidar_core.occlusion.lidar_handler"
+        classname: "LidarComplexOcclusionHandler"
+
+    road_split:
+      name: "road_split"
+      classpath: "drivence.module.road_split.road_split"
+      classname: "SemanticKITTIRoadSplit"

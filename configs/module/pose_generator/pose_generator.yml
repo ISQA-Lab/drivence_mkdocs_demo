@@ -1,0 +1,3 @@
+pose_generator:
+  max_try_pose_num: 5
+  max_non_road_points_limit: 300
