@@ -7,14 +7,18 @@ Usage:
     python main.py scene --logic_scene_path=/path/to/scene.json
     python main.py group --bg_index=10
 """
+import importlib
 import os
-from pathlib import Path
+import sys
 
-import fire
+from drivence.utils.path_utils import get_project_root_dir
 
-# Ensure packaged modules know the project root directory. This must be set
-# before importing modules that rely on drivence.utils.path_utils.
-os.environ.setdefault("DRIVENCE_ROOT_DIR", str(Path(__file__).resolve().parent))
+PROJECT_ROOT = get_project_root_dir()
+
+os.environ.setdefault("DRIVENCE_ROOT_DIR", PROJECT_ROOT)
+
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 
 from entry.generate_data import (
     generate_data_with_point_cloud,
@@ -62,7 +66,12 @@ def group(bg_index: int):
 
 
 if __name__ == '__main__':
-    fire.Fire({
+    try:
+        fire_module = importlib.import_module("fire")
+    except ImportError as exc:  # pragma: no cover - optional dependency
+        raise RuntimeError("Google Fire is required. Install via `pip install fire`.") from exc
+
+    fire_module.Fire({
         'point_cloud': point_cloud,
         'scene': scene,
         'group': group,

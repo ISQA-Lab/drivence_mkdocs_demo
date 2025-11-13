@@ -83,12 +83,12 @@ def generate_data_with_point_cloud(bg_index: int, obj_name: str, count: int = 1)
     shapenet_loader = container.shapenet_loader()
     dataset_config = container.dataset_config()
 
-    dataset_type = dataset_config.get_config("demo_dataset").get("dataset_type", "")
-    dataset_output_type = dataset_config.get_config("demo_dataset").get("dataset_output_type", "")
-    demo_dataset_cfg = dataset_config.get_config("demo_dataset")
+    dataset_type = dataset_config.get_config("source_dataset").get("dataset_type", "")
+    dataset_output_type = dataset_config.get_config("source_dataset").get("dataset_output_type", "")
+    source_dataset_cfg = dataset_config.get_config("source_dataset")
 
     # Load object configuration
-    obj_insert_config_rel_path = demo_dataset_cfg.get("obj_insert_config_path", "configs/obj_insert_config.yml")
+    obj_insert_config_rel_path = source_dataset_cfg.get("obj_insert_config_path", "configs/obj_insert_config.yml")
     if not os.path.isabs(obj_insert_config_rel_path):
         project_root = get_project_root_dir()
         obj_insert_config_path = os.path.join(project_root, obj_insert_config_rel_path)
@@ -173,9 +173,9 @@ def generate_data_with_point_cloud(bg_index: int, obj_name: str, count: int = 1)
         default_path = shapenet_loader.get_mesh_path(obj_name)
         obj_paths = [default_path for _ in range(count)]
 
-    dataset = DataFrameFactory.get_data_frame(dataset_type, bg_index, demo_dataset_cfg)
+    dataset = DataFrameFactory.get_data_frame(dataset_type, bg_index, source_dataset_cfg)
     dataset_output = DataFrameFactory.get_output_data_frame(dataset_type, dataset_output_type, bg_index,
-                                                            dataset_config.get_config("aug_dataset"))
+                                                            dataset_config.get_config("generated_dataset"))
 
     surface_type = category_of(obj_name)
     if surface_type == "sidewalk":
@@ -273,9 +273,9 @@ def generate_data_with_logic_scene(logic_scene_path: str):
 
     container = DataGenContainer()
     dataset_config = container.dataset_config()
-    demo_dataset_cfg = dataset_config.get_config("demo_dataset")
+    source_dataset_cfg = dataset_config.get_config("source_dataset")
 
-    obj_insert_config_rel_path = demo_dataset_cfg.get("obj_insert_config_path",
+    obj_insert_config_rel_path = source_dataset_cfg.get("obj_insert_config_path",
                                                       "configs/obj_insert_config.yml")
     if not os.path.isabs(obj_insert_config_rel_path):
         project_root = get_project_root_dir()
@@ -365,11 +365,11 @@ def generate_data_with_group(bg_index: int):
     shapenet_loader = container.shapenet_loader()
     dataset_config = container.dataset_config()
 
-    dataset_type = dataset_config.get_config("demo_dataset").get("dataset_type", "")
-    dataset_output_type = dataset_config.get_config("demo_dataset").get("dataset_output_type", "")
-    demo_dataset_cfg = dataset_config.get_config("demo_dataset")
+    dataset_type = dataset_config.get_config("source_dataset").get("dataset_type", "")
+    dataset_output_type = dataset_config.get_config("source_dataset").get("dataset_output_type", "")
+    source_dataset_cfg = dataset_config.get_config("source_dataset")
 
-    obj_insert_config_rel_path = demo_dataset_cfg.get("obj_insert_config_path", "configs/obj_insert_config.yml")
+    obj_insert_config_rel_path = source_dataset_cfg.get("obj_insert_config_path", "configs/obj_insert_config.yml")
     if not os.path.isabs(obj_insert_config_rel_path):
         project_root = get_project_root_dir()
         obj_insert_config_path = os.path.join(project_root, obj_insert_config_rel_path)
@@ -483,9 +483,9 @@ def generate_data_with_group(bg_index: int):
         
         mesh_list.append(mesh)
     
-    dataset = DataFrameFactory.get_data_frame(dataset_type, bg_index, demo_dataset_cfg)
+    dataset = DataFrameFactory.get_data_frame(dataset_type, bg_index, source_dataset_cfg)
     dataset_output = DataFrameFactory.get_output_data_frame(dataset_type, dataset_output_type, bg_index,
-                                                            dataset_config.get_config("aug_dataset"))
+                                                            dataset_config.get_config("generated_dataset"))
 
     road_pc, non_road_pc = road_split.split_pcd_road(bg_index, dataset.get_point_cloud_path(),
                                                      dataset.road_split_label_dir,

@@ -1,6 +1,6 @@
 project:
   dataset:
-    name: "demo_dataset"
+    name: "source_dataset"
     config: "configs.dataset.semantic_kitti.yml"
 
   assets:

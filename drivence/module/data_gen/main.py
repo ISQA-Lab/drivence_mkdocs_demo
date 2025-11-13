@@ -22,11 +22,11 @@ def lidar_pipeline(ray_casting_lidar, label_lidar_gen, lidar_scene_info, shapene
     bounding_box_dicts, car_list = get_mesh_and_bounding_box(lidar_scene_info, shapenet_loader,
                                                              lidar.yaw_rotation_counterclockwise)
 
-    dataset_type = dataset_config.get_config("demo_dataset").get("dataset_type", "")
-    dataset_output_type = dataset_config.get_config("demo_dataset").get("dataset_output_type", "")
+    dataset_type = dataset_config.get_config("source_dataset").get("dataset_type", "")
+    dataset_output_type = dataset_config.get_config("source_dataset").get("dataset_output_type", "")
     
-    dataset = DataFrameFactory.get_data_frame(dataset_type, lidar_scene_info.bg_index, dataset_config.get_config("demo_dataset"))
-    dataset_output = DataFrameFactory.get_output_data_frame(dataset_type, dataset_output_type, lidar_scene_info.bg_index, dataset_config.get_config("aug_dataset"))
+    dataset = DataFrameFactory.get_data_frame(dataset_type, lidar_scene_info.bg_index, dataset_config.get_config("source_dataset"))
+    dataset_output = DataFrameFactory.get_output_data_frame(dataset_type, dataset_output_type, lidar_scene_info.bg_index, dataset_config.get_config("generated_dataset"))
     
     labels = dataset.get_label()
     calib_info = dataset.get_calibration()

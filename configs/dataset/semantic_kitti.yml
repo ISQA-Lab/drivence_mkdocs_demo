@@ -13,25 +13,16 @@ directory_tree: &directory_tree
 
   depth_format: "real_distance"
 
-
-dataset:
-  name: semantic_kitti
-  root_dir: "_data/semanticKITTI/dataset"
-  split: "sequences/08"
-  <<: *directory_tree
-  occlusion_th: 0.95
-
-
-aug_dataset:
-  name: semantic_kitti_aug
+generated_dataset:
+  name: semantic_kitti_generated
   root_dir: "_outputs/semanticKITTI"
   split: "sequences/08"
-  output_dir: "_outputs/semanticKITTI/sequences/08"
+  output_dir: "_outputs/semanticKITTI_test/sequences/08"
   <<: *directory_tree
 
 
-demo_dataset:
-  name: semantic_kitti_demo
+source_dataset:
+  name: semantic_kitti_source
   root_dir: "_data/semanticKITTI/dataset"
   split: "sequences/08"
   <<: *directory_tree

@@ -130,25 +130,25 @@ if __name__ == '__main__':
     parser.add_argument(
         '--original_gt', '-og',
         type=str,
-        default="/home/atri/WD_Passport/semanticKITTI/dataset/sequences/08_i0",
+        default="/home/atri/WD_Passport/semanticKITTI/dataset/sequences/08_i0", # TODO
         help='Original GT labels directory. Defaults to %(default)s',
     )
     parser.add_argument(
         '--original_pred', '-op',
         type=str,
-        default="./RQ2/0/insert_0",
+        default="./RQ2/0/insert_0", # TODO
         help='Original predictions directory. Defaults to %(default)s',
     )
     parser.add_argument(
         '--transformed_gt', '-tg',
         type=str,
-        default="/home/atri/WD_Passport/semanticKITTI/dataset/sequences/08_i3",
+        default="/home/atri/WD_Passport/semanticKITTI/dataset/sequences/08_i3", # TODO
         help='Transformed GT labels directory. Defaults to %(default)s',
     )
     parser.add_argument(
         '--transformed_pred', '-tp',
         type=str,
-        default="./RQ2/2/insert_3",
+        default="./RQ2/2/insert_3", # TODO
         help='Transformed predictions directory. Defaults to %(default)s',
     )
     parser.add_argument(
