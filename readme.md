@@ -26,9 +26,8 @@ pip install lidar_core_dist/lidar_core-1.0.0-py3-none-any.whl
 
 ## Download Datasets and Object Assets
 - Download SemanticKITTI datasets from this [link](https://semantic-kitti.org/dataset.html) to `Selda/_data/semanticKITTI`
-- We provide both a tiny version (for quick start and debugging) and the full version of the object dataset. You can download them via the links below:
-- [Download object assets (tiny)](https://semantic-kitti.org/dataset.html)
-- [Download object assets (complete)](https://semantic-kitti.org/dataset.html)
+- We provide both a tiny version (for quick start and debugging) and the full version of the object dataset. You can download them via the link below:
+  - [Download object assets](https://pan.baidu.com/s/1mw7g5woOSc67H1LvJC7TGg?pwd=d3sz)
 ## Usage
 ### Configuration
 Selda is highly configurable via YAML files under `configs/`. You can directly edit these files to control asset loading, dataset paths, physics simulation, and test generation behavior
