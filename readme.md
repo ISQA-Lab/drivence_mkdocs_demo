@@ -128,7 +128,8 @@ All SUTs must output `.label` predictions in **SemanticKITTI format** (see model
 |-------|------|
 | **CENet** | [huixiancheng/CENet](https://github.com/huixiancheng/CENet) |
 | **LSK3DNet** | [FengZicai/LSK3DNet](https://github.com/FengZicai/LSK3DNet) |
-| **PVKD & Cylinder3D** | [cardwing/codes-for-pvkd](https://github.com/cardwing/codes-for-pvkd) |
+| **PVKD** | [cardwing/codes-for-pvkd](https://github.com/cardwing/codes-for-pvkd) |
+| **Cylinder3D** | [xinge008/Cylinder3D](https://github.com/xinge008/Cylinder3D) |
 | **SalsaNext** | [TiagoCortinhal/SalsaNext](https://github.com/TiagoCortinhal/SalsaNext) |
 
 

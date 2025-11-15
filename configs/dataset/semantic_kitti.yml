@@ -17,7 +17,7 @@ generated_dataset:
   name: semantic_kitti_generated
   root_dir: "_outputs/semanticKITTI"
   split: "sequences/08"
-  output_dir: "_outputs/semanticKITTI_test/sequences/08"
+  output_dir: "_outputs/semanticKITTI/sequences/08"
   <<: *directory_tree
 
 
