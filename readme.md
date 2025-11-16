@@ -12,6 +12,26 @@ Figure above presents the high-level workflow of Selda. Given a background LiDAR
   <img src="src/selda.gif" alt="selda.gif">
 </p>
 
+## The structure of the repository
+Folder Structure:
+
+```
+Selda
+├── _assets     
+│   └── objects                          # object database                 
+├── _data							
+│   ├── semanticKITTI                    # SemanticKITTI dataset
+├── configs                              # Selda tool configuration
+├── drivence                             # Core Selda working code
+├── entry                                # Entry points for Selda
+├── eval_tools                           # Tools for evaluation
+├── lidar_core                           # Package building for Selda lidar module
+├── scene_example                        # Example scene JSON files
+├── selda_rq_scripts                     # Scripts for experiments
+├── build_script.py                      # Package building script
+├── demo.py                              # Quick-start demo
+└── main.py                              # Selda main file
+```
 ## Installation
 
 We implement the Selda upon PyTorch 2.8.0 and Python 3.9.0. All experiments are conducted on a server with a 13th Gen Intel Core i7-13650HX CPU (2.60 GHz), 16 GB RAM, and an NVIDIA GeForce RTX 4060 Laptop GPU (8 GB VRAM).
