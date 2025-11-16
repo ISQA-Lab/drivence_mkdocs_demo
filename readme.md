@@ -2,9 +2,11 @@
 
 This repository provides the code of the paper "**Selda: Semantic-Aware LiDAR Perception Testing via Realistic and Diverse Entity Insertion**"
 
+[[website]](https://sites.google.com/view/selda-main)
+
 ![img1.jpg](src/img1.jpg)
 
-Selda employs a semantic-aware and physics-guided approach to render realistic and diverse entity instances using a virtual LiDAR sensor for testing LiDAR-based semantic perception systems   
+Selda employs a semantic-aware and physics-guided approach to render realistic and diverse entity instances using a virtual LiDAR sensor for testing LiDAR-based semantic perception systems.
 
 Figure above presents the high-level workflow of Selda. Given a background LiDAR point cloud scene and an entity instance selected from a large-scale semantic entity database, Selda first executes the semantic entity insertion operator to determine valid compositions such as single entities or structured interactions like dog-walker and generate physically plausible poses constrained by spatial and semantic scene context. Then the semantic-aware LiDAR simulation module renders the selected entities into high-fidelity point clouds simulating geometry intensity and per-point semantic labels based on a physics-based LiDAR model RCLB that accounts for laser propagation surface reflectivity incidence angle and atmospheric effects. The module further integrates the rendered entity point clouds into the original scene while rigorously handling occlusion. These components form Selda’s semantic-aware test data generation pipeline. Finally the framework boosts testing efficiency and error exposure via a semantic diversity-guided strategy which actively selects transformations that maximize categorical balance measured by Gini impurity enabling scalable automated discovery of perception failures through semantic-level metamorphic relations.
 
