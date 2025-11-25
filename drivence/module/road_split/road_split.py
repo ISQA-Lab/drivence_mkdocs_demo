@@ -17,13 +17,45 @@ def load_road_split_labels(label_path: str) -> list:
 
 
 class RoadSplit(object):
+    """
+    路面点云分割基类，定义路面点云处理的核心接口和基础方法。
+
+    核心功能：
+    1. 提供图像视野（FOV）内路面点云的筛选方法；
+    2. 定义路面点云与非路面点云的分割接口（需子类实现具体分割逻辑）；
+    3. 适配不同场景的点云输入格式，支持语义标签辅助分割（可选）。
+    """
     def __init__(self, img_height, img_width):
+        """
+        初始化路面分割器，配置图像尺寸（用于FOV筛选）。
+
+        Args:
+            img_height (int): 图像高度（像素），对应点云投影后的Y轴范围；
+            img_width (int): 图像宽度（像素），对应点云投影后的X轴范围。
+        """
         self.img_height = img_height
         self.img_width = img_width
 
     def get_pc_road_in_img(self, pts_img: numpy.ndarray, pts_rect_depth: numpy.ndarray,
                            points: numpy.ndarray) -> numpy.ndarray:
+        """
+        筛选出位于图像视野（FOV）内的点云（基于点云投影后的图像坐标和深度）。
 
+        核心逻辑：
+        1. 校验点云投影后的图像坐标是否在图像尺寸范围内（X∈[0, img_width)，Y∈[0, img_height)）；
+        2. 校验点云深度是否有效（≥0）；
+        3. 基于上述条件筛选出有效点云，返回视野内的点云数据。
+
+        Args:
+            pts_img (numpy.ndarray): 点云投影到图像平面的坐标数组，形状为 (N, 2)，
+                每行对应 [u, v]（图像X、Y像素坐标）；
+            pts_rect_depth (numpy.ndarray): 点云的深度数组（矩形坐标系下），形状为 (N,)，
+                每个元素为对应点的深度值（需≥0才有效）；
+            points (numpy.ndarray): 原始3D点云数组，形状为 (N, 3)，每行对应 [x, y, z] 坐标。
+
+        Returns:
+            numpy.ndarray: 图像视野内的有效点云数组，形状为 (M, 3)，M≤N。
+        """
         assert points.shape[1] == 3
         img_shape = (self.img_height, self.img_width)
         val_flag_1 = np.logical_and(pts_img[:, 0] >= 0, pts_img[:, 0] < img_shape[1])
@@ -35,6 +67,26 @@ class RoadSplit(object):
 
     def split_pcd_road(self, bg_index: int, bg_pc_path: str, save_road_label_dir: str, log_dir: str,
                        insert_location="road", semantic_label_dir=None) -> Tuple[numpy.ndarray, numpy.ndarray]:
+        """
+        分割背景点云为路面点云和非路面点云（基类抽象接口，需子类实现具体分割逻辑）。
+
+        子类需根据场景需求实现分割算法（如基于语义标签、高程阈值、地面拟合等），
+        返回分割后的路面点云和非路面点云，支持保存分割结果和日志。
+
+        Args:
+            bg_index (int): 背景索引（如数据集帧号、场景序列号），用于标识当前处理的背景；
+            bg_pc_path (str): 背景点云文件路径（绝对/相对路径），用于读取原始背景点云；
+            save_road_label_dir (str): 路面分割结果保存目录（如保存路面点云、语义标签文件）；
+            log_dir (str): 日志保存目录（用于记录分割过程中的关键信息、异常日志）；
+            insert_location (str, 可选): 插入位置标识（默认 "road"，用于区分分割场景，如路面、人行道等）；
+            semantic_label_dir (Optional[str], 可选): 语义标签文件目录（若基于语义标签分割，需读取该目录下的标签文件），
+                默认为 None（不使用语义标签辅助分割）。
+
+        Returns:
+            Tuple[numpy.ndarray, numpy.ndarray]: 分割结果，格式为 (road_pc, non_road_pc)：
+                - road_pc: 路面点云数组，形状为 (M, 3+)；
+                - non_road_pc: 非路面点云数组，形状为 (K, 3+)。
+        """
         raise NotImplementedError("RoadSplit.split_pcd_road must be implemented by subclasses")
 
 

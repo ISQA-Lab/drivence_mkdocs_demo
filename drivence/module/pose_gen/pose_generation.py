@@ -12,8 +12,19 @@ import os
 
 
 class PoseGenerator(object):
+    """
+    姿态生成器类，用于为待插入场景的网格模型生成无碰撞、贴合路面的3D姿态（位置+偏航角）。
 
+    核心功能：
+    1. 基于路面点云采样候选位置，确保模型贴合地面；
+    2. 进行路面有效性校验（避免模型落在非路面区域）；
+    3. 进行碰撞检测（避免与背景物体、已插入物体重叠）；
+    4. 支持最大尝试次数限制，确保流程高效终止。
+    """
     def __init__(self):
+        """
+        初始化姿态生成器，配置核心参数和依赖组件。
+        """
         self.max_try_pose_num = 50
         self.collision_detector = CollisionDetector()
         self.max_non_road_points_limit = 300
@@ -22,17 +33,26 @@ class PoseGenerator(object):
                       non_road_pc: numpy.ndarray, init_objs_box3d_corners: numpy.ndarray,
                       objs_box3d_corners: numpy.ndarray) -> Tuple[List[float], float]:
         """
-        Generate a collision-free pose for a single mesh.
+        为单个网格模型生成无碰撞的3D姿态（位置+绕Z轴偏航角）。
+
+        核心流程：
+        1. 循环尝试生成姿态（最多max_try_pose_num次）；
+        2. 采样路面点作为候选位置，生成偏航角，变换网格模型；
+        3. 校验模型是否在路面上（非路面点数不超过阈值）；
+        4. 校验模型是否与背景物体、已插入物体碰撞；
+        5. 找到满足条件的姿态则返回，全部尝试失败则返回None。
 
         Args:
-            init_mesh_obj: Candidate mesh to be inserted.
-            road_pc_input: Candidate ground points.
-            non_road_pc: Non-ground points for exclusion checks.
-            init_objs_box3d_corners: Bounding boxes of the original background objects.
-            objs_box3d_corners: Bounding boxes of the already inserted objects.
+            init_mesh_obj (o3d.geometry.TriangleMesh): 待插入的候选网格模型（原始未变换状态）；
+            road_pc_input (numpy.ndarray): 路面点云（用于采样候选位置，确保模型贴合地面），形状为 (N, 3+)；
+            non_road_pc (numpy.ndarray): 非路面点云（用于校验模型是否落在路面上），形状为 (M, 3+)；
+            init_objs_box3d_corners (numpy.ndarray): 原始背景物体的3D包围盒角点数组，形状为 (K, 8, 3)，
+                K为背景物体数量，每个物体对应8个3D角点；
+            objs_box3d_corners (numpy.ndarray): 已插入物体的3D包围盒角点数组，格式与 init_objs_box3d_corners 一致。
 
         Returns:
-            (position, yaw_degree) if a valid pose is found; otherwise None.
+            Tuple[List[float], float]: 有效姿态（位置+偏航角），格式为 ([x, y, z], yaw_degree)；
+                若所有尝试均失败，返回 None。
         """
         max_try_pose_num = self.max_try_pose_num
         while max_try_pose_num > 0:
@@ -67,14 +87,22 @@ class PoseGenerator(object):
     def _generate_pose_detail(self, mesh_obj: o3d.geometry.TriangleMesh, road_pc_input: numpy.ndarray) -> Tuple[
         List[float], float]:
         """
-        Internal pose search that samples from road points.
+        内部姿态采样方法：基于路面点云随机采样候选位置，结合网格尺寸调整Z轴高度，随机生成偏航角。
+
+        核心逻辑：
+        1. 限制最大采样次数（40次），避免无限循环；
+        2. 过滤路面点云（仅保留X>5的区域，可通过注释代码扩展过滤规则）；
+        3. 随机采样路面点，校验采样区域的点云密度（避免稀疏区域）；
+        4. 根据网格高度调整Z轴位置（确保模型底部贴合路面）；
+        5. 随机生成偏航角（根据Y坐标正负调整方向）。
 
         Args:
-            mesh_obj: Candidate mesh.
-            road_pc_input: Road surface points.
+            mesh_obj (o3d.geometry.TriangleMesh): 待插入的候选网格模型（用于获取尺寸信息）；
+            road_pc_input (numpy.ndarray): 路面点云（用于采样候选位置），形状为 (N, 3+)。
 
         Returns:
-            (position, yaw_degree) when successful, otherwise (None, None).
+            Tuple[List[float], float]: 候选姿态（[x, y, z], yaw_degree）；
+                若采样失败（如无可用路面点、密度校验多次失败），返回 (None, None)。
         """
         cnt = 0
         min_x = 7
@@ -142,15 +170,17 @@ class PoseGenerator(object):
     def transform_mesh_by_pose(mesh_obj: o3d.geometry.TriangleMesh, shift: List[float] = None,
                                rotation: float = None) -> o3d.geometry.TriangleMesh:
         """
-        Apply translation and yaw rotation to a mesh.
+        静态方法：根据姿态（平移+偏航角）变换网格模型。
+
+        变换顺序：先平移（基于shift参数），后绕Z轴旋转（基于rotation参数，单位为度）。
 
         Args:
-            mesh_obj: Mesh to transform.
-            shift: Translation vector.
-            rotation: Rotation around the Z axis in degrees.
+            mesh_obj (o3d.geometry.TriangleMesh): 待变换的网格模型；
+            shift (List[float], 可选): 平移向量，格式为 [x, y, z]，默认None（不平移）；
+            rotation (float, 可选): 绕Z轴的偏航角（单位：度），默认None（不旋转）。
 
         Returns:
-            Transformed mesh.
+            o3d.geometry.TriangleMesh: 变换后的网格模型（原地变换，返回原对象）。
         """
         if shift is not None:
             mesh_obj.translate(shift)
@@ -163,14 +193,14 @@ class PoseGenerator(object):
     @staticmethod
     def scale_mesh(mesh_obj: o3d.geometry.TriangleMesh, scale_ratio: float) -> o3d.geometry.TriangleMesh:
         """
-        Uniformly scale a mesh around its center.
+        静态方法：对网格模型进行均匀缩放（围绕网格中心点）。
 
         Args:
-            mesh_obj: Mesh to scale.
-            scale_ratio: Scaling factor.
+            mesh_obj (o3d.geometry.TriangleMesh): 待缩放的网格模型；
+            scale_ratio (float): 缩放系数（1.0表示不缩放，>1放大，<1缩小）。
 
         Returns:
-            Scaled mesh.
+            o3d.geometry.TriangleMesh: 缩放后的网格模型（原地缩放，返回原对象）。
         """
         if scale_ratio == 1:
             pass
@@ -180,14 +210,18 @@ class PoseGenerator(object):
 
     def _is_on_road(self, mesh_obj: o3d.geometry.TriangleMesh, non_road_pc: numpy.ndarray) -> bool:
         """
-        Detect whether the mesh overlaps non-road points.
+        校验网格模型是否落在路面上：通过统计模型包围盒内的非路面点数判断。
+
+        核心逻辑：若模型包围盒内包含的非路面点数≥阈值，则判定为未在路面上；否则判定为在路面上。
 
         Args:
-            mesh_obj: Mesh to test.
-            non_road_pc: Points that should remain obstacle-free.
+            mesh_obj (o3d.geometry.TriangleMesh): 待校验的网格模型（已变换到候选姿态）；
+            non_road_pc (numpy.ndarray): 非路面点云，形状为 (M, 3+)。
 
         Returns:
-            True if the mesh stays on the road surface, False otherwise.
+            bool: 模型是否在路面上的结果：
+                - True：包围盒内非路面点数 < 阈值（在路面上）；
+                - False：包围盒内非路面点数 ≥ 阈值（未在路面上）。
         """
         box = mesh_obj.get_oriented_bounding_box()
         non_road_pcd = format_convert.pc_numpy_2_pcd(non_road_pc)
@@ -201,20 +235,33 @@ class PoseGenerator(object):
 
 def generate_group_pose_from_road(road_pc_valid, non_road_pc, calib_info, dataset, mesh_list, group_members_indices, relative_displacement_list, relative_rotation_list=None):
     """
-    Generate poses for groups of meshes with optional relative offsets.
+    为分组的网格模型生成姿态（位置+偏航角），支持组内模型基于基准模型的相对偏移（位移+旋转），
+    确保组内模型无碰撞、贴合路面，且不与背景物体/已插入物体重叠。
+
+    核心逻辑：
+    1. 为每个分组选择一个基准模型，生成其无碰撞的基础姿态；
+    2. 组内其他模型基于基准姿态和预设的相对偏移（位移+旋转）计算自身姿态；
+    3. 校验组内所有模型与背景物体的碰撞情况，整体通过则保留组内所有姿态；
+    4. 收集所有模型的最终姿态，返回与输入mesh_list顺序一致的结果。
 
     Args:
-        road_pc_valid: Road surface points available for placement.
-        non_road_pc: Points that represent obstacles.
-        calib_info: Calibration records for the background scene.
-        dataset: Dataset frame used for collision queries.
-        mesh_list: List of meshes to position.
-        group_members_indices: Indices describing each insertion group.
-        relative_displacement_list: Per-mesh displacement relative to the group base.
-        relative_rotation_list: Optional per-mesh rotation offset (radians).
+        road_pc_valid (np.ndarray): 有效路面点云（用于基准模型姿态采样），形状为 (N, 3+)；
+        non_road_pc (np.ndarray): 非路面点云（用于校验模型是否在路面上），形状为 (M, 3+)；
+        calib_info (dict): 背景场景的标定信息（用于提取背景物体包围盒）；
+        dataset: 数据集帧对象（需支持 get_label() 方法，若有 get_label_2() 方法则用于生成目标检测标注）；
+        mesh_list (List[o3d.geometry.TriangleMesh]): 待生成姿态的所有网格模型列表，
+            顺序与最终返回的姿态列表一致；
+        group_members_indices (List[List[int]]): 分组索引列表，每个元素为一个子列表，
+            子列表包含对应分组内模型在 mesh_list 中的索引（如 [[0,1], [2,3,4]] 表示2个分组）；
+        relative_displacement_list (List[List[float]]): 每个模型相对于其分组基准模型的位移偏移列表，
+            长度与 mesh_list 一致，每个元素为 [dx, dy, dz]（单位：米）；
+        relative_rotation_list (Optional[List[float]], 可选): 每个模型相对于其分组基准模型的旋转偏移列表，
+            长度与 mesh_list 一致，每个元素为绕Z轴的旋转角（单位：弧度），默认 None（无旋转偏移）。
 
     Returns:
-        Tuple of (positions, yaw_degrees) aligned with the order of mesh_list.
+        Tuple[List[Optional[List[float]]], List[Optional[float]]]: 所有模型的姿态结果，与 mesh_list 顺序一致：
+            - 第一个元素：位置列表，每个元素为 [x, y, z]（保留2位小数），失败则为 None；
+            - 第二个元素：偏航角列表（单位：度），失败则为 None。
     """
     pose_generator = PoseGenerator()
     obj_lidar_positions = [None] * len(mesh_list)

@@ -7,15 +7,29 @@ from typing import Optional
 
 
 def extract_initial_objs_from_bg(calib_info, label, label_2_path: Optional[str] = None):
-    """Extract background objects bounding boxes for collision detection.
-    
+    """
+    从背景场景中提取物体的3D包围盒（LiDAR坐标系下），用于后续碰撞检测。
+
+    核心逻辑：
+    1. 优先使用 SemanticKITTI 格式的 label_2 文件（若路径有效），通过 `extract_objs_from_label2` 提取包围盒；
+    2. 若未提供 label_2 文件，则使用原始 KITTI 格式的标签对象，遍历每个物体并提取其 LiDAR 坐标系下的3D角点；
+    3. 处理空输入场景（无标签/无有效文件），返回形状为 (0, 8, 3) 的空数组，确保输出格式一致性。
+
     Args:
-        calib_info: Calibration info (can be None for SemanticKITTI)
-        label: KITTI label object (can be None for SemanticKITTI)
-        label_2_path: Path to label_2 file (used for SemanticKITTI when label is None)
-    
+        calib_info (Optional[dict]): 标定信息字典（包含相机-激光雷达外参等，用于坐标转换），
+            SemanticKITTI 场景下可为 None；
+        label (Optional[List[KITTIObject]]): 原始 KITTI 格式的标签对象列表，每个元素为一个物体的标签信息，
+            需支持 `get_box3d_corners_in_lidar_coord` 方法（提取LiDAR坐标系下的3D角点），
+            SemanticKITTI 场景下可为 None；
+        label_2_path (Optional[str], 可选): SemanticKITTI 格式的 label_2 文件路径（文本文件），
+            用于 SemanticKITTI 场景下提取物体包围盒，默认 None。
+
     Returns:
-        Background objects bounding boxes (N, 8, 3) in LiDAR coordinate
+        np.ndarray: 背景物体的3D包围盒角点数组，形状为 (N, 8, 3)：
+            - N：背景物体数量（无物体时 N=0）；
+            - 8：每个3D包围盒的8个角点；
+            - 3：每个角点的 X/Y/Z 坐标（LiDAR坐标系下）；
+            若无背景物体，返回形状为 (0, 8, 3) 的空数组（避免后续处理维度错误）。
     """
     # If label_2_path is provided, use it for SemanticKITTI
     if label_2_path is not None and os.path.exists(label_2_path):
@@ -32,14 +46,28 @@ def extract_initial_objs_from_bg(calib_info, label, label_2_path: Optional[str] 
 
 
 def extract_objs_from_label2(label_2_path: str, calib_info) -> np.ndarray:
-    """Extract bounding boxes from KITTI-format label_2 file.
-    
+    """
+    从 KITTI 格式的 label_2 文本文件中提取物体的3D包围盒，并转换为 LiDAR 坐标系下的8个角点。
+
+    核心逻辑：
+    1. 校验 label_2 文件有效性，读取文件中每行的物体标注信息；
+    2. 若未提供标定信息，尝试从数据集目录中自动推断并读取 calib.txt（KITTI 标定文件）；
+    3. 解析 label_2 每行的物体参数（尺寸、矩形坐标系中心、朝向角）；
+    4. 将矩形坐标系（rect）下的物体中心转换为 LiDAR 坐标系；
+    5. 构建 LiDAR 坐标系下的7维包围盒（中心+尺寸+朝向），并转换为8个3D角点。
+
     Args:
-        label_2_path: Path to label_2 file
-        calib_info: Calibration info (can be None, will try to read from dataset)
-    
+        label_2_path (str): KITTI 格式 label_2 文件的路径（绝对路径或相对路径），
+            文件每行存储一个物体的标注信息，格式遵循 KITTI 标准；
+        calib_info (Optional[dict], 可选): 标定信息字典（包含 R0、Tr 等外参），
+            若为 None，将尝试从 label_2 文件所在目录的上级目录中自动查找 calib.txt，默认 None。
+
     Returns:
-        Background objects bounding boxes (N, 8, 3) in LiDAR coordinate
+        np.ndarray: LiDAR 坐标系下的物体3D包围盒角点数组，形状为 (N, 8, 3)：
+            - N：有效提取的物体数量（无有效物体时 N=0）；
+            - 8：每个3D包围盒的8个角点；
+            - 3：每个角点的 X/Y/Z 坐标（LiDAR 坐标系下）；
+            若无有效物体或文件读取失败，返回形状为 (0, 8, 3) 的空数组，确保输出格式一致性。
     """
     from drivence.utils.box_utils import lidar_boxesn7_to_corners3d
     from drivence.module.label_2_generator.label_2_generator import read_kitti_calib, rect_to_lidar

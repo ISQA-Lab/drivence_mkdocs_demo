@@ -1,0 +1,39 @@
+site_name: selda
+site_url:
+theme:
+  name: material             # ← 关键：RTD 风格
+  language: zh
+  highlightjs: true
+
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google  # 必须与代码中的文档字符串风格一致
+            docstring_section_style: list  # 强制以列表形式展示参数/返回值
+            show_signature_annotations: true  # 显示参数类型注解
+            show_default: true  # 显示默认值（如 optional 参数）
+            show_returns: true  # 显示返回值部分
+
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - footnotes
+  - def_list
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+
+
+nav:
+  - 首页: index.md
+  - 模块文档:
+    - drivence 模块: drivence.md
+
+
+
+

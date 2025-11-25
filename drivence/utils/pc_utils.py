@@ -10,6 +10,21 @@ def load_pc_xyzr(path: str):
 
 
 def load_pc(path: str, demension=4, format=None):
+    """
+    加载点云文件（支持 .npy 和 .bin 格式），自动识别格式或按指定格式解析。
+
+    核心逻辑：
+    1. 若未指定格式，通过文件后缀自动识别（.npy → "npy"，.bin → "bin"）；
+    2. 调用 _load_pc_detail 执行具体加载逻辑，返回指定维度的点云数组。
+
+    Args:
+        path (str): 点云文件路径（绝对路径或相对路径）；
+        demension (int, 可选): 点云每个点的维度（如4维：X/Y/Z/强度），默认4；
+        format (Optional[str], 可选): 指定文件格式（"npy" 或 "bin"），默认 None（自动识别）。
+
+    Returns:
+        np.ndarray: 加载的点云数组，形状为 (N, demension)，N为点云数量，数据类型为 float32。
+    """
     if format is None:
         if path.split(".")[-1] == "npy":
             format = "npy"
@@ -21,6 +36,17 @@ def load_pc(path: str, demension=4, format=None):
 
 
 def _load_pc_detail(path: str, demension, format):
+    """
+    点云加载核心函数，根据指定格式和维度加载点云（内部使用，不建议外部直接调用）。
+
+    Args:
+        path (str): 点云文件路径；
+        demension (int): 点云维度；
+        format (str): 文件格式（"npy" 或 "bin"）。
+
+    Returns:
+        np.ndarray: 点云数组，形状为 (N, demension)，数据类型为 float32。
+    """
     if format == "npy":
         example = np.load(path).astype(np.float32)
     else:
@@ -33,6 +59,28 @@ def save_point_cloud(file_path, point_cloud):
 
 
 def rotate_points_along_z(points: np.ndarray, angle: np.ndarray, return_type: str = "numpy") -> np.ndarray:
+    """
+    绕 Z 轴旋转批量点云（支持 numpy 数组和 torch 张量输入）。
+
+    核心逻辑：
+    1. 将输入转换为 torch 张量（统一计算逻辑）；
+    2. 构建 Z 轴旋转矩阵（基于旋转角的余弦和正弦）；
+    3. 对点云的 XYZ 坐标应用旋转，保留其他维度（如强度）；
+    4. 按指定格式返回结果（numpy 或 torch 张量）。
+
+    Args:
+        points (np.ndarray): 输入点云数组，形状为 (B, N, D)：
+            - B：批量大小；
+            - N：每个点云的点数；
+            - D：点云维度（≥3，前3维为 XYZ 坐标）；
+        angle (np.ndarray): 旋转角数组，形状为 (B,)，单位为弧度；
+        return_type (str, 可选): 返回格式，默认 "numpy"：
+            - "numpy"：返回 numpy 数组；
+            - "torch"：返回 torch 张量。
+
+    Returns:
+        Union[np.ndarray, torch.Tensor]: 旋转后的点云，形状与输入一致。
+    """
     import torch
     """Rotate batched point clouds around the z-axis."""
     points = numpy_to_torch(points)
@@ -69,7 +117,25 @@ def load_pcd(path: str, return_pcd=False):
 
 
 def get_reflection_intensities_by_objects(intensity_config_dict: dict = None):
-    """Load reflection intensity parameters for each model from the intensity configuration."""
+    """
+    从配置中加载每个模型的反射强度参数（物理参数），支持传入字典或从 YAML 文件读取。
+
+    核心逻辑：
+    1. 优先使用传入的配置字典，否则尝试加载 legacy YAML 文件（未实现）；
+    2. 解析配置中的默认参数和各模型参数，构建模型名称到参数的映射；
+    3. 处理配置缺失或解析失败的情况，返回空字典。
+
+    Args:
+        intensity_config_dict (Optional[dict], 可选): 强度配置字典，默认 None。
+
+    Returns:
+        Dict[str, dict]: 模型名称到强度参数的映射，每个参数字典包含：
+            - p_lambda: 波长相关参数；
+            - kd: 漫反射系数；
+            - m: 表面粗糙度参数；
+            - theta_T: 阈值角度（度）；
+            解析失败时返回空字典。
+    """
     # Prefer the provided dictionary; otherwise, fall back to the YAML file for backward compatibility
     if intensity_config_dict is not None:
         intensity_config = intensity_config_dict
@@ -123,7 +189,25 @@ def get_reflection_intensities_by_objects(intensity_config_dict: dict = None):
 
 
 def calculate_surface_normal_from_tangent_plane(point_xyz, object_points, k_neighbors=10):
-    """Estimate a surface normal by fitting a tangent plane around the query point."""
+    """
+    通过拟合查询点周围的切平面，估计表面法向量和入射角（激光雷达到点的射线与法向量的夹角）。
+
+    核心逻辑：
+    1. 若点云数量不足，返回默认法向量；
+    2. 查找查询点的 k 个最近邻，计算邻域的协方差矩阵；
+    3. 协方差矩阵的最小特征值对应的特征向量即为法向量；
+    4. 调整法向量方向指向激光雷达（原点），计算锐角入射角。
+
+    Args:
+        point_xyz (np.ndarray): 查询点的 XYZ 坐标，形状为 (3,)；
+        object_points (np.ndarray): 物体点云数组，形状为 (M, 3)，M为物体点数；
+        k_neighbors (int, 可选): 用于拟合平面的最近邻数量，默认10。
+
+    Returns:
+        Tuple[np.ndarray, float]:
+            - 表面法向量，形状为 (3,)，已归一化并指向激光雷达；
+            - 入射角（度），范围 0–90 度。
+    """
     # If there are too few points, fall back to a default normal vector
     if len(object_points) < k_neighbors:
         return np.array([0, 0, 1]), 0.0
@@ -167,7 +251,29 @@ def calculate_surface_normal_from_tangent_plane(point_xyz, object_points, k_neig
 
 
 def calculate_physics_based_intensity(model_name, point_xyz, model_config, object_points=None):
-    """Compute physics-based reflection intensity using the Eq.15 radiometric model."""
+    """
+    基于物理辐射测量模型（Lambert-Beckmann 混合模型）计算点的反射强度，参考公式 Eq.15。
+
+    核心逻辑：
+    1. 加载激光雷达系统硬件参数（如发射功率、接收孔径等）；
+    2. 计算点到激光雷达的距离和表面入射角（通过切平面拟合估计法向量）；
+    3. 结合模型物理参数（漫反射系数、表面粗糙度等）和系统参数，计算原始强度；
+    4. 归一化强度到 0–1 范围，适配激光雷达传感器的动态范围。
+
+    Args:
+        model_name (str): 物体模型名称（用于调试或日志，不影响计算）；
+        point_xyz (np.ndarray): 目标点的 3D 坐标（LiDAR 坐标系下），形状为 (3,)；
+        model_config (dict): 模型反射强度物理参数字典，需包含：
+            - p_lambda: 波长相关衰减系数（默认 0.7）；
+            - kd: 漫反射系数（默认 0.95）；
+            - m: 表面粗糙度参数（默认 0.15）；
+            - theta_T: 角度阈值（度，默认 10）；
+        object_points (Optional[np.ndarray], 可选): 物体的完整点云（用于估计表面法向量），
+            形状为 (M, 3)，M 为物体点数，默认 None。
+
+    Returns:
+        float: 归一化后的反射强度（范围 0.0–1.0）。
+    """
     # Retrieve LiDAR system parameters
     params = data()
 
@@ -219,7 +325,27 @@ def calculate_physics_based_intensity(model_name, point_xyz, model_config, objec
 
 
 def pc_numpy_2_pcr_with_instance_intensity(mixed_pc_three_dims, instance_mask, obj_names=None, model_intensity_mapping=None, object_point_clouds=None) -> np.ndarray:
-    """Attach intensity values to a mixed point cloud using instance segmentation metadata."""
+    """
+    基于实例分割掩码，为 3D 点云添加逐点反射强度（支持物理模型计算或默认值）。
+
+    核心逻辑：
+    1. 校验输入点云维度（必须为 3 维 XYZ 坐标）；
+    2. 遍历每个点，根据实例掩码获取对应的模型名称；
+    3. 基于模型的物理参数，通过物理模型计算强度；
+    4. 无配置时使用默认强度，最终返回 (N, 4) 维点云（XYZ+强度）。
+
+    Args:
+        mixed_pc_three_dims (np.ndarray): 3D 点云数组（仅 XYZ 坐标），形状为 (N, 3)，N 为点数；
+        instance_mask (np.ndarray): 实例分割掩码，形状为 (N,)，每个元素为实例索引（对应 obj_names）；
+        obj_names (Optional[List[str]], 可选): 实例名称列表，索引与 instance_mask 对应，默认 None；
+        model_intensity_mapping (Optional[Dict[str, dict]], 可选): 模型名称到物理参数字典的映射，
+            由 get_reflection_intensities_by_objects() 返回，默认 None；
+        object_point_clouds (Optional[Dict[str, np.ndarray]], 可选): 实例点云字典，键为实例唯一标识，
+            值为该实例的点云数组（用于估计法向量），默认 None。
+
+    Returns:
+        np.ndarray: 带强度的点云数组，形状为 (N, 4)，前 3 维为 XYZ 坐标，第 4 维为反射强度（0.0–1.0）。
+    """
     # Ensure each point has three spatial dimensions
     assert mixed_pc_three_dims.shape[1] == 3
     # Total number of points in the mixed point cloud
@@ -301,7 +427,29 @@ def pc_numpy_2_pcr_with_instance_intensity(mixed_pc_three_dims, instance_mask, o
 
 
 def compare_intensity_statistics(pc_bg_intensity, obj_names, instance_mask, obj_intensity, pc_bg_remain, pc_obj_remain):
-    """Compute descriptive statistics for inserted-object intensities."""
+    """
+    计算插入物体的反射强度描述性统计信息（按物体类型和整体汇总）。
+
+    核心逻辑：
+    1. 按物体名称分组，聚合同类物体的所有点强度；
+    2. 计算每组的统计指标（均值、标准差、分位数等）；
+    3. 计算所有插入物体的整体统计指标；
+    4. 标记无点云数据的物体，返回统计结果字典。
+
+    Args:
+        pc_bg_intensity (np.ndarray): 背景点的强度数组，形状为 (B,)，B 为背景点数；
+        obj_names (List[str]): 插入物体的名称列表；
+        instance_mask (np.ndarray): 实例分割掩码，形状为 (O,)，O 为插入物体点数；
+        obj_intensity (np.ndarray): 插入物体的强度数组，形状为 (O,)；
+        pc_bg_remain (np.ndarray): 背景点云（XYZ 坐标），形状为 (B, 3)；
+        pc_obj_remain (np.ndarray): 插入物体点云（XYZ 坐标），形状为 (O, 3)。
+
+    Returns:
+        Dict[str, dict]: 强度统计结果字典，包含：
+            - 每个物体的统计指标（count、mean、std、min、max、median、q25、q75、iqr、cv）；
+            - 整体统计指标（inserted_count、inserted_mean、inserted_std 等）；
+            - 无点云物体的警告信息。
+    """
     statistics = {}
  
     # Per-object intensity statistics
@@ -388,7 +536,28 @@ def compare_intensity_statistics(pc_bg_intensity, obj_names, instance_mask, obj_
 
 
 def create_fused_pointcloud_with_intensity(pc_remain, pc_bg_intensity, pcd_obj_numpy, instance_mask, obj_names=None, bg_keep_mask=None, bg_remain_count=None, intensity_config=None):
-    """Fuse background and object points while assigning per-point intensity values."""
+    """
+    融合背景点云和插入物体点云，为所有点分配反射强度（背景保留原始强度，物体基于物理模型计算）。
+
+    核心逻辑：
+    1. 确定背景点和物体点的数量，提取背景原始强度；
+    2. 处理背景强度的长度匹配（裁剪或填充）；
+    3. 为插入物体点计算强度（基于实例配置）；
+    4. 融合背景和物体的强度，返回 (N, 4) 维融合点云。
+
+    Args:
+        pc_remain (np.ndarray): 待融合的点云（背景+物体，仅 XYZ 坐标），形状为 (N, 3)；
+        pc_bg_intensity (np.ndarray): 原始背景点的强度数组，形状为 (B_orig,)；
+        pcd_obj_numpy (np.ndarray): 插入物体的点云（仅 XYZ 坐标），形状为 (O, 3)；
+        instance_mask (np.ndarray): 物体实例分割掩码，形状为 (O,)；
+        obj_names (Optional[List[str]], 可选): 物体名称列表，默认 None；
+        bg_keep_mask (Optional[np.ndarray], 可选): 背景点保留掩码（布尔数组），形状为 (B_orig,)，默认 None；
+        bg_remain_count (Optional[int], 可选): 保留的背景点数量，默认 None；
+        intensity_config (Optional[dict], 可选): 强度配置字典（传递给 get_reflection_intensities_by_objects），默认 None。
+
+    Returns:
+        np.ndarray: 融合后的点云数组，形状为 (N, 4)，前 3 维为 XYZ 坐标，第 4 维为反射强度。
+    """
     # Determine counts for background and object points
     if bg_remain_count is not None:
         bg_count = bg_remain_count
@@ -479,7 +648,15 @@ def create_fused_pointcloud_with_intensity(pc_remain, pc_bg_intensity, pcd_obj_n
 
 
 def pc_numpy_2_pcr(mixed_pc_three_dims) -> np.ndarray:
-    """Pad a 3D point cloud with a zero-intensity column."""
+    """
+    为 3D 点云（XYZ 坐标）添加零值强度列，转换为 4D 点云（XYZ+强度）。
+
+    Args:
+        mixed_pc_three_dims (np.ndarray): 3D 点云数组（仅 XYZ 坐标），形状为 (N, 3)。
+
+    Returns:
+        np.ndarray: 4D 点云数组，形状为 (N, 4)，第 4 维为 0（默认强度）。
+    """
     # Ensure the input has three spatial dimensions
     assert mixed_pc_three_dims.shape[1] == 3
     # Number of points
@@ -491,8 +668,26 @@ def pc_numpy_2_pcr(mixed_pc_three_dims) -> np.ndarray:
 
 
 class PointCloud(object):
+    """
+    点云数据管理类，支持点云存储、反射强度管理、可视化、KD-Tree近邻查询和文件读写。
+
+    核心功能：
+    1. 点云（XYZ）和反射强度（Reflection）的存储与读写；
+    2. 基础可视化（纯点云、反射强度着色可视化）；
+    3. 2D KD-Tree构建与k近邻查询（基于X-Y坐标）；
+    4. 点云文件保存（含强度的完整格式、纯XYZ格式）。
+    """
     # @Test status: Completed
     def __init__(self, point_cloud: np.ndarray = None, reflection: np.ndarray = None):
+        """
+        初始化点云对象。
+
+        Args:
+            point_cloud (Optional[np.ndarray], 可选): 3D点云数组，形状为 (N, 3)，N为点数，
+                每行为 [X, Y, Z] 坐标，默认 None；
+            reflection (Optional[np.ndarray], 可选): 反射强度数组，形状为 (N,) 或 (N, 1)，
+                与点云点数一一对应，默认 None。
+        """
         self.point_cloud = point_cloud
         self.reflection = reflection
         self.kd_tree = None
@@ -507,6 +702,12 @@ class PointCloud(object):
 
     # @Test status: Completed
     def to_numpy_with_reflection(self):
+        """
+        合并点云和反射强度，返回 (N, 4) 格式的点云数组（X-Y-Z-反射强度）。
+
+        Returns:
+            np.ndarray: 合并后的点云数组，形状为 (N, 4)。
+        """
         reflection_column = self.reflection.reshape(-1, 1)
         return np.concatenate((self.point_cloud, reflection_column), axis=1)
 
@@ -533,6 +734,14 @@ class PointCloud(object):
 
     # @Test status: Completed
     def visualize_with_reflection(self):
+        """
+        基于反射强度着色可视化点云（使用 viridis 色彩映射）。
+
+        核心逻辑：
+        1. 归一化反射强度到 0–1 范围；
+        2. 使用 viridis 色彩映射为每个点分配颜色；
+        3. 去除颜色的 alpha 通道，适配 Open3D 格式。
+        """
         pcd = o3d.geometry.PointCloud()
         pcd.points = o3d.utility.Vector3dVector(self.point_cloud)
         reflection_values = self.reflection
@@ -543,12 +752,34 @@ class PointCloud(object):
         o3d.visualization.draw_geometries([pcd])
 
     def get_kd_tree(self, refresh=False):
+        """
+        构建或获取基于 X-Y 坐标的 2D KD-Tree（用于快速近邻查询）。
+
+        Args:
+            refresh (bool, 可选): 是否强制重建 KD-Tree，默认 False（复用缓存）。
+
+        Returns:
+            KDTree: 基于 X-Y 坐标的 KD-Tree 对象。
+        """
         from scipy.spatial import KDTree
         if self.kd_tree is None or refresh:
             self.kd_tree = KDTree(self.point_cloud[:, :2])
         return self.kd_tree
 
     def get_k_nearest_points(self, point, k, refresh=False):
+        """
+        基于 X-Y 坐标查询 k 个最近邻点。
+
+        Args:
+            point (Union[np.ndarray, Tuple[float, float]]): 查询点的 X-Y 坐标，格式为 (2,) 数组或二元组；
+            k (int): 需查询的近邻点数（k ≥ 1）；
+            refresh (bool, 可选): 是否强制重建 KD-Tree，默认 False。
+
+        Returns:
+            Tuple[np.ndarray, np.ndarray]:
+                - 距离数组：形状为 (k,)，存储查询点到每个近邻点的距离；
+                - 索引数组：形状为 (k,)，存储近邻点在原始点云中的索引。
+        """
         tree = self.get_kd_tree(refresh)
         distances, indices = tree.query(point, k=k)
         return distances, indices
