@@ -1,0 +1,3031 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../module/">
+      
+      
+        <link rel="next" href="../logic_scene/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>label_2_generator - drivence</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#drivencemodulelabel_2_generator" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="drivence" class="md-header__button md-logo" aria-label="drivence" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            drivence
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              label_2_generator
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="drivence" class="md-nav__button md-logo" aria-label="drivence" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    drivence
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块文档
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    模块文档
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    drivence
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    drivence
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    assets 模块
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    assets 模块
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    assets_utils
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1_2" id="__nav_2_1_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    objects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    objects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    loader
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dataset 模块
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    entity 模块
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4" id="__nav_2_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    module 模块
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    module 模块
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4_1" id="__nav_2_1_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    data_gen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    data_gen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    main
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4_1_2" id="__nav_2_1_4_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    interface
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_1_4_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_4_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    interface
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    occlusion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    label_2_generator
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    label_2_generator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#drivencemodulelabel_2_generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        drivence.module.label_2_generator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        label_2_generator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.SemanticKITTILabel2Generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SemanticKITTILabel2Generator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SemanticKITTILabel2Generator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.SemanticKITTILabel2Generator.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        __init__
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.SemanticKITTILabel2Generator.generate_label2_from_semantic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        generate_label2_from_semantic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.cluster_points_dbscan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cluster_points_dbscan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.lidar_to_rect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        lidar_to_rect
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.read_kitti_calib" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        read_kitti_calib
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.read_semantic_label" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        read_semantic_label
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.read_velodyne_bin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        read_velodyne_bin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.rect_to_lidar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rect_to_lidar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.write_label2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        write_label2
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logic_scene/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    logic_scene
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pose_gen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pose_gen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../road_split/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    road_split
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    utils 模块
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#drivencemodulelabel_2_generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        drivence.module.label_2_generator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        label_2_generator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.SemanticKITTILabel2Generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SemanticKITTILabel2Generator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SemanticKITTILabel2Generator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.SemanticKITTILabel2Generator.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        __init__
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.SemanticKITTILabel2Generator.generate_label2_from_semantic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        generate_label2_from_semantic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.cluster_points_dbscan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cluster_points_dbscan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.lidar_to_rect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        lidar_to_rect
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.read_kitti_calib" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        read_kitti_calib
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.read_semantic_label" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        read_semantic_label
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.read_velodyne_bin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        read_velodyne_bin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.rect_to_lidar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rect_to_lidar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.module.label_2_generator.label_2_generator.write_label2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        write_label2
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>label_2_generator</h1>
+
+<h3 id="drivencemodulelabel_2_generator">drivence.module.label_2_generator<a class="headerlink" href="#drivencemodulelabel_2_generator" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="drivence.module.label_2_generator.label_2_generator"></a>
+    <div class="doc doc-contents first">
+
+        <p>Label 2 Generator for SemanticKITTI
+Generates KITTI-format label_2 files from semantic labels for collision detection.</p>
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="drivence.module.label_2_generator.label_2_generator.SemanticKITTILabel2Generator" class="doc doc-heading">
+            <code>SemanticKITTILabel2Generator</code>
+
+
+<a href="#drivence.module.label_2_generator.label_2_generator.SemanticKITTILabel2Generator" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Generate KITTI-format label_2 files from semantic labels.</p>
+
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>drivence\module\label_2_generator\label_2_generator.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span>
+<span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span>
+<span class="normal">398</span>
+<span class="normal">399</span>
+<span class="normal">400</span>
+<span class="normal">401</span>
+<span class="normal">402</span>
+<span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span>
+<span class="normal">419</span>
+<span class="normal">420</span>
+<span class="normal">421</span>
+<span class="normal">422</span>
+<span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span>
+<span class="normal">429</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span>
+<span class="normal">435</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">SemanticKITTILabel2Generator</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate KITTI-format label_2 files from semantic labels.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">eps_car</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.2</span><span class="p">,</span> <span class="n">eps_truck</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize label_2 generator.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            eps_car: DBSCAN eps for cars</span>
+<span class="sd">            eps_truck: DBSCAN eps for trucks/buses</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eps_car</span> <span class="o">=</span> <span class="n">eps_car</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eps_truck</span> <span class="o">=</span> <span class="n">eps_truck</span>
+
+        <span class="c1"># DBSCAN eps map for each semantic ID</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dbscan_eps_map</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="mi">10</span><span class="p">:</span> <span class="n">eps_car</span><span class="p">,</span>    <span class="c1"># Car</span>
+            <span class="mi">11</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>        <span class="c1"># Bicycle</span>
+            <span class="mi">13</span><span class="p">:</span> <span class="n">eps_truck</span><span class="p">,</span>  <span class="c1"># Bus</span>
+            <span class="mi">15</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>        <span class="c1"># Motorcycle</span>
+            <span class="mi">18</span><span class="p">:</span> <span class="n">eps_truck</span><span class="p">,</span>  <span class="c1"># Truck</span>
+            <span class="mi">30</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">,</span>        <span class="c1"># Person</span>
+            <span class="mi">31</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>        <span class="c1"># Bicyclist</span>
+            <span class="mi">32</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>        <span class="c1"># Motorcyclist</span>
+            <span class="mi">252</span><span class="p">:</span> <span class="n">eps_car</span><span class="p">,</span>
+            <span class="mi">257</span><span class="p">:</span> <span class="n">eps_truck</span><span class="p">,</span>
+            <span class="mi">258</span><span class="p">:</span> <span class="n">eps_truck</span><span class="p">,</span>
+            <span class="mi">253</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>
+            <span class="mi">254</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">,</span>
+            <span class="mi">255</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>
+            <span class="mi">259</span><span class="p">:</span> <span class="n">eps_car</span><span class="p">,</span>
+        <span class="p">}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_label2_from_semantic</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">frame_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">velodyne_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">semantic_label_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">calib_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">output_path</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        基于激光雷达点云的语义标签，自动生成 KITTI 格式的 label_2 3D 目标检测标注文件。</span>
+
+<span class="sd">        核心流程为“语义筛选→密度聚类→坐标转换→边界框计算→标注写入”，无需人工标注，</span>
+<span class="sd">        可批量将语义分割结果转换为目标检测标注，适配 KITTI 数据集格式要求，支持后续模型训练或评估。</span>
+<span class="sd">        适配车辆、行人等多类目标，通过 DBSCAN 聚类分割同一语义下的不同实例，基于聚类点云计算边界框维度与位置。</span>
+
+<span class="sd">        核心逻辑：</span>
+<span class="sd">        1. 数据读取：加载激光雷达点云、语义标签、传感器标定参数；</span>
+<span class="sd">        2. 数据校验：确保点云与语义标签数量匹配，避免维度不兼容；</span>
+<span class="sd">        3. 语义筛选：按语义ID筛选出各类目标对应的点云子集；</span>
+<span class="sd">        4. 实例聚类：对每类目标点云用 DBSCAN 聚类，分割不同实例（如多辆汽车）；</span>
+<span class="sd">        5. 坐标转换：将聚类点云从激光雷达坐标系转换到矫正后相机坐标系（适配 KITTI 标注规范）；</span>
+<span class="sd">        6. 边界框计算：基于聚类点云的极值计算边界框维度（高/宽/长）和中心坐标；</span>
+<span class="sd">        7. 标注写入：按 KITTI label_2 格式写入标注文件，返回生成结果状态。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            frame_id (int): 帧ID，用于日志输出和错误定位（如“frame_0001”的ID为1）。</span>
+<span class="sd">            velodyne_path (str): 激光雷达点云二进制文件（.bin）的路径（含文件名）。</span>
+<span class="sd">                示例：&quot;/data/kitti/velodyne/000001.bin&quot;、&quot;../dataset/frame_001_velo.bin&quot;。</span>
+<span class="sd">            semantic_label_path (str): 语义标签文件路径（含文件名），支持 .label 或 .npy 格式。</span>
+<span class="sd">                示例：&quot;/data/kitti/semantic/000001.label&quot;、&quot;../dataset/frame_001_sem.npy&quot;。</span>
+<span class="sd">            calib_path (str): KITTI 传感器标定文件（.txt）的路径（含文件名），用于读取坐标转换所需的 R0 和 Tr 矩阵。</span>
+<span class="sd">                示例：&quot;/data/kitti/calib/000001.txt&quot;、&quot;../dataset/frame_001_calib.txt&quot;。</span>
+<span class="sd">            output_path (str): 生成的 KITTI label_2 标注文件输出路径（含文件名）。</span>
+<span class="sd">                示例：&quot;/data/kitti/label_2/000001.txt&quot;、&quot;../output/frame_001_label.txt&quot;。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: 生成结果状态：</span>
+<span class="sd">                - True：标注文件成功生成并写入指定路径；</span>
+<span class="sd">                - False：生成过程中出现错误（如文件缺失、维度不匹配），未生成有效标注。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># Read point cloud</span>
+            <span class="n">pts_lidar</span> <span class="o">=</span> <span class="n">read_velodyne_bin</span><span class="p">(</span><span class="n">velodyne_path</span><span class="p">)</span>
+
+            <span class="c1"># Read semantic labels</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">semantic_label_path</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARN] No semantic labels for frame </span><span class="si">{</span><span class="n">frame_id</span><span class="si">}</span><span class="s2">, skip&quot;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+            <span class="n">sem</span> <span class="o">=</span> <span class="n">read_semantic_label</span><span class="p">(</span><span class="n">semantic_label_path</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">sem</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">pts_lidar</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARN] Mismatch points/labels for frame </span><span class="si">{</span><span class="n">frame_id</span><span class="si">}</span><span class="s2">, skip&quot;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+            <span class="c1"># Read calibration</span>
+            <span class="n">R0</span><span class="p">,</span> <span class="n">Tr</span> <span class="o">=</span> <span class="n">read_kitti_calib</span><span class="p">(</span><span class="n">calib_path</span><span class="p">)</span>
+
+            <span class="c1"># Generate boxes</span>
+            <span class="n">boxes</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">sem_id</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">SEMANTIC_TO_NAME</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">mask</span> <span class="o">=</span> <span class="n">sem</span> <span class="o">==</span> <span class="n">sem_id</span>
+                <span class="n">pts_c</span> <span class="o">=</span> <span class="n">pts_lidar</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">pts_c</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="n">eps</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dbscan_eps_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">sem_id</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+                <span class="n">clusters</span> <span class="o">=</span> <span class="n">cluster_points_dbscan</span><span class="p">(</span><span class="n">pts_c</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span><span class="n">eps</span><span class="p">,</span> <span class="n">min_samples</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+                <span class="k">for</span> <span class="n">cl</span> <span class="ow">in</span> <span class="n">clusters</span><span class="p">:</span>
+                    <span class="c1"># Transform cluster points from LiDAR to rect camera coordinate</span>
+                    <span class="n">cl_rect</span> <span class="o">=</span> <span class="n">lidar_to_rect</span><span class="p">(</span><span class="n">cl</span><span class="p">,</span> <span class="n">R0</span><span class="p">,</span> <span class="n">Tr</span><span class="p">)</span>
+                    <span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">z_min</span> <span class="o">=</span> <span class="n">cl_rect</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                    <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">z_max</span> <span class="o">=</span> <span class="n">cl_rect</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+                    <span class="c1"># Dimensions: l (length=Δz), h (height=Δy), w (width=Δx)</span>
+                    <span class="n">w</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">z_max</span> <span class="o">-</span> <span class="n">z_min</span><span class="p">)</span>
+                    <span class="n">h</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">-</span> <span class="n">y_min</span><span class="p">)</span>
+                    <span class="n">l</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">-</span> <span class="n">x_min</span><span class="p">)</span>
+
+                    <span class="c1"># Center point: x, z take midpoint; y take bottom (y_max, KITTI convention)</span>
+                    <span class="n">x_c</span> <span class="o">=</span> <span class="p">(</span><span class="n">x_min</span> <span class="o">+</span> <span class="n">x_max</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span>
+                    <span class="n">y_c</span> <span class="o">=</span> <span class="n">y_max</span>  <span class="c1"># Note: KITTI&#39;s y is height direction, bottom is y_max</span>
+                    <span class="n">z_c</span> <span class="o">=</span> <span class="p">(</span><span class="n">z_min</span> <span class="o">+</span> <span class="n">z_max</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span>
+
+                    <span class="n">boxes</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">name</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">x_c</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">y_c</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">z_c</span><span class="p">),</span> <span class="mf">0.0</span><span class="p">))</span>
+
+            <span class="c1"># Write label_2 file</span>
+            <span class="n">write_label2</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="n">boxes</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ERROR] Frame </span><span class="si">{</span><span class="n">frame_id</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="drivence.module.label_2_generator.label_2_generator.SemanticKITTILabel2Generator.__init__" class="doc doc-heading">
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">eps_car</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.2</span><span class="p">,</span> <span class="n">eps_truck</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">)</span></code>
+
+<a href="#drivence.module.label_2_generator.label_2_generator.SemanticKITTILabel2Generator.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Initialize label_2 generator.</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>eps_car</code></b>
+              (<code><span title="float">float</span></code>, 默认：
+                  <code>1.2</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>DBSCAN eps for cars</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>eps_truck</code></b>
+              (<code><span title="float">float</span></code>, 默认：
+                  <code>2.0</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>DBSCAN eps for trucks/buses</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\module\label_2_generator\label_2_generator.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">eps_car</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.2</span><span class="p">,</span> <span class="n">eps_truck</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Initialize label_2 generator.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        eps_car: DBSCAN eps for cars</span>
+<span class="sd">        eps_truck: DBSCAN eps for trucks/buses</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">eps_car</span> <span class="o">=</span> <span class="n">eps_car</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">eps_truck</span> <span class="o">=</span> <span class="n">eps_truck</span>
+
+    <span class="c1"># DBSCAN eps map for each semantic ID</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">dbscan_eps_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="n">eps_car</span><span class="p">,</span>    <span class="c1"># Car</span>
+        <span class="mi">11</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>        <span class="c1"># Bicycle</span>
+        <span class="mi">13</span><span class="p">:</span> <span class="n">eps_truck</span><span class="p">,</span>  <span class="c1"># Bus</span>
+        <span class="mi">15</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>        <span class="c1"># Motorcycle</span>
+        <span class="mi">18</span><span class="p">:</span> <span class="n">eps_truck</span><span class="p">,</span>  <span class="c1"># Truck</span>
+        <span class="mi">30</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">,</span>        <span class="c1"># Person</span>
+        <span class="mi">31</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>        <span class="c1"># Bicyclist</span>
+        <span class="mi">32</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>        <span class="c1"># Motorcyclist</span>
+        <span class="mi">252</span><span class="p">:</span> <span class="n">eps_car</span><span class="p">,</span>
+        <span class="mi">257</span><span class="p">:</span> <span class="n">eps_truck</span><span class="p">,</span>
+        <span class="mi">258</span><span class="p">:</span> <span class="n">eps_truck</span><span class="p">,</span>
+        <span class="mi">253</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>
+        <span class="mi">254</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">,</span>
+        <span class="mi">255</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>
+        <span class="mi">259</span><span class="p">:</span> <span class="n">eps_car</span><span class="p">,</span>
+    <span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="drivence.module.label_2_generator.label_2_generator.SemanticKITTILabel2Generator.generate_label2_from_semantic" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">generate_label2_from_semantic</span><span class="p">(</span><span class="n">frame_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">velodyne_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">semantic_label_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">calib_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">output_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span></code>
+
+<a href="#drivence.module.label_2_generator.label_2_generator.SemanticKITTILabel2Generator.generate_label2_from_semantic" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>基于激光雷达点云的语义标签，自动生成 KITTI 格式的 label_2 3D 目标检测标注文件。</p>
+<p>核心流程为“语义筛选→密度聚类→坐标转换→边界框计算→标注写入”，无需人工标注，
+可批量将语义分割结果转换为目标检测标注，适配 KITTI 数据集格式要求，支持后续模型训练或评估。
+适配车辆、行人等多类目标，通过 DBSCAN 聚类分割同一语义下的不同实例，基于聚类点云计算边界框维度与位置。</p>
+<p>核心逻辑：
+1. 数据读取：加载激光雷达点云、语义标签、传感器标定参数；
+2. 数据校验：确保点云与语义标签数量匹配，避免维度不兼容；
+3. 语义筛选：按语义ID筛选出各类目标对应的点云子集；
+4. 实例聚类：对每类目标点云用 DBSCAN 聚类，分割不同实例（如多辆汽车）；
+5. 坐标转换：将聚类点云从激光雷达坐标系转换到矫正后相机坐标系（适配 KITTI 标注规范）；
+6. 边界框计算：基于聚类点云的极值计算边界框维度（高/宽/长）和中心坐标；
+7. 标注写入：按 KITTI label_2 格式写入标注文件，返回生成结果状态。</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>frame_id</code></b>
+              (<code><span title="int">int</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>帧ID，用于日志输出和错误定位（如“frame_0001”的ID为1）。</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>velodyne_path</code></b>
+              (<code><span title="str">str</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>激光雷达点云二进制文件（.bin）的路径（含文件名）。
+示例："/data/kitti/velodyne/000001.bin"、"../dataset/frame_001_velo.bin"。</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>semantic_label_path</code></b>
+              (<code><span title="str">str</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>语义标签文件路径（含文件名），支持 .label 或 .npy 格式。
+示例："/data/kitti/semantic/000001.label"、"../dataset/frame_001_sem.npy"。</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>calib_path</code></b>
+              (<code><span title="str">str</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>KITTI 传感器标定文件（.txt）的路径（含文件名），用于读取坐标转换所需的 R0 和 Tr 矩阵。
+示例："/data/kitti/calib/000001.txt"、"../dataset/frame_001_calib.txt"。</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>output_path</code></b>
+              (<code><span title="str">str</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>生成的 KITTI label_2 标注文件输出路径（含文件名）。
+示例："/data/kitti/label_2/000001.txt"、"../output/frame_001_label.txt"。</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">返回：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>bool</code></b> (              <code><span title="bool">bool</span></code>
+)          –
+          <div class="doc-md-description">
+            <p>生成结果状态：
+- True：标注文件成功生成并写入指定路径；
+- False：生成过程中出现错误（如文件缺失、维度不匹配），未生成有效标注。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\module\label_2_generator\label_2_generator.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span>
+<span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span>
+<span class="normal">398</span>
+<span class="normal">399</span>
+<span class="normal">400</span>
+<span class="normal">401</span>
+<span class="normal">402</span>
+<span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span>
+<span class="normal">419</span>
+<span class="normal">420</span>
+<span class="normal">421</span>
+<span class="normal">422</span>
+<span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span>
+<span class="normal">429</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span>
+<span class="normal">435</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">generate_label2_from_semantic</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">frame_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">velodyne_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">semantic_label_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">calib_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">output_path</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    基于激光雷达点云的语义标签，自动生成 KITTI 格式的 label_2 3D 目标检测标注文件。</span>
+
+<span class="sd">    核心流程为“语义筛选→密度聚类→坐标转换→边界框计算→标注写入”，无需人工标注，</span>
+<span class="sd">    可批量将语义分割结果转换为目标检测标注，适配 KITTI 数据集格式要求，支持后续模型训练或评估。</span>
+<span class="sd">    适配车辆、行人等多类目标，通过 DBSCAN 聚类分割同一语义下的不同实例，基于聚类点云计算边界框维度与位置。</span>
+
+<span class="sd">    核心逻辑：</span>
+<span class="sd">    1. 数据读取：加载激光雷达点云、语义标签、传感器标定参数；</span>
+<span class="sd">    2. 数据校验：确保点云与语义标签数量匹配，避免维度不兼容；</span>
+<span class="sd">    3. 语义筛选：按语义ID筛选出各类目标对应的点云子集；</span>
+<span class="sd">    4. 实例聚类：对每类目标点云用 DBSCAN 聚类，分割不同实例（如多辆汽车）；</span>
+<span class="sd">    5. 坐标转换：将聚类点云从激光雷达坐标系转换到矫正后相机坐标系（适配 KITTI 标注规范）；</span>
+<span class="sd">    6. 边界框计算：基于聚类点云的极值计算边界框维度（高/宽/长）和中心坐标；</span>
+<span class="sd">    7. 标注写入：按 KITTI label_2 格式写入标注文件，返回生成结果状态。</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        frame_id (int): 帧ID，用于日志输出和错误定位（如“frame_0001”的ID为1）。</span>
+<span class="sd">        velodyne_path (str): 激光雷达点云二进制文件（.bin）的路径（含文件名）。</span>
+<span class="sd">            示例：&quot;/data/kitti/velodyne/000001.bin&quot;、&quot;../dataset/frame_001_velo.bin&quot;。</span>
+<span class="sd">        semantic_label_path (str): 语义标签文件路径（含文件名），支持 .label 或 .npy 格式。</span>
+<span class="sd">            示例：&quot;/data/kitti/semantic/000001.label&quot;、&quot;../dataset/frame_001_sem.npy&quot;。</span>
+<span class="sd">        calib_path (str): KITTI 传感器标定文件（.txt）的路径（含文件名），用于读取坐标转换所需的 R0 和 Tr 矩阵。</span>
+<span class="sd">            示例：&quot;/data/kitti/calib/000001.txt&quot;、&quot;../dataset/frame_001_calib.txt&quot;。</span>
+<span class="sd">        output_path (str): 生成的 KITTI label_2 标注文件输出路径（含文件名）。</span>
+<span class="sd">            示例：&quot;/data/kitti/label_2/000001.txt&quot;、&quot;../output/frame_001_label.txt&quot;。</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: 生成结果状态：</span>
+<span class="sd">            - True：标注文件成功生成并写入指定路径；</span>
+<span class="sd">            - False：生成过程中出现错误（如文件缺失、维度不匹配），未生成有效标注。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Read point cloud</span>
+        <span class="n">pts_lidar</span> <span class="o">=</span> <span class="n">read_velodyne_bin</span><span class="p">(</span><span class="n">velodyne_path</span><span class="p">)</span>
+
+        <span class="c1"># Read semantic labels</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">semantic_label_path</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARN] No semantic labels for frame </span><span class="si">{</span><span class="n">frame_id</span><span class="si">}</span><span class="s2">, skip&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="n">sem</span> <span class="o">=</span> <span class="n">read_semantic_label</span><span class="p">(</span><span class="n">semantic_label_path</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">sem</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">pts_lidar</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARN] Mismatch points/labels for frame </span><span class="si">{</span><span class="n">frame_id</span><span class="si">}</span><span class="s2">, skip&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="c1"># Read calibration</span>
+        <span class="n">R0</span><span class="p">,</span> <span class="n">Tr</span> <span class="o">=</span> <span class="n">read_kitti_calib</span><span class="p">(</span><span class="n">calib_path</span><span class="p">)</span>
+
+        <span class="c1"># Generate boxes</span>
+        <span class="n">boxes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">sem_id</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">SEMANTIC_TO_NAME</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">mask</span> <span class="o">=</span> <span class="n">sem</span> <span class="o">==</span> <span class="n">sem_id</span>
+            <span class="n">pts_c</span> <span class="o">=</span> <span class="n">pts_lidar</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">pts_c</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="n">eps</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dbscan_eps_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">sem_id</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+            <span class="n">clusters</span> <span class="o">=</span> <span class="n">cluster_points_dbscan</span><span class="p">(</span><span class="n">pts_c</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span><span class="n">eps</span><span class="p">,</span> <span class="n">min_samples</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">cl</span> <span class="ow">in</span> <span class="n">clusters</span><span class="p">:</span>
+                <span class="c1"># Transform cluster points from LiDAR to rect camera coordinate</span>
+                <span class="n">cl_rect</span> <span class="o">=</span> <span class="n">lidar_to_rect</span><span class="p">(</span><span class="n">cl</span><span class="p">,</span> <span class="n">R0</span><span class="p">,</span> <span class="n">Tr</span><span class="p">)</span>
+                <span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">z_min</span> <span class="o">=</span> <span class="n">cl_rect</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">z_max</span> <span class="o">=</span> <span class="n">cl_rect</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+                <span class="c1"># Dimensions: l (length=Δz), h (height=Δy), w (width=Δx)</span>
+                <span class="n">w</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">z_max</span> <span class="o">-</span> <span class="n">z_min</span><span class="p">)</span>
+                <span class="n">h</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">-</span> <span class="n">y_min</span><span class="p">)</span>
+                <span class="n">l</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">-</span> <span class="n">x_min</span><span class="p">)</span>
+
+                <span class="c1"># Center point: x, z take midpoint; y take bottom (y_max, KITTI convention)</span>
+                <span class="n">x_c</span> <span class="o">=</span> <span class="p">(</span><span class="n">x_min</span> <span class="o">+</span> <span class="n">x_max</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span>
+                <span class="n">y_c</span> <span class="o">=</span> <span class="n">y_max</span>  <span class="c1"># Note: KITTI&#39;s y is height direction, bottom is y_max</span>
+                <span class="n">z_c</span> <span class="o">=</span> <span class="p">(</span><span class="n">z_min</span> <span class="o">+</span> <span class="n">z_max</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span>
+
+                <span class="n">boxes</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">name</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">x_c</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">y_c</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">z_c</span><span class="p">),</span> <span class="mf">0.0</span><span class="p">))</span>
+
+        <span class="c1"># Write label_2 file</span>
+        <span class="n">write_label2</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="n">boxes</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ERROR] Frame </span><span class="si">{</span><span class="n">frame_id</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="drivence.module.label_2_generator.label_2_generator.cluster_points_dbscan" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">cluster_points_dbscan</span><span class="p">(</span><span class="n">points</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">eps</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">min_samples</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span></code>
+
+<a href="#drivence.module.label_2_generator.label_2_generator.cluster_points_dbscan" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>基于 DBSCAN（密度聚类算法）对 3D 点云在 XY 平面进行聚类，提取有效目标点云簇。</p>
+<p>针对激光雷达点云的目标检测场景，忽略 Z 轴高度信息，仅基于 XY 平面的水平分布进行密度聚类，
+筛选出满足最小点数要求的聚类簇（视为有效目标），过滤噪声点和过小的离散点集。
+适用于车辆、行人等地面目标的初步分割，为后续目标识别、边界框拟合提供基础。</p>
+<p>核心逻辑：
+1. 数据预处理：若输入点云为空，直接返回空列表；否则提取点云的 XY 平面坐标（忽略 Z 轴）；
+2. DBSCAN 聚类：使用指定的邻域半径（eps）和最小点数（min_samples）执行密度聚类；
+3. 结果筛选：过滤噪声点（标签为 -1）和点数小于 5 的无效簇，保留有效目标点云簇；
+4. 结果返回：返回包含所有有效簇的列表，每个簇为原始 3D 点云的子集（保留 XYZ 坐标）。</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>points</code></b>
+              (<code><span title="numpy.ndarray">ndarray</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>输入 3D 点云数组，形状为 (N, 3)，数据类型为数值型。
+- N: 点云中点的数量；
+- 3: 每个点的 X、Y、Z 三维坐标（单位通常为米）。</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>eps</code></b>
+              (<code><span title="float">float</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>DBSCAN 算法的邻域半径（单位与坐标一致，通常为米），
+用于定义“密度”的邻域范围，需根据点云密度调整（如点云密集时取较小值，稀疏时取较大值）。</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>min_samples</code></b>
+              (<code>(<span title="int">int</span>, <span title="可选">可选</span>)</code>, 默认：
+                  <code>5</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>形成有效聚类簇的最小点数阈值，默认 5。
+表示一个簇中至少包含的点数，用于过滤噪声和离散小簇。</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">返回：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="list">list</span></code>
+          –
+          <div class="doc-md-description">
+            <p>list[np.ndarray]: 有效目标点云簇列表，每个元素为一个 np.ndarray，形状为 (M, 3)：
+- M: 该簇中点的数量（M ≥ 5，即满足最小点数要求）；
+- 3: 每个点保留原始 XYZ 三维坐标；
+若输入点云为空或无有效簇，返回空列表。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\module\label_2_generator\label_2_generator.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">cluster_points_dbscan</span><span class="p">(</span><span class="n">points</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">eps</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">min_samples</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">      基于 DBSCAN（密度聚类算法）对 3D 点云在 XY 平面进行聚类，提取有效目标点云簇。</span>
+
+<span class="sd">      针对激光雷达点云的目标检测场景，忽略 Z 轴高度信息，仅基于 XY 平面的水平分布进行密度聚类，</span>
+<span class="sd">      筛选出满足最小点数要求的聚类簇（视为有效目标），过滤噪声点和过小的离散点集。</span>
+<span class="sd">      适用于车辆、行人等地面目标的初步分割，为后续目标识别、边界框拟合提供基础。</span>
+
+<span class="sd">      核心逻辑：</span>
+<span class="sd">      1. 数据预处理：若输入点云为空，直接返回空列表；否则提取点云的 XY 平面坐标（忽略 Z 轴）；</span>
+<span class="sd">      2. DBSCAN 聚类：使用指定的邻域半径（eps）和最小点数（min_samples）执行密度聚类；</span>
+<span class="sd">      3. 结果筛选：过滤噪声点（标签为 -1）和点数小于 5 的无效簇，保留有效目标点云簇；</span>
+<span class="sd">      4. 结果返回：返回包含所有有效簇的列表，每个簇为原始 3D 点云的子集（保留 XYZ 坐标）。</span>
+
+<span class="sd">      Args:</span>
+<span class="sd">          points (np.ndarray): 输入 3D 点云数组，形状为 (N, 3)，数据类型为数值型。</span>
+<span class="sd">              - N: 点云中点的数量；</span>
+<span class="sd">              - 3: 每个点的 X、Y、Z 三维坐标（单位通常为米）。</span>
+<span class="sd">          eps (float): DBSCAN 算法的邻域半径（单位与坐标一致，通常为米），</span>
+<span class="sd">              用于定义“密度”的邻域范围，需根据点云密度调整（如点云密集时取较小值，稀疏时取较大值）。</span>
+<span class="sd">          min_samples (int, 可选): 形成有效聚类簇的最小点数阈值，默认 5。</span>
+<span class="sd">              表示一个簇中至少包含的点数，用于过滤噪声和离散小簇。</span>
+
+<span class="sd">      Returns:</span>
+<span class="sd">          list[np.ndarray]: 有效目标点云簇列表，每个元素为一个 np.ndarray，形状为 (M, 3)：</span>
+<span class="sd">              - M: 该簇中点的数量（M ≥ 5，即满足最小点数要求）；</span>
+<span class="sd">              - 3: 每个点保留原始 XYZ 三维坐标；</span>
+<span class="sd">              若输入点云为空或无有效簇，返回空列表。</span>
+<span class="sd">      &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">points</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="n">xy</span> <span class="o">=</span> <span class="n">points</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># Use only X, Y for clustering</span>
+    <span class="n">clustering</span> <span class="o">=</span> <span class="n">DBSCAN</span><span class="p">(</span><span class="n">eps</span><span class="o">=</span><span class="n">eps</span><span class="p">,</span> <span class="n">min_samples</span><span class="o">=</span><span class="n">min_samples</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">xy</span><span class="p">)</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">clustering</span><span class="o">.</span><span class="n">labels_</span>
+    <span class="n">clusters</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">labels</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">label</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>  <span class="c1"># Skip noise points</span>
+            <span class="k">continue</span>
+        <span class="n">cluster_points</span> <span class="o">=</span> <span class="n">points</span><span class="p">[</span><span class="n">labels</span> <span class="o">==</span> <span class="n">label</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">cluster_points</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">:</span>  <span class="c1"># At least 5 points to be considered a valid object</span>
+            <span class="n">clusters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cluster_points</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">clusters</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="drivence.module.label_2_generator.label_2_generator.lidar_to_rect" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">lidar_to_rect</span><span class="p">(</span><span class="n">points_lidar</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">R0</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">Tr</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span></code>
+
+<a href="#drivence.module.label_2_generator.label_2_generator.lidar_to_rect" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>将激光雷达（LiDAR）坐标系下的 3D 点云转换到矫正后相机（rect camera）坐标系，为跨模态融合提供空间对齐。</p>
+<p>该函数是点云-图像跨模态处理的核心坐标转换接口，通过两步变换实现坐标映射：
+1. 激光雷达 → 相机坐标系：利用外参矩阵 Tr（Velodyne→Camera）完成旋转+平移变换；
+2. 相机 → 矫正后相机坐标系：利用矫正矩阵 R0 消除相机径向畸变，得到归一化无畸变坐标。
+转换后的数据可直接用于点云投影到图像平面、跨模态特征对齐等场景（如 Li-Fusion 中的特征融合前处理）。</p>
+<p>核心变换公式：
+1. 齐次坐标扩展：P_h = [P_lidar; 1] （将 3D 点扩展为 4D 齐次坐标，支持平移变换）；
+2. 激光雷达到相机：P_cam = Tr × P_h^T （矩阵乘法，得到相机坐标系下的 3D 点）；
+3. 相机到矫正后相机：P_rect = R0 × P_cam^T （矩阵乘法，消除畸变，得到最终矫正坐标）。</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>points_lidar</code></b>
+              (<code><span title="numpy.ndarray">ndarray</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>激光雷达坐标系下的 3D 点云数组，形状为 (N, 3)，数据类型需为数值型。
+- N: 点云中点的数量；
+- 3: 每个点的 X、Y、Z 三维坐标（单位：米，遵循 LiDAR 坐标系定义）；
+若输入为其他数据类型（如 int），内部会自动转换为 np.float32。</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>R0</code></b>
+              (<code><span title="numpy.ndarray">ndarray</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>相机矫正矩阵，形状为 (3, 3)，数据类型为 np.float32。
+- 作用：消除相机径向畸变，将原始相机坐标系点转换为无畸变的矫正坐标系点；
+通常从 KITTI 标定文件中读取（如 read_kitti_calib 函数输出），缺失时可用单位矩阵。</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>Tr</code></b>
+              (<code><span title="numpy.ndarray">ndarray</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>激光雷达到相机的外参变换矩阵，形状为 (3, 4)，数据类型为 np.float32。
+- 格式：前 3 列为旋转矩阵（R），第 4 列为平移向量（t），即 [R | t]；
+- 作用：实现激光雷达坐标系到相机坐标系的旋转+平移变换，需与点云、相机的坐标系严格匹配。</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">返回：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="numpy.ndarray">ndarray</span></code>
+          –
+          <div class="doc-md-description">
+            <p>np.ndarray: 矫正后相机坐标系下的 3D 点云数组，形状为 (N, 3)，数据类型为 np.float32。
+- N: 点数量与输入保持一致；
+- 3: 每个点的 X_rect、Y_rect、Z_rect 三维矫正坐标（单位：米），无畸变，可直接用于后续投影计算。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\module\label_2_generator\label_2_generator.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">lidar_to_rect</span><span class="p">(</span><span class="n">points_lidar</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">R0</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">Tr</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    将激光雷达（LiDAR）坐标系下的 3D 点云转换到矫正后相机（rect camera）坐标系，为跨模态融合提供空间对齐。</span>
+
+<span class="sd">    该函数是点云-图像跨模态处理的核心坐标转换接口，通过两步变换实现坐标映射：</span>
+<span class="sd">    1. 激光雷达 → 相机坐标系：利用外参矩阵 Tr（Velodyne→Camera）完成旋转+平移变换；</span>
+<span class="sd">    2. 相机 → 矫正后相机坐标系：利用矫正矩阵 R0 消除相机径向畸变，得到归一化无畸变坐标。</span>
+<span class="sd">    转换后的数据可直接用于点云投影到图像平面、跨模态特征对齐等场景（如 Li-Fusion 中的特征融合前处理）。</span>
+
+<span class="sd">    核心变换公式：</span>
+<span class="sd">    1. 齐次坐标扩展：P_h = [P_lidar; 1] （将 3D 点扩展为 4D 齐次坐标，支持平移变换）；</span>
+<span class="sd">    2. 激光雷达到相机：P_cam = Tr × P_h^T （矩阵乘法，得到相机坐标系下的 3D 点）；</span>
+<span class="sd">    3. 相机到矫正后相机：P_rect = R0 × P_cam^T （矩阵乘法，消除畸变，得到最终矫正坐标）。</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        points_lidar (np.ndarray): 激光雷达坐标系下的 3D 点云数组，形状为 (N, 3)，数据类型需为数值型。</span>
+<span class="sd">            - N: 点云中点的数量；</span>
+<span class="sd">            - 3: 每个点的 X、Y、Z 三维坐标（单位：米，遵循 LiDAR 坐标系定义）；</span>
+<span class="sd">            若输入为其他数据类型（如 int），内部会自动转换为 np.float32。</span>
+<span class="sd">        R0 (np.ndarray): 相机矫正矩阵，形状为 (3, 3)，数据类型为 np.float32。</span>
+<span class="sd">            - 作用：消除相机径向畸变，将原始相机坐标系点转换为无畸变的矫正坐标系点；</span>
+<span class="sd">            通常从 KITTI 标定文件中读取（如 read_kitti_calib 函数输出），缺失时可用单位矩阵。</span>
+<span class="sd">        Tr (np.ndarray): 激光雷达到相机的外参变换矩阵，形状为 (3, 4)，数据类型为 np.float32。</span>
+<span class="sd">            - 格式：前 3 列为旋转矩阵（R），第 4 列为平移向量（t），即 [R | t]；</span>
+<span class="sd">            - 作用：实现激光雷达坐标系到相机坐标系的旋转+平移变换，需与点云、相机的坐标系严格匹配。</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: 矫正后相机坐标系下的 3D 点云数组，形状为 (N, 3)，数据类型为 np.float32。</span>
+<span class="sd">            - N: 点数量与输入保持一致；</span>
+<span class="sd">            - 3: 每个点的 X_rect、Y_rect、Z_rect 三维矫正坐标（单位：米），无畸变，可直接用于后续投影计算。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ones</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">points_lidar</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+    <span class="n">pts_h</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">points_lidar</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">),</span> <span class="n">ones</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># (N,4)</span>
+    <span class="n">pts_cam</span> <span class="o">=</span> <span class="p">(</span><span class="n">Tr</span> <span class="o">@</span> <span class="n">pts_h</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>  <span class="c1"># (N,3)</span>
+    <span class="n">pts_rect</span> <span class="o">=</span> <span class="p">(</span><span class="n">R0</span> <span class="o">@</span> <span class="n">pts_cam</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>  <span class="c1"># (N,3)</span>
+    <span class="k">return</span> <span class="n">pts_rect</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="drivence.module.label_2_generator.label_2_generator.read_kitti_calib" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">read_kitti_calib</span><span class="p">(</span><span class="n">calib_txt_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span></code>
+
+<a href="#drivence.module.label_2_generator.label_2_generator.read_kitti_calib" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>读取 KITTI 数据集的标定文件（.txt），提取并返回相机矫正矩阵 R0 和 Velodyne 到相机的变换矩阵 Tr。</p>
+<p>KITTI 标定文件存储了多传感器（激光雷达、相机、雷达）之间的外参和内参，本函数专注于提取激光雷达与相机融合所需的核心矩阵：
+1. R0（相机矫正矩阵）：用于矫正相机的径向畸变，将相机坐标系下的点转换为无畸变的归一化平面坐标；
+2. Tr（Velodyne→Camera 变换矩阵）：用于将激光雷达坐标系下的 3D 点云转换到相机坐标系，是跨模态（点云-图像）融合的关键外参。
+函数兼容 KITTI 标定文件中矩阵的多种常见键名（如 R0_rect/R_rect、Tr_velo_to_cam/Tr_velo2cam），提升鲁棒性。</p>
+<p>核心逻辑：
+1. 文件读取：按行解析标定文件，过滤无效行（不含 ':' 的行）；
+2. 键值提取：拆分每行的键名（key）和数值字符串（rest），将数值字符串转换为浮点数列表；
+3. 矩阵解析：
+   - 若键名匹配相机矫正矩阵（R0_rect/R_rect 等），取前 9 个数值reshape为 (3, 3) 矩阵；
+   - 若键名匹配激光雷达到相机变换矩阵（Tr_velo_to_cam 等），取前 12 个数值reshape为 (3, 4) 矩阵；
+4. 容错处理：Tr 矩阵为必需项（缺失则抛出异常），R0 矩阵缺失时默认使用 3x3 单位矩阵。</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>calib_txt_path</code></b>
+              (<code><span title="str">str</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>KITTI 标定文件的绝对路径或相对路径（含文件名）。
+示例："/data/kitti/training/calib/000001.txt"、"../dataset/frame_001_calib.txt"。</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">返回：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="typing.Tuple">Tuple</span>[<span title="numpy.ndarray">ndarray</span>, <span title="numpy.ndarray">ndarray</span>]</code>
+          –
+          <div class="doc-md-description">
+            <p>Tuple[np.ndarray, np.ndarray]: 包含两个矩阵的元组，顺序如下：
+1. R0 (np.ndarray): 相机矫正矩阵，形状为 (3, 3)，数据类型为 np.float32。
+    - 作用：矫正相机畸变，将相机坐标系点转换为无畸变坐标；
+    - 若文件中未找到对应键名，返回 3x3 单位矩阵（np.eye(3)）。
+2. Tr (np.ndarray): Velodyne 激光雷达到相机的变换矩阵，形状为 (3, 4)，数据类型为 np.float32。
+    - 作用：实现点云坐标从激光雷达坐标系 → 相机坐标系的转换（公式：P_cam = R0 @ (Tr @ [P_velo; 1])）；
+    - 矩阵格式：前 3 列为旋转矩阵，第 4 列为平移向量，即 [R | t]，其中 R 为 3x3 旋转矩阵，t 为 3x1 平移向量。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\module\label_2_generator\label_2_generator.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">read_kitti_calib</span><span class="p">(</span><span class="n">calib_txt_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    读取 KITTI 数据集的标定文件（.txt），提取并返回相机矫正矩阵 R0 和 Velodyne 到相机的变换矩阵 Tr。</span>
+
+<span class="sd">    KITTI 标定文件存储了多传感器（激光雷达、相机、雷达）之间的外参和内参，本函数专注于提取激光雷达与相机融合所需的核心矩阵：</span>
+<span class="sd">    1. R0（相机矫正矩阵）：用于矫正相机的径向畸变，将相机坐标系下的点转换为无畸变的归一化平面坐标；</span>
+<span class="sd">    2. Tr（Velodyne→Camera 变换矩阵）：用于将激光雷达坐标系下的 3D 点云转换到相机坐标系，是跨模态（点云-图像）融合的关键外参。</span>
+<span class="sd">    函数兼容 KITTI 标定文件中矩阵的多种常见键名（如 R0_rect/R_rect、Tr_velo_to_cam/Tr_velo2cam），提升鲁棒性。</span>
+
+<span class="sd">    核心逻辑：</span>
+<span class="sd">    1. 文件读取：按行解析标定文件，过滤无效行（不含 &#39;:&#39; 的行）；</span>
+<span class="sd">    2. 键值提取：拆分每行的键名（key）和数值字符串（rest），将数值字符串转换为浮点数列表；</span>
+<span class="sd">    3. 矩阵解析：</span>
+<span class="sd">       - 若键名匹配相机矫正矩阵（R0_rect/R_rect 等），取前 9 个数值reshape为 (3, 3) 矩阵；</span>
+<span class="sd">       - 若键名匹配激光雷达到相机变换矩阵（Tr_velo_to_cam 等），取前 12 个数值reshape为 (3, 4) 矩阵；</span>
+<span class="sd">    4. 容错处理：Tr 矩阵为必需项（缺失则抛出异常），R0 矩阵缺失时默认使用 3x3 单位矩阵。</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        calib_txt_path (str): KITTI 标定文件的绝对路径或相对路径（含文件名）。</span>
+<span class="sd">            示例：&quot;/data/kitti/training/calib/000001.txt&quot;、&quot;../dataset/frame_001_calib.txt&quot;。</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Tuple[np.ndarray, np.ndarray]: 包含两个矩阵的元组，顺序如下：</span>
+<span class="sd">            1. R0 (np.ndarray): 相机矫正矩阵，形状为 (3, 3)，数据类型为 np.float32。</span>
+<span class="sd">                - 作用：矫正相机畸变，将相机坐标系点转换为无畸变坐标；</span>
+<span class="sd">                - 若文件中未找到对应键名，返回 3x3 单位矩阵（np.eye(3)）。</span>
+<span class="sd">            2. Tr (np.ndarray): Velodyne 激光雷达到相机的变换矩阵，形状为 (3, 4)，数据类型为 np.float32。</span>
+<span class="sd">                - 作用：实现点云坐标从激光雷达坐标系 → 相机坐标系的转换（公式：P_cam = R0 @ (Tr @ [P_velo; 1])）；</span>
+<span class="sd">                - 矩阵格式：前 3 列为旋转矩阵，第 4 列为平移向量，即 [R | t]，其中 R 为 3x3 旋转矩阵，t 为 3x1 平移向量。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">R0</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">Tr</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">calib_txt_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s1">&#39;:&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">key</span><span class="p">,</span> <span class="n">rest</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">vals</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">rest</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;R0_rect&#39;</span><span class="p">,</span> <span class="s1">&#39;R_rect&#39;</span><span class="p">,</span> <span class="s1">&#39;R_rect_00&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">9</span><span class="p">:</span>
+                <span class="n">R0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">vals</span><span class="p">[:</span><span class="mi">9</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;Tr_velo_to_cam&#39;</span><span class="p">,</span> <span class="s1">&#39;Tr_velo2cam&#39;</span><span class="p">,</span> <span class="s1">&#39;Tr&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">12</span><span class="p">:</span>
+                <span class="n">Tr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">vals</span><span class="p">[:</span><span class="mi">12</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">Tr</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid calib file (missing Tr): </span><span class="si">{</span><span class="n">calib_txt_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">R0</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">R0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">R0</span><span class="p">,</span> <span class="n">Tr</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="drivence.module.label_2_generator.label_2_generator.read_semantic_label" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">read_semantic_label</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span></code>
+
+<a href="#drivence.module.label_2_generator.label_2_generator.read_semantic_label" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>读取语义标签文件（支持 .label 二进制格式和 .npy numpy 格式），返回标准化的一维语义标签数组。</p>
+<p>针对激光雷达点云/图像语义分割任务的标签读取需求，适配两种主流标签存储格式：
+1. .label 格式：Velodyne 点云语义分割任务常用二进制格式，每个标签为 32 位无符号整数，低 16 位存储语义类别 ID，高 16 位通常存储实例 ID；
+2. .npy 格式：numpy 序列化格式，直接存储语义标签数组，支持快速加载。
+函数自动识别文件后缀并选择对应解析逻辑，最终返回一维整数型语义标签数组，适配后续标签处理、可视化或模型训练场景。</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>path</code></b>
+              (<code><span title="str">str</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>语义标签文件的绝对路径或相对路径（含文件名）。
+支持后缀：.label（二进制格式）、.npy（numpy 格式）；
+示例："/data/semantic/000001.label"、"../dataset/frame_001_semantic.npy"。</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">返回：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="numpy.ndarray">ndarray</span></code>
+          –
+          <div class="doc-md-description">
+            <p>np.ndarray: 一维语义标签数组，形状为 (N,)，数据类型为 np.int32。
+- N: 标签数量（与对应点云/图像的像素/点数量一致）；
+- 数组元素：语义类别 ID（整数），取值范围由数据集的标签体系决定（如 0 表示背景、1 表示车辆等）。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\module\label_2_generator\label_2_generator.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">read_semantic_label</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    读取语义标签文件（支持 .label 二进制格式和 .npy numpy 格式），返回标准化的一维语义标签数组。</span>
+
+<span class="sd">    针对激光雷达点云/图像语义分割任务的标签读取需求，适配两种主流标签存储格式：</span>
+<span class="sd">    1. .label 格式：Velodyne 点云语义分割任务常用二进制格式，每个标签为 32 位无符号整数，低 16 位存储语义类别 ID，高 16 位通常存储实例 ID；</span>
+<span class="sd">    2. .npy 格式：numpy 序列化格式，直接存储语义标签数组，支持快速加载。</span>
+<span class="sd">    函数自动识别文件后缀并选择对应解析逻辑，最终返回一维整数型语义标签数组，适配后续标签处理、可视化或模型训练场景。</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        path (str): 语义标签文件的绝对路径或相对路径（含文件名）。</span>
+<span class="sd">            支持后缀：.label（二进制格式）、.npy（numpy 格式）；</span>
+<span class="sd">            示例：&quot;/data/semantic/000001.label&quot;、&quot;../dataset/frame_001_semantic.npy&quot;。</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: 一维语义标签数组，形状为 (N,)，数据类型为 np.int32。</span>
+<span class="sd">            - N: 标签数量（与对应点云/图像的像素/点数量一致）；</span>
+<span class="sd">            - 数组元素：语义类别 ID（整数），取值范围由数据集的标签体系决定（如 0 表示背景、1 表示车辆等）。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.label&quot;</span><span class="p">):</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fromfile</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
+        <span class="n">semantic</span> <span class="o">=</span> <span class="n">labels</span> <span class="o">&amp;</span> <span class="mh">0xFFFF</span>
+        <span class="k">return</span> <span class="n">semantic</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">path</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.npy&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported semantic label file: </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="drivence.module.label_2_generator.label_2_generator.read_velodyne_bin" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">read_velodyne_bin</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span></code>
+
+<a href="#drivence.module.label_2_generator.label_2_generator.read_velodyne_bin" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>读取 Velodyne 激光雷达的二进制（.bin）文件，提取 3D 点云坐标（x, y, z）。</p>
+<p>Velodyne 激光雷达输出的 .bin 文件采用固定格式存储：每个点云数据包含 4 个 float32 类型值，
+依次为 x（x轴坐标）、y（y轴坐标）、z（z轴坐标）、intensity（反射强度）。
+该函数读取文件后解析数据格式，仅提取前 3 个维度的空间坐标，返回标准化的点云数组，
+适用于点云可视化、特征提取、跨模态融合等后续处理场景。</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>path</code></b>
+              (<code><span title="str">str</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>Velodyne .bin 文件的绝对路径或相对路径（含文件名）。
+示例："/data/velodyne/000001.bin"、"../dataset/frame_001.bin"。</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">返回：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="numpy.ndarray">ndarray</span></code>
+          –
+          <div class="doc-md-description">
+            <p>np.ndarray: 3D 点云坐标数组，形状为 (N, 3)，数据类型为 np.float32。
+- N: 点云中点的数量（由文件大小决定，每个点占 16 字节：4 个 float32）；
+- 3: 每个点的 x、y、z 三维空间坐标，坐标单位与激光雷达输出一致（通常为米）。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\module\label_2_generator\label_2_generator.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">read_velodyne_bin</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    读取 Velodyne 激光雷达的二进制（.bin）文件，提取 3D 点云坐标（x, y, z）。</span>
+
+<span class="sd">    Velodyne 激光雷达输出的 .bin 文件采用固定格式存储：每个点云数据包含 4 个 float32 类型值，</span>
+<span class="sd">    依次为 x（x轴坐标）、y（y轴坐标）、z（z轴坐标）、intensity（反射强度）。</span>
+<span class="sd">    该函数读取文件后解析数据格式，仅提取前 3 个维度的空间坐标，返回标准化的点云数组，</span>
+<span class="sd">    适用于点云可视化、特征提取、跨模态融合等后续处理场景。</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        path (str): Velodyne .bin 文件的绝对路径或相对路径（含文件名）。</span>
+<span class="sd">            示例：&quot;/data/velodyne/000001.bin&quot;、&quot;../dataset/frame_001.bin&quot;。</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: 3D 点云坐标数组，形状为 (N, 3)，数据类型为 np.float32。</span>
+<span class="sd">            - N: 点云中点的数量（由文件大小决定，每个点占 16 字节：4 个 float32）；</span>
+<span class="sd">            - 3: 每个点的 x、y、z 三维空间坐标，坐标单位与激光雷达输出一致（通常为米）。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fromfile</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">size</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid velodyne bin file: </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">pts</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">))[:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">pts</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="drivence.module.label_2_generator.label_2_generator.rect_to_lidar" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">rect_to_lidar</span><span class="p">(</span><span class="n">points_rect</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">R0</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">Tr</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span></code>
+
+<a href="#drivence.module.label_2_generator.label_2_generator.rect_to_lidar" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>将矫正后相机（rect camera）坐标系下的 3D 点转换到激光雷达（LiDAR）坐标系，实现跨模态坐标反向映射。</p>
+<p>该函数是 <code>lidar_to_rect</code> 的逆操作，为点云-图像跨模态处理的反向对齐提供支持（如从图像标注反推点云区域、跨模态结果验证）。
+通过两步逆变换还原激光雷达坐标：
+1. 矫正后相机 → 相机坐标系：利用矫正矩阵 R0 的转置（因 R0 为正交矩阵，逆矩阵=转置）消除矫正效果；
+2. 相机 → 激光雷达坐标系：利用 Tr 矩阵的逆变换（旋转矩阵转置+平移向量反向）还原原始激光雷达坐标。
+适用于图像引导的点云分割、标注转换、跨模态结果对齐等场景。</p>
+<p>核心逆变换公式（基于 <code>lidar_to_rect</code> 正向变换推导）：
+1. 矫正后相机到相机：P_cam = R0^T × P_rect^T （R0 为正交矩阵，逆矩阵=转置，消除矫正）；
+2. 相机到激光雷达：P_lidar = R^T × (P_cam - t) （R 为 Tr 中的旋转矩阵，t 为 Tr 中的平移向量，反向实现旋转+平移逆操作）。</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>points_rect</code></b>
+              (<code><span title="numpy.ndarray">ndarray</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>矫正后相机坐标系下的 3D 点数组，形状为 (N, 3) 或 (3,)，数据类型需为数值型。
+- N: 点的数量（N≥1）；若为单一点，支持 (3,) 一维格式；
+- 3: 每个点的 X_rect、Y_rect、Z_rect 三维坐标（单位：米，无畸变）；
+输入为一维数组时，内部会自动reshape为 (1, 3) 处理，输出保持一维格式。</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>R0</code></b>
+              (<code><span title="numpy.ndarray">ndarray</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>相机矫正矩阵，形状为 (3, 3)，数据类型为 np.float32。
+- 需与正向变换（lidar_to_rect）使用的 R0 完全一致，确保逆变换准确性；
+通常从 KITTI 标定文件读取（如 read_kitti_calib 函数输出），为正交矩阵（R0^T = R0^-1）。</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>Tr</code></b>
+              (<code><span title="numpy.ndarray">ndarray</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>激光雷达到相机的外参变换矩阵，形状为 (3, 4)，数据类型为 np.float32。
+- 格式：前 3 列为旋转矩阵 R（3x3），第 4 列为平移向量 t（3x1），即 [R | t]；
+需与正向变换使用的 Tr 完全一致，R 为正交矩阵（R^T = R^-1）。</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">返回：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="numpy.ndarray">ndarray</span></code>
+          –
+          <div class="doc-md-description">
+            <p>np.ndarray: 激光雷达坐标系下的 3D 点数组，形状与输入 points_rect 对应：
+- 若输入为 (N, 3)，输出为 (N, 3)；
+- 若输入为 (3,)（单一点），输出为 (3,)；
+数据类型为 np.float32，每个点的 X、Y、Z 坐标（单位：米，遵循 LiDAR 坐标系定义）。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\module\label_2_generator\label_2_generator.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">rect_to_lidar</span><span class="p">(</span><span class="n">points_rect</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">R0</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">Tr</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    将矫正后相机（rect camera）坐标系下的 3D 点转换到激光雷达（LiDAR）坐标系，实现跨模态坐标反向映射。</span>
+
+<span class="sd">    该函数是 `lidar_to_rect` 的逆操作，为点云-图像跨模态处理的反向对齐提供支持（如从图像标注反推点云区域、跨模态结果验证）。</span>
+<span class="sd">    通过两步逆变换还原激光雷达坐标：</span>
+<span class="sd">    1. 矫正后相机 → 相机坐标系：利用矫正矩阵 R0 的转置（因 R0 为正交矩阵，逆矩阵=转置）消除矫正效果；</span>
+<span class="sd">    2. 相机 → 激光雷达坐标系：利用 Tr 矩阵的逆变换（旋转矩阵转置+平移向量反向）还原原始激光雷达坐标。</span>
+<span class="sd">    适用于图像引导的点云分割、标注转换、跨模态结果对齐等场景。</span>
+
+<span class="sd">    核心逆变换公式（基于 `lidar_to_rect` 正向变换推导）：</span>
+<span class="sd">    1. 矫正后相机到相机：P_cam = R0^T × P_rect^T （R0 为正交矩阵，逆矩阵=转置，消除矫正）；</span>
+<span class="sd">    2. 相机到激光雷达：P_lidar = R^T × (P_cam - t) （R 为 Tr 中的旋转矩阵，t 为 Tr 中的平移向量，反向实现旋转+平移逆操作）。</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        points_rect (np.ndarray): 矫正后相机坐标系下的 3D 点数组，形状为 (N, 3) 或 (3,)，数据类型需为数值型。</span>
+<span class="sd">            - N: 点的数量（N≥1）；若为单一点，支持 (3,) 一维格式；</span>
+<span class="sd">            - 3: 每个点的 X_rect、Y_rect、Z_rect 三维坐标（单位：米，无畸变）；</span>
+<span class="sd">            输入为一维数组时，内部会自动reshape为 (1, 3) 处理，输出保持一维格式。</span>
+<span class="sd">        R0 (np.ndarray): 相机矫正矩阵，形状为 (3, 3)，数据类型为 np.float32。</span>
+<span class="sd">            - 需与正向变换（lidar_to_rect）使用的 R0 完全一致，确保逆变换准确性；</span>
+<span class="sd">            通常从 KITTI 标定文件读取（如 read_kitti_calib 函数输出），为正交矩阵（R0^T = R0^-1）。</span>
+<span class="sd">        Tr (np.ndarray): 激光雷达到相机的外参变换矩阵，形状为 (3, 4)，数据类型为 np.float32。</span>
+<span class="sd">            - 格式：前 3 列为旋转矩阵 R（3x3），第 4 列为平移向量 t（3x1），即 [R | t]；</span>
+<span class="sd">            需与正向变换使用的 Tr 完全一致，R 为正交矩阵（R^T = R^-1）。</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: 激光雷达坐标系下的 3D 点数组，形状与输入 points_rect 对应：</span>
+<span class="sd">            - 若输入为 (N, 3)，输出为 (N, 3)；</span>
+<span class="sd">            - 若输入为 (3,)（单一点），输出为 (3,)；</span>
+<span class="sd">            数据类型为 np.float32，每个点的 X、Y、Z 坐标（单位：米，遵循 LiDAR 坐标系定义）。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Step 1: rect -&gt; cam: cam = R0^T @ rect (R0 is orthogonal)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">points_rect</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">points_rect</span> <span class="o">=</span> <span class="n">points_rect</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">points_cam</span> <span class="o">=</span> <span class="p">(</span><span class="n">R0</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">points_rect</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>  <span class="c1"># (N, 3)</span>
+
+    <span class="c1"># Step 2: cam -&gt; velo: need inverse of Tr</span>
+    <span class="c1"># Tr is 3x4: [R | t], where cam = R @ velo + t</span>
+    <span class="c1"># So: velo = R^-1 @ (cam - t) = R^T @ (cam - t) (R is rotation, so R^-1 = R^T)</span>
+    <span class="n">R</span> <span class="o">=</span> <span class="n">Tr</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># 3x3 rotation matrix</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">Tr</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]</span>  <span class="c1"># 3x1 translation vector</span>
+
+    <span class="c1"># Apply inverse transformation for each point</span>
+    <span class="n">points_lidar</span> <span class="o">=</span> <span class="p">(</span><span class="n">R</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="p">(</span><span class="n">points_cam</span> <span class="o">-</span> <span class="n">t</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>  <span class="c1"># (N, 3)</span>
+
+    <span class="k">if</span> <span class="n">points_lidar</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">points_lidar</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">points_lidar</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="drivence.module.label_2_generator.label_2_generator.write_label2" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">write_label2</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">boxes</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span></code>
+
+<a href="#drivence.module.label_2_generator.label_2_generator.write_label2" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>写入 KITTI 格式的 label_2 标注文件，存储 3D 目标边界框及类别信息，适配 KITTI 目标检测数据集标准。</p>
+<p>KITTI label_2 文件为纯文本格式，每行对应一个目标的标注信息，字段顺序和格式严格遵循 KITTI 数据集规范，
+支持后续使用 KITTI 官方工具或主流目标检测框架（如 PointPillars、SECOND）进行数据加载、训练或评估。
+函数自动创建输出路径的父目录（若不存在），确保文件正常写入。</p>
+<p>核心规范（KITTI label_2 字段说明，共 15 个字段）：
+1. 目标类别（name）          2. 截断程度（truncated）    3. 遮挡程度（occluded）
+4. 观测角度（alpha）         5. 2D 边界框左（x1）       6. 2D 边界框上（y1）
+7. 2D 边界框右（x2）         8. 2D 边界框下（y2）       9. 3D 边界框高度（h）
+10. 3D 边界框宽度（w）       11. 3D 边界框长度（l）     12. 3D 边界框中心 x（x）
+13. 3D 边界框中心 y（y）     14. 3D 边界框中心 z（z）   15. 旋转角（ry）
+本函数中，字段 2-8（截断、遮挡、观测角度、2D 边界框）统一填充默认值（-1/-1/0/0/0/0/0），仅需输入核心的 3D 信息。</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>path</code></b>
+              (<code><span title="str">str</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>label_2 标注文件的输出路径（含文件名），格式为 "xxx/xxx.txt"。
+示例："/data/kitti/training/label_2/000001.txt"、"../dataset/frame_001_label.txt"。</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>boxes</code></b>
+              (<code><span title="list">list</span>[<span title="tuple">tuple</span>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>3D 目标边界框列表，每个元素为一个元组，包含 8 个字段（对应 KITTI 核心标注信息）：
+- name (str): 目标类别名称（需符合 KITTI 类别规范，如 "Car"、"Pedestrian"、"Cyclist" 等）；
+- h (float): 3D 边界框高度（单位：米）；
+- w (float): 3D 边界框宽度（单位：米）；
+- l (float): 3D 边界框长度（单位：米）；
+- x (float): 3D 边界框中心 x 坐标（单位：米，遵循 KITTI 坐标系）；
+- y (float): 3D 边界框中心 y 坐标（单位：米，遵循 KITTI 坐标系）；
+- z (float): 3D 边界框中心 z 坐标（单位：米，遵循 KITTI 坐标系）；
+- ry (float): 目标绕 Y 轴的旋转角（单位：弧度，遵循 KITTI 旋转角定义）。</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">返回：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>None</code></b>          –
+          <div class="doc-md-description">
+            <p>函数无显式返回值，标注信息直接写入指定路径的文件中。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\module\label_2_generator\label_2_generator.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">write_label2</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">boxes</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    写入 KITTI 格式的 label_2 标注文件，存储 3D 目标边界框及类别信息，适配 KITTI 目标检测数据集标准。</span>
+
+<span class="sd">    KITTI label_2 文件为纯文本格式，每行对应一个目标的标注信息，字段顺序和格式严格遵循 KITTI 数据集规范，</span>
+<span class="sd">    支持后续使用 KITTI 官方工具或主流目标检测框架（如 PointPillars、SECOND）进行数据加载、训练或评估。</span>
+<span class="sd">    函数自动创建输出路径的父目录（若不存在），确保文件正常写入。</span>
+
+<span class="sd">    核心规范（KITTI label_2 字段说明，共 15 个字段）：</span>
+<span class="sd">    1. 目标类别（name）          2. 截断程度（truncated）    3. 遮挡程度（occluded）</span>
+<span class="sd">    4. 观测角度（alpha）         5. 2D 边界框左（x1）       6. 2D 边界框上（y1）</span>
+<span class="sd">    7. 2D 边界框右（x2）         8. 2D 边界框下（y2）       9. 3D 边界框高度（h）</span>
+<span class="sd">    10. 3D 边界框宽度（w）       11. 3D 边界框长度（l）     12. 3D 边界框中心 x（x）</span>
+<span class="sd">    13. 3D 边界框中心 y（y）     14. 3D 边界框中心 z（z）   15. 旋转角（ry）</span>
+<span class="sd">    本函数中，字段 2-8（截断、遮挡、观测角度、2D 边界框）统一填充默认值（-1/-1/0/0/0/0/0），仅需输入核心的 3D 信息。</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        path (str): label_2 标注文件的输出路径（含文件名），格式为 &quot;xxx/xxx.txt&quot;。</span>
+<span class="sd">            示例：&quot;/data/kitti/training/label_2/000001.txt&quot;、&quot;../dataset/frame_001_label.txt&quot;。</span>
+<span class="sd">        boxes (list[tuple]): 3D 目标边界框列表，每个元素为一个元组，包含 8 个字段（对应 KITTI 核心标注信息）：</span>
+<span class="sd">            - name (str): 目标类别名称（需符合 KITTI 类别规范，如 &quot;Car&quot;、&quot;Pedestrian&quot;、&quot;Cyclist&quot; 等）；</span>
+<span class="sd">            - h (float): 3D 边界框高度（单位：米）；</span>
+<span class="sd">            - w (float): 3D 边界框宽度（单位：米）；</span>
+<span class="sd">            - l (float): 3D 边界框长度（单位：米）；</span>
+<span class="sd">            - x (float): 3D 边界框中心 x 坐标（单位：米，遵循 KITTI 坐标系）；</span>
+<span class="sd">            - y (float): 3D 边界框中心 y 坐标（单位：米，遵循 KITTI 坐标系）；</span>
+<span class="sd">            - z (float): 3D 边界框中心 z 坐标（单位：米，遵循 KITTI 坐标系）；</span>
+<span class="sd">            - ry (float): 目标绕 Y 轴的旋转角（单位：弧度，遵循 KITTI 旋转角定义）。</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None: 函数无显式返回值，标注信息直接写入指定路径的文件中。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">ry</span> <span class="ow">in</span> <span class="n">boxes</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> -1 -1 0 0 0 0 0 </span><span class="si">{</span><span class="n">h</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">w</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">l</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">y</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">z</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">ry</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

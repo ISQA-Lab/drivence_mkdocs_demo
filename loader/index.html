@@ -1,0 +1,3236 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../assets/">
+      
+      
+        <link rel="next" href="../dataset/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>loader - drivence</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#drivenceassetsobjectsloader" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="drivence" class="md-header__button md-logo" aria-label="drivence" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            drivence
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              loader
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="drivence" class="md-nav__button md-logo" aria-label="drivence" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    drivence
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模块文档
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    模块文档
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    drivence
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    drivence
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    assets 模块
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    assets 模块
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    assets_utils
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1_2" id="__nav_2_1_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    objects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    objects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    loader
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    loader
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#drivenceassetsobjectsloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        drivence.assets.objects.loader
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        loader
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ObjectsLoader
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ObjectsLoader">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        __init__
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.get_all_categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_all_categories
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.get_car_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_car_list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.get_frame_lwh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_frame_lwh
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.get_mesh_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_mesh_path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.get_models_by_category" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_models_by_category
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.get_object_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_object_list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.get_scale_ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_scale_ratio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.get_scale_ratio_by_frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_scale_ratio_by_frame
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.load_mesh_by_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        load_mesh_by_name
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dataset 模块
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    entity 模块
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4" id="__nav_2_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    module 模块
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    module 模块
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4_1" id="__nav_2_1_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    data_gen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    data_gen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    main
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4_1_2" id="__nav_2_1_4_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    interface
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_1_4_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_4_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    interface
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    occlusion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../label_2_generator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    label_2_generator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logic_scene/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    logic_scene
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pose_gen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pose_gen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../road_split/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    road_split
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    utils 模块
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#drivenceassetsobjectsloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        drivence.assets.objects.loader
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        loader
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ObjectsLoader
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ObjectsLoader">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        __init__
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.get_all_categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_all_categories
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.get_car_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_car_list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.get_frame_lwh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_frame_lwh
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.get_mesh_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_mesh_path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.get_models_by_category" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_models_by_category
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.get_object_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_object_list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.get_scale_ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_scale_ratio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.get_scale_ratio_by_frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_scale_ratio_by_frame
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivence.assets.objects.loader.ObjectsLoader.load_mesh_by_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        load_mesh_by_name
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>loader</h1>
+
+<h3 id="drivenceassetsobjectsloader">drivence.assets.objects.loader<a class="headerlink" href="#drivenceassetsobjectsloader" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="drivence.assets.objects.loader"></a>
+    <div class="doc doc-contents first">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="drivence.assets.objects.loader.ObjectsLoader" class="doc doc-heading">
+            <code>ObjectsLoader</code>
+
+
+<a href="#drivence.assets.objects.loader.ObjectsLoader" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="object">object</span></code></p>
+
+
+        <p>资产加载器，兼容 ShapeNetLoader 接口，用于加载 ShapeNet 格式的 3D 网格模型（如车辆、行人等）。</p>
+<p>该类负责从指定目录加载预定义类别的 3D 网格资产，支持模型路径映射、坐标对齐、尺度归一化、类别筛选等功能，
+为场景生成、点云仿真等模块提供标准化的网格加载接口。核心特性包括：
+1. 兼容 ShapeNetLoader 原有接口，支持平滑替换；
+2. 支持按类别、子类别筛选模型，适配多目标场景；
+3. 提供灵活的尺度归一化策略（固定比例/自动适配目标尺寸/帧特异性尺寸）；
+4. 支持 LiDAR/相机坐标系对齐，确保加载的模型与场景坐标系一致。</p>
+<p>配置依赖：
+需通过 config 参数传入 ShapeNet 相关配置，包含资产路径、模型文件名、类别定义、对齐参数、尺度参数等，
+具体配置项见 <strong>init</strong> 方法中的参数解析。</p>
+
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>drivence\assets\objects\loader.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span>
+<span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span>
+<span class="normal">398</span>
+<span class="normal">399</span>
+<span class="normal">400</span>
+<span class="normal">401</span>
+<span class="normal">402</span>
+<span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span>
+<span class="normal">419</span>
+<span class="normal">420</span>
+<span class="normal">421</span>
+<span class="normal">422</span>
+<span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span>
+<span class="normal">429</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span>
+<span class="normal">435</span>
+<span class="normal">436</span>
+<span class="normal">437</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ObjectsLoader</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    资产加载器，兼容 ShapeNetLoader 接口，用于加载 ShapeNet 格式的 3D 网格模型（如车辆、行人等）。</span>
+
+<span class="sd">    该类负责从指定目录加载预定义类别的 3D 网格资产，支持模型路径映射、坐标对齐、尺度归一化、类别筛选等功能，</span>
+<span class="sd">    为场景生成、点云仿真等模块提供标准化的网格加载接口。核心特性包括：</span>
+<span class="sd">    1. 兼容 ShapeNetLoader 原有接口，支持平滑替换；</span>
+<span class="sd">    2. 支持按类别、子类别筛选模型，适配多目标场景；</span>
+<span class="sd">    3. 提供灵活的尺度归一化策略（固定比例/自动适配目标尺寸/帧特异性尺寸）；</span>
+<span class="sd">    4. 支持 LiDAR/相机坐标系对齐，确保加载的模型与场景坐标系一致。</span>
+
+<span class="sd">    配置依赖：</span>
+<span class="sd">    需通过 config 参数传入 ShapeNet 相关配置，包含资产路径、模型文件名、类别定义、对齐参数、尺度参数等，</span>
+<span class="sd">    具体配置项见 __init__ 方法中的参数解析。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">:</span> <span class="n">Dict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        初始化 ObjectsLoader，解析配置并构建模型路径映射、加载模型列表。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            config (Dict): 全局配置字典，需包含 &#39;shapenet&#39; 键对应的子配置，关键配置项如下：</span>
+<span class="sd">                - &#39;name&#39;: 资产名称标识（仅用于日志/标识，无实际功能）；</span>
+<span class="sd">                - &#39;assets_path&#39;: 资产根目录的相对路径（基于项目根目录）；</span>
+<span class="sd">                - &#39;object_file_name&#39;: 网格模型文件名（如 &#39;model.obj&#39;）；</span>
+<span class="sd">                - &#39;object_dir_name&#39;: 模型文件所在的子目录名（如 &#39;model&#39;）；</span>
+<span class="sd">                - &#39;strategy&#39;: 加载策略（预留字段，暂未使用）；</span>
+<span class="sd">                - &#39;scale_ratio&#39;: 尺度比例（支持固定数值或 &#39;auto&#39;，&#39;auto&#39; 时自动适配目标尺寸）；</span>
+<span class="sd">                - &#39;align_in_camera_coordinate&#39;: 相机坐标系对齐参数（字符串格式，如 &quot;(0,0,0)&quot;）；</span>
+<span class="sd">                - &#39;align_in_lidar_coordinate&#39;: LiDAR 坐标系对齐参数列表（字符串格式，如 &quot;[(0,0,0), (90,0,0)]&quot;）；</span>
+<span class="sd">                - &#39;target_lwh&#39;: 默认目标尺寸（长度、宽度、高度），格式为 (l, w, h)，用于 &#39;auto&#39; 尺度计算；</span>
+<span class="sd">                - &#39;target_lwh_by_type&#39; (可选): 按模型名称划分的目标尺寸字典，格式为 {model_name: (l, w, h)}；</span>
+<span class="sd">                - &#39;frame_lwh_config&#39; (可选): 按模型名称和帧号划分的目标尺寸字典，格式为 {model_name: {frame_num: (l, w, h)}}；</span>
+<span class="sd">                - &#39;categories&#39; (可选): 类别配置字典，格式为 {category: {subcategory: [model_name1, model_name2, ...]}}。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">root_dir</span> <span class="o">=</span> <span class="n">get_project_root_dir</span><span class="p">()</span>
+        <span class="c1"># Reuse ShapeNet configuration entries used by the main pipeline</span>
+        <span class="n">shapenet_config</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;shapenet&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assets_name</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assets_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;assets_path&#39;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model_file_name</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;object_file_name&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model_dir_name</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;object_dir_name&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;strategy&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scale_ratio</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;scale_ratio&#39;</span><span class="p">]</span>
+
+        <span class="c1"># Alignment configuration</span>
+        <span class="n">align_in_camera_coordinate</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;align_in_camera_coordinate&#39;</span><span class="p">]</span>
+        <span class="n">align_in_lidar_coordinate</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;align_in_lidar_coordinate&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">align_in_camera_coordinate</span> <span class="o">=</span> <span class="n">get_str_numbers</span><span class="p">(</span><span class="n">align_in_camera_coordinate</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">align_in_lidar_coordinate_list</span> <span class="o">=</span> <span class="n">get_list_str_numbers</span><span class="p">(</span><span class="n">align_in_lidar_coordinate</span><span class="p">)</span>
+
+        <span class="c1"># Dimension configuration</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_lwh</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;target_lwh&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_lwh_by_type</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;target_lwh_by_type&#39;</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frame_lwh_config</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;frame_lwh_config&#39;</span><span class="p">,</span> <span class="p">{})</span>
+
+        <span class="c1"># Category configuration</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">categories</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;categories&#39;</span><span class="p">,</span> <span class="p">{})</span>
+
+        <span class="c1"># Build the mapping from object name to asset path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name_to_path_mapping</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_name_mapping</span><span class="p">()</span>
+
+        <span class="c1"># Load the model list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">object_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load_objects</span><span class="p">()</span>
+
+        <span class="c1"># Backward compatibility: car_list mirrors object_list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">car_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">object_list</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_load_objects</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        枚举所有可用的模型名称，过滤掉资产文件不存在的模型。</span>
+
+<span class="sd">        遍历 categories 配置中的所有模型，检查对应的网格文件是否存在，仅保留存在的模型名称。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[str]: 可用模型名称列表（按类别配置遍历收集）。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">object_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># Gather model names from the category configuration</span>
+        <span class="k">for</span> <span class="n">category</span><span class="p">,</span> <span class="n">subcategories</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">categories</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">subcategory</span><span class="p">,</span> <span class="n">models</span> <span class="ow">in</span> <span class="n">subcategories</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">for</span> <span class="n">model_name</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>
+                    <span class="c1"># Only keep models whose asset files exist</span>
+                    <span class="n">model_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_model_path_by_name</span><span class="p">(</span><span class="n">model_name</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">model_path</span><span class="p">):</span>
+                        <span class="n">object_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">model_name</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">object_list</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_create_name_mapping</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        构建模型名称到资产相对路径的映射字典，用于快速查找模型文件路径。</span>
+
+<span class="sd">        映射格式：{model_name: &quot;category/subcategory/model_name&quot;}，结合 assets_dir 可拼接为绝对路径。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Dict[str, str]: 模型名称到相对路径的映射字典。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">mapping</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># 遍历类别配置，构建映射</span>
+        <span class="k">for</span> <span class="n">category</span><span class="p">,</span> <span class="n">subcategories</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">categories</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">subcategory</span><span class="p">,</span> <span class="n">models</span> <span class="ow">in</span> <span class="n">subcategories</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">for</span> <span class="n">model_name</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>
+                    <span class="c1"># 拼接相对路径（category/subcategory/model_name）</span>
+                    <span class="n">full_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">category</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">subcategory</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="n">mapping</span><span class="p">[</span><span class="n">model_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">full_path</span>
+
+        <span class="k">return</span> <span class="n">mapping</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_get_model_path_by_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        根据模型名称获取网格文件的绝对路径。</span>
+
+<span class="sd">        优先使用 _create_name_mapping 构建的映射查找路径，若未找到（如模型不在类别配置中），</span>
+<span class="sd">        降级使用 legacy 目录结构（vehicles/cars/model_name/...）查找。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            model_name (str): 模型名称（如 &#39;car_001&#39;）。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: 网格文件的绝对路径（格式：assets_dir/relative_path/model_dir_name/model_file_name）。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">model_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">name_to_path_mapping</span><span class="p">:</span>
+            <span class="n">full_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name_to_path_mapping</span><span class="p">[</span><span class="n">model_name</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">assets_dir</span><span class="p">,</span> <span class="n">full_path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_dir_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_file_name</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Fallback to legacy directory layout if the mapping is missing</span>
+            <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">assets_dir</span><span class="p">,</span> <span class="s2">&quot;vehicles&quot;</span><span class="p">,</span> <span class="s2">&quot;cars&quot;</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_dir_name</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">model_file_name</span><span class="p">)</span>
+            <span class="c1"># return os.path.join(self.assets_dir, &quot;vehicles&quot;, &quot;buses&quot;, model_name, self.model_dir_name, self.model_file_name)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_mesh_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">car_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        获取网格文件路径（兼容 ShapeNetLoader 接口）。</span>
+
+<span class="sd">        直接调用 _get_model_path_by_name 方法，仅为适配原有接口命名习惯。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            car_name (str): 模型名称（兼容原有接口的命名，实际支持任意模型类型）。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: 网格文件的绝对路径。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_model_path_by_name</span><span class="p">(</span><span class="n">car_name</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_car_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        获取可用模型列表（兼容 ShapeNetLoader 接口）。</span>
+
+<span class="sd">        支持返回全部模型或随机采样指定数量的模型，命名沿用 &#39;car_list&#39; 以保持兼容性。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            nums (Optional[int], 可选): 需返回的模型数量，None 时返回全部模型。</span>
+<span class="sd">                若 nums 大于可用模型总数，会抛出 ValueError（由 random.sample 触发）。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[str]: 模型名称列表（全部或随机采样后的子集）。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">nums</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">car_list</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">car_list</span><span class="p">,</span> <span class="n">nums</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_object_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        获取可用模型列表（新接口，推荐使用）。</span>
+
+<span class="sd">        功能与 get_car_list 一致，命名更通用（支持非车辆类模型）。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            nums (Optional[int], 可选): 需返回的模型数量，None 时返回全部模型。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[str]: 模型名称列表（全部或随机采样后的子集）。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">nums</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">object_list</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">object_list</span><span class="p">,</span> <span class="n">nums</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">load_mesh_by_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">car_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">scale_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                          <span class="n">location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">rotation</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">object</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        按模型名称加载网格，并执行对齐、尺度归一化、平移、旋转操作（兼容 ShapeNetLoader 接口）。</span>
+
+<span class="sd">        核心流程：加载网格 → LiDAR 坐标系对齐 → 尺度归一化 → 平移 → 旋转，返回处理后的网格对象。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            car_name (str): 模型名称（需在 object_list 中）。</span>
+<span class="sd">            scale_ratio (Optional[Union[float, str]], 可选): 尺度比例，优先级：传入值 &gt; 全局配置 &gt; 自动计算。</span>
+<span class="sd">                支持固定数值或 &#39;auto&#39;，&#39;auto&#39; 时根据 target_lwh 自动适配尺寸。</span>
+<span class="sd">            location (Optional[List[float]], 可选): 平移坐标，格式为 [x, y, z]（单位：米），None 时不平移。</span>
+<span class="sd">            rotation (Optional[float], 可选): 绕 Z 轴的旋转角度（单位：度），None 时不旋转。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            object: 处理后的网格模型对象（Open3D TriangleMesh 或其他兼容格式，需支持 scale/translate/rotate 方法）。</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            FileNotFoundError: 若模型文件不存在（路径由 get_mesh_path 生成）；</span>
+<span class="sd">            ValueError: 若 scale_ratio 为无效值，或 target_lwh 格式错误；</span>
+<span class="sd">            RuntimeError: 若网格加载、对齐、归一化过程中出错。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># 获取网格路径并加载原始网格</span>
+        <span class="n">mesh_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_mesh_path</span><span class="p">(</span><span class="n">car_name</span><span class="p">)</span>
+        <span class="n">mesh_obj</span> <span class="o">=</span> <span class="n">mesh_utils</span><span class="o">.</span><span class="n">load_mesh</span><span class="p">(</span><span class="n">mesh_path</span><span class="p">)</span>
+        <span class="n">mesh_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_align_mesh_in_lidar</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">)</span>
+
+        <span class="c1"># Resolve scaling</span>
+        <span class="n">scale_ratio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_scale_ratio_with_name</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">,</span> <span class="n">scale_ratio</span><span class="p">,</span> <span class="n">car_name</span><span class="p">)</span>
+        <span class="n">mesh_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_normalize_mesh</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">,</span> <span class="n">scale_ratio</span><span class="o">=</span><span class="n">scale_ratio</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="n">rotation</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">mesh_obj</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_scale_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">car_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        获取模型的尺度比例（兼容 ShapeNetLoader 接口）。</span>
+
+<span class="sd">        加载模型并对齐后，根据全局配置的 scale_ratio 计算最终尺度比例（支持 &#39;auto&#39; 自动适配）。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            car_name (str): 模型名称。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            float: 计算后的尺度比例（数值型）。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">mesh_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_mesh_path</span><span class="p">(</span><span class="n">car_name</span><span class="p">)</span>
+        <span class="n">mesh_obj</span> <span class="o">=</span> <span class="n">mesh_utils</span><span class="o">.</span><span class="n">load_mesh</span><span class="p">(</span><span class="n">mesh_path</span><span class="p">)</span>
+        <span class="n">mesh_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_align_mesh_in_lidar</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">)</span>
+        <span class="n">scale_ratio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_scale_ratio_with_name</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale_ratio</span><span class="p">,</span> <span class="n">car_name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">scale_ratio</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_scale_ratio_by_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">car_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        获取帧特异性的模型尺度比例（兼容 ShapeNetLoader 接口）。</span>
+
+<span class="sd">        优先使用 frame_lwh_config 中该模型+帧号对应的目标尺寸，其次是 target_lwh_by_type，最后是默认 target_lwh。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            car_name (str): 模型名称。</span>
+<span class="sd">            frame_number (int): 帧号（用于匹配 frame_lwh_config 中的配置）。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            float: 帧特异性的尺度比例（数值型）。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">mesh_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_mesh_path</span><span class="p">(</span><span class="n">car_name</span><span class="p">)</span>
+        <span class="n">mesh_obj</span> <span class="o">=</span> <span class="n">mesh_utils</span><span class="o">.</span><span class="n">load_mesh</span><span class="p">(</span><span class="n">mesh_path</span><span class="p">)</span>
+        <span class="n">mesh_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_align_mesh_in_lidar</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">)</span>
+        <span class="n">scale_ratio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_scale_ratio_with_name_and_frame</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale_ratio</span><span class="p">,</span> <span class="n">car_name</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">scale_ratio</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_get_scale_ratio_with_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_obj</span><span class="p">:</span> <span class="nb">object</span><span class="p">,</span> <span class="n">scale_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">]],</span>
+                                   <span class="n">car_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        基于模型名称计算尺度比例（支持固定值和 &#39;auto&#39; 自动适配）。</span>
+
+<span class="sd">        优先级：传入的 scale_ratio &gt; 全局 scale_ratio；&#39;auto&#39; 时优先使用 target_lwh_by_type，其次是默认 target_lwh。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            mesh_obj (object): 对齐后的网格模型对象。</span>
+<span class="sd">            scale_ratio (Optional[Union[float, str]]): 传入的尺度比例（可能为 None）。</span>
+<span class="sd">            car_name (str): 模型名称。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            float: 计算后的尺度比例（数值型）。</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: 若 scale_ratio 为无效字符串（非 &#39;auto&#39;），或 target_lwh 格式错误。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># 解析尺度比例（优先级：传入值 &gt; 全局配置）</span>
+        <span class="k">if</span> <span class="n">scale_ratio</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">scale_ratio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale_ratio</span>
+        <span class="k">if</span> <span class="n">scale_ratio</span> <span class="o">==</span> <span class="s2">&quot;auto&quot;</span><span class="p">:</span>
+            <span class="c1"># Prefer type-specific target dimensions when defined</span>
+            <span class="k">if</span> <span class="n">car_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_lwh_by_type</span><span class="p">:</span>
+                <span class="n">target_lwh</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_lwh_by_type</span><span class="p">[</span><span class="n">car_name</span><span class="p">]</span>
+                <span class="n">scale_ratio</span> <span class="o">=</span> <span class="n">mesh_utils</span><span class="o">.</span><span class="n">get_mesh_scale_ratio</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">,</span> <span class="n">target_lwh</span><span class="p">)</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># Fall back to the default target dimensions</span>
+                <span class="n">scale_ratio</span> <span class="o">=</span> <span class="n">mesh_utils</span><span class="o">.</span><span class="n">get_mesh_scale_ratio</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_lwh</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">scale_ratio</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_get_scale_ratio_with_name_and_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_obj</span><span class="p">:</span> <span class="nb">object</span><span class="p">,</span> <span class="n">scale_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">]],</span>
+                                             <span class="n">car_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        基于模型名称和帧号计算尺度比例（支持帧特异性尺寸配置）。</span>
+
+<span class="sd">        优先级：frame_lwh_config（模型+帧号）&gt; target_lwh_by_type（模型）&gt; target_lwh（默认）。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            mesh_obj (object): 对齐后的网格模型对象。</span>
+<span class="sd">            scale_ratio (Optional[Union[float, str]]): 传入的尺度比例（可能为 None）。</span>
+<span class="sd">            car_name (str): 模型名称。</span>
+<span class="sd">            frame_number (int): 帧号。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            float: 计算后的尺度比例（数值型）。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># 解析尺度比例（优先级：传入值 &gt; 全局配置）</span>
+        <span class="k">if</span> <span class="n">scale_ratio</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">scale_ratio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale_ratio</span>
+        <span class="k">if</span> <span class="n">scale_ratio</span> <span class="o">==</span> <span class="s2">&quot;auto&quot;</span><span class="p">:</span>
+            <span class="c1"># Prefer frame-specific dimensions when available</span>
+            <span class="n">frame_lwh</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_frame_lwh</span><span class="p">(</span><span class="n">car_name</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">frame_lwh</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">scale_ratio</span> <span class="o">=</span> <span class="n">mesh_utils</span><span class="o">.</span><span class="n">get_mesh_scale_ratio</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">,</span> <span class="n">frame_lwh</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">car_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_lwh_by_type</span><span class="p">:</span>
+                <span class="c1"># Fall back to type-specific dimensions</span>
+                <span class="n">target_lwh</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_lwh_by_type</span><span class="p">[</span><span class="n">car_name</span><span class="p">]</span>
+                <span class="n">scale_ratio</span> <span class="o">=</span> <span class="n">mesh_utils</span><span class="o">.</span><span class="n">get_mesh_scale_ratio</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">,</span> <span class="n">target_lwh</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># Ultimately fall back to default dimensions</span>
+                <span class="n">scale_ratio</span> <span class="o">=</span> <span class="n">mesh_utils</span><span class="o">.</span><span class="n">get_mesh_scale_ratio</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_lwh</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">scale_ratio</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_frame_lwh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">car_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        获取指定模型和帧号对应的目标尺寸（l, w, h）。</span>
+
+<span class="sd">        从 frame_lwh_config 中查找，未找到则返回 None。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            car_name (str): 模型名称。</span>
+<span class="sd">            frame_number (int): 帧号。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Optional[Tuple[float, float, float]]: 目标尺寸（l, w, h），未找到则返回 None。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">car_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame_lwh_config</span><span class="p">:</span>
+            <span class="n">frame_config</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame_lwh_config</span><span class="p">[</span><span class="n">car_name</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">frame_number</span> <span class="ow">in</span> <span class="n">frame_config</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">frame_config</span><span class="p">[</span><span class="n">frame_number</span><span class="p">]</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_align_mesh_in_lidar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_obj</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">object</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        将网格模型与 LiDAR 坐标系对齐。</span>
+
+<span class="sd">        遍历 align_in_lidar_coordinate_list 中的所有旋转参数，依次对网格执行旋转操作（基于 XYZ 欧拉角）。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            mesh_obj (object): 原始网格模型对象（需支持 get_rotation_matrix_from_xyz 和 rotate 方法）。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            object: 对齐后的网格模型对象。</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            RuntimeError: 若网格不支持旋转相关方法，或旋转参数格式错误。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">align_in_lidar_coordinate</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">align_in_lidar_coordinate_list</span><span class="p">:</span>
+            <span class="c1"># 根据 XYZ 欧拉角生成旋转矩阵（注意：角度单位需与 mesh_obj 要求一致，通常为弧度）</span>
+            <span class="n">R</span> <span class="o">=</span> <span class="n">mesh_obj</span><span class="o">.</span><span class="n">get_rotation_matrix_from_xyz</span><span class="p">(</span><span class="n">align_in_lidar_coordinate</span><span class="p">)</span>
+            <span class="n">mesh_obj</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">mesh_obj</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_normalize_mesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_obj</span><span class="p">:</span> <span class="nb">object</span><span class="p">,</span> <span class="n">scale_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+                        <span class="n">location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">rotation</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">object</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        对网格模型执行标准化操作：尺度缩放 → 平移 → 旋转（顺序固定）。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            mesh_obj (object): 对齐后的网格模型对象。</span>
+<span class="sd">            scale_ratio (float, 可选): 尺度比例，默认 1.0（不缩放）。</span>
+<span class="sd">            location (Optional[List[float]], 可选): 平移坐标 [x, y, z]，默认 None（不平移）。</span>
+<span class="sd">            rotation (Optional[float], 可选): 绕 Z 轴旋转角度（单位：度），默认 None（不旋转）。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            object: 标准化后的网格模型对象。</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: 若 location 维度不为 3，或 rotation 为无效角度值；</span>
+<span class="sd">            RuntimeError: 若网格不支持 scale/translate/rotate 方法。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># 第一步：尺度缩放（以网格中心为缩放中心）</span>
+        <span class="k">if</span> <span class="n">scale_ratio</span> <span class="o">!=</span> <span class="mf">1.0</span><span class="p">:</span>
+            <span class="n">mesh_obj</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="n">scale_ratio</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="n">mesh_obj</span><span class="o">.</span><span class="n">get_center</span><span class="p">())</span>
+
+            <span class="c1"># Then translate</span>
+        <span class="k">if</span> <span class="n">location</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">mesh_translation_vector</span> <span class="o">=</span> <span class="n">mesh_utils</span><span class="o">.</span><span class="n">_get_translation_vector</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">,</span> <span class="n">location</span><span class="p">)</span>
+            <span class="n">mesh_obj</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">mesh_translation_vector</span><span class="p">)</span>
+
+            <span class="c1"># Finally rotate</span>
+        <span class="k">if</span> <span class="n">rotation</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+            <span class="n">rz_radians</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">rotation</span><span class="p">)</span>
+            <span class="n">RZ</span> <span class="o">=</span> <span class="n">mesh_obj</span><span class="o">.</span><span class="n">get_rotation_matrix_from_xyz</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">rz_radians</span><span class="p">))</span>
+            <span class="n">mesh_obj</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="n">RZ</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">mesh_obj</span>
+
+    <span class="c1"># 类别相关辅助方法</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_models_by_category</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">category</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">subcategory</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        按类别和子类别获取模型名称列表。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            category (str): 主类别名称（需在 self.categories 中）。</span>
+<span class="sd">            subcategory (Optional[str], 可选): 子类别名称，None 时返回该主类别下所有子类别的模型。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[str]: 匹配的模型名称列表，若类别不存在则返回空列表。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">category</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">categories</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[]</span>
+
+        <span class="k">if</span> <span class="n">subcategory</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Collect every model under the specified category</span>
+            <span class="n">models</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">sub</span><span class="p">,</span> <span class="n">model_list</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">categories</span><span class="p">[</span><span class="n">category</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">models</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">model_list</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">models</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Return models for the requested subcategory</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">categories</span><span class="p">[</span><span class="n">category</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">subcategory</span><span class="p">,</span> <span class="p">[])</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_all_categories</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        获取完整的类别配置字典。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Dict[str, Dict[str, List[str]]]: 类别配置，格式为 {category: {subcategory: [model_name1, ...]}}。</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">categories</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="drivence.assets.objects.loader.ObjectsLoader.__init__" class="doc doc-heading">
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span></code>
+
+<a href="#drivence.assets.objects.loader.ObjectsLoader.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>初始化 ObjectsLoader，解析配置并构建模型路径映射、加载模型列表。</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>config</code></b>
+              (<code><span title="Dict">Dict</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>全局配置字典，需包含 'shapenet' 键对应的子配置，关键配置项如下：
+- 'name': 资产名称标识（仅用于日志/标识，无实际功能）；
+- 'assets_path': 资产根目录的相对路径（基于项目根目录）；
+- 'object_file_name': 网格模型文件名（如 'model.obj'）；
+- 'object_dir_name': 模型文件所在的子目录名（如 'model'）；
+- 'strategy': 加载策略（预留字段，暂未使用）；
+- 'scale_ratio': 尺度比例（支持固定数值或 'auto'，'auto' 时自动适配目标尺寸）；
+- 'align_in_camera_coordinate': 相机坐标系对齐参数（字符串格式，如 "(0,0,0)"）；
+- 'align_in_lidar_coordinate': LiDAR 坐标系对齐参数列表（字符串格式，如 "[(0,0,0), (90,0,0)]"）；
+- 'target_lwh': 默认目标尺寸（长度、宽度、高度），格式为 (l, w, h)，用于 'auto' 尺度计算；
+- 'target_lwh_by_type' (可选): 按模型名称划分的目标尺寸字典，格式为 {model_name: (l, w, h)}；
+- 'frame_lwh_config' (可选): 按模型名称和帧号划分的目标尺寸字典，格式为 {model_name: {frame_num: (l, w, h)}}；
+- 'categories' (可选): 类别配置字典，格式为 {category: {subcategory: [model_name1, model_name2, ...]}}。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\assets\objects\loader.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">:</span> <span class="n">Dict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    初始化 ObjectsLoader，解析配置并构建模型路径映射、加载模型列表。</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        config (Dict): 全局配置字典，需包含 &#39;shapenet&#39; 键对应的子配置，关键配置项如下：</span>
+<span class="sd">            - &#39;name&#39;: 资产名称标识（仅用于日志/标识，无实际功能）；</span>
+<span class="sd">            - &#39;assets_path&#39;: 资产根目录的相对路径（基于项目根目录）；</span>
+<span class="sd">            - &#39;object_file_name&#39;: 网格模型文件名（如 &#39;model.obj&#39;）；</span>
+<span class="sd">            - &#39;object_dir_name&#39;: 模型文件所在的子目录名（如 &#39;model&#39;）；</span>
+<span class="sd">            - &#39;strategy&#39;: 加载策略（预留字段，暂未使用）；</span>
+<span class="sd">            - &#39;scale_ratio&#39;: 尺度比例（支持固定数值或 &#39;auto&#39;，&#39;auto&#39; 时自动适配目标尺寸）；</span>
+<span class="sd">            - &#39;align_in_camera_coordinate&#39;: 相机坐标系对齐参数（字符串格式，如 &quot;(0,0,0)&quot;）；</span>
+<span class="sd">            - &#39;align_in_lidar_coordinate&#39;: LiDAR 坐标系对齐参数列表（字符串格式，如 &quot;[(0,0,0), (90,0,0)]&quot;）；</span>
+<span class="sd">            - &#39;target_lwh&#39;: 默认目标尺寸（长度、宽度、高度），格式为 (l, w, h)，用于 &#39;auto&#39; 尺度计算；</span>
+<span class="sd">            - &#39;target_lwh_by_type&#39; (可选): 按模型名称划分的目标尺寸字典，格式为 {model_name: (l, w, h)}；</span>
+<span class="sd">            - &#39;frame_lwh_config&#39; (可选): 按模型名称和帧号划分的目标尺寸字典，格式为 {model_name: {frame_num: (l, w, h)}}；</span>
+<span class="sd">            - &#39;categories&#39; (可选): 类别配置字典，格式为 {category: {subcategory: [model_name1, model_name2, ...]}}。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">root_dir</span> <span class="o">=</span> <span class="n">get_project_root_dir</span><span class="p">()</span>
+    <span class="c1"># Reuse ShapeNet configuration entries used by the main pipeline</span>
+    <span class="n">shapenet_config</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;shapenet&#39;</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assets_name</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assets_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;assets_path&#39;</span><span class="p">])</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">model_file_name</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;object_file_name&#39;</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">model_dir_name</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;object_dir_name&#39;</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;strategy&#39;</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">scale_ratio</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;scale_ratio&#39;</span><span class="p">]</span>
+
+    <span class="c1"># Alignment configuration</span>
+    <span class="n">align_in_camera_coordinate</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;align_in_camera_coordinate&#39;</span><span class="p">]</span>
+    <span class="n">align_in_lidar_coordinate</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;align_in_lidar_coordinate&#39;</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">align_in_camera_coordinate</span> <span class="o">=</span> <span class="n">get_str_numbers</span><span class="p">(</span><span class="n">align_in_camera_coordinate</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">align_in_lidar_coordinate_list</span> <span class="o">=</span> <span class="n">get_list_str_numbers</span><span class="p">(</span><span class="n">align_in_lidar_coordinate</span><span class="p">)</span>
+
+    <span class="c1"># Dimension configuration</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">target_lwh</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="p">[</span><span class="s1">&#39;target_lwh&#39;</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">target_lwh_by_type</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;target_lwh_by_type&#39;</span><span class="p">,</span> <span class="p">{})</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">frame_lwh_config</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;frame_lwh_config&#39;</span><span class="p">,</span> <span class="p">{})</span>
+
+    <span class="c1"># Category configuration</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">categories</span> <span class="o">=</span> <span class="n">shapenet_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;categories&#39;</span><span class="p">,</span> <span class="p">{})</span>
+
+    <span class="c1"># Build the mapping from object name to asset path</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">name_to_path_mapping</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_name_mapping</span><span class="p">()</span>
+
+    <span class="c1"># Load the model list</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">object_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load_objects</span><span class="p">()</span>
+
+    <span class="c1"># Backward compatibility: car_list mirrors object_list</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">car_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">object_list</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="drivence.assets.objects.loader.ObjectsLoader.get_all_categories" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_all_categories</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]]</span></code>
+
+<a href="#drivence.assets.objects.loader.ObjectsLoader.get_all_categories" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>获取完整的类别配置字典。</p>
+
+
+<p><span class="doc-section-title">返回：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="Dict">Dict</span>[<span title="str">str</span>, <span title="Dict">Dict</span>[<span title="str">str</span>, <span title="List">List</span>[<span title="str">str</span>]]]</code>
+          –
+          <div class="doc-md-description">
+            <p>Dict[str, Dict[str, List[str]]]: 类别配置，格式为 {category: {subcategory: [model_name1, ...]}}。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\assets\objects\loader.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span>
+<span class="normal">435</span>
+<span class="normal">436</span>
+<span class="normal">437</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_all_categories</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    获取完整的类别配置字典。</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Dict[str, Dict[str, List[str]]]: 类别配置，格式为 {category: {subcategory: [model_name1, ...]}}。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">categories</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="drivence.assets.objects.loader.ObjectsLoader.get_car_list" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_car_list</span><span class="p">(</span><span class="n">nums</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+
+<a href="#drivence.assets.objects.loader.ObjectsLoader.get_car_list" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>获取可用模型列表（兼容 ShapeNetLoader 接口）。</p>
+<p>支持返回全部模型或随机采样指定数量的模型，命名沿用 'car_list' 以保持兼容性。</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>nums</code></b>
+              (<code>(<span title="Optional">Optional</span>[<span title="int">int</span>], <span title="可选">可选</span>)</code>, 默认：
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>需返回的模型数量，None 时返回全部模型。
+若 nums 大于可用模型总数，会抛出 ValueError（由 random.sample 触发）。</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">返回：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="List">List</span>[<span title="str">str</span>]</code>
+          –
+          <div class="doc-md-description">
+            <p>List[str]: 模型名称列表（全部或随机采样后的子集）。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\assets\objects\loader.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_car_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    获取可用模型列表（兼容 ShapeNetLoader 接口）。</span>
+
+<span class="sd">    支持返回全部模型或随机采样指定数量的模型，命名沿用 &#39;car_list&#39; 以保持兼容性。</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        nums (Optional[int], 可选): 需返回的模型数量，None 时返回全部模型。</span>
+<span class="sd">            若 nums 大于可用模型总数，会抛出 ValueError（由 random.sample 触发）。</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List[str]: 模型名称列表（全部或随机采样后的子集）。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">nums</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">car_list</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">car_list</span><span class="p">,</span> <span class="n">nums</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="drivence.assets.objects.loader.ObjectsLoader.get_frame_lwh" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_frame_lwh</span><span class="p">(</span><span class="n">car_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span></code>
+
+<a href="#drivence.assets.objects.loader.ObjectsLoader.get_frame_lwh" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>获取指定模型和帧号对应的目标尺寸（l, w, h）。</p>
+<p>从 frame_lwh_config 中查找，未找到则返回 None。</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>car_name</code></b>
+              (<code><span title="str">str</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>模型名称。</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>frame_number</code></b>
+              (<code><span title="int">int</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>帧号。</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">返回：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          –
+          <div class="doc-md-description">
+            <p>Optional[Tuple[float, float, float]]: 目标尺寸（l, w, h），未找到则返回 None。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\assets\objects\loader.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_frame_lwh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">car_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    获取指定模型和帧号对应的目标尺寸（l, w, h）。</span>
+
+<span class="sd">    从 frame_lwh_config 中查找，未找到则返回 None。</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        car_name (str): 模型名称。</span>
+<span class="sd">        frame_number (int): 帧号。</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Optional[Tuple[float, float, float]]: 目标尺寸（l, w, h），未找到则返回 None。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">car_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame_lwh_config</span><span class="p">:</span>
+        <span class="n">frame_config</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame_lwh_config</span><span class="p">[</span><span class="n">car_name</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">frame_number</span> <span class="ow">in</span> <span class="n">frame_config</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">frame_config</span><span class="p">[</span><span class="n">frame_number</span><span class="p">]</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="kc">None</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="drivence.assets.objects.loader.ObjectsLoader.get_mesh_path" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_mesh_path</span><span class="p">(</span><span class="n">car_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
+
+<a href="#drivence.assets.objects.loader.ObjectsLoader.get_mesh_path" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>获取网格文件路径（兼容 ShapeNetLoader 接口）。</p>
+<p>直接调用 _get_model_path_by_name 方法，仅为适配原有接口命名习惯。</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>car_name</code></b>
+              (<code><span title="str">str</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>模型名称（兼容原有接口的命名，实际支持任意模型类型）。</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">返回：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>str</code></b> (              <code><span title="str">str</span></code>
+)          –
+          <div class="doc-md-description">
+            <p>网格文件的绝对路径。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\assets\objects\loader.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_mesh_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">car_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    获取网格文件路径（兼容 ShapeNetLoader 接口）。</span>
+
+<span class="sd">    直接调用 _get_model_path_by_name 方法，仅为适配原有接口命名习惯。</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        car_name (str): 模型名称（兼容原有接口的命名，实际支持任意模型类型）。</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: 网格文件的绝对路径。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_model_path_by_name</span><span class="p">(</span><span class="n">car_name</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="drivence.assets.objects.loader.ObjectsLoader.get_models_by_category" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_models_by_category</span><span class="p">(</span><span class="n">category</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">subcategory</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+
+<a href="#drivence.assets.objects.loader.ObjectsLoader.get_models_by_category" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>按类别和子类别获取模型名称列表。</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>category</code></b>
+              (<code><span title="str">str</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>主类别名称（需在 self.categories 中）。</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>subcategory</code></b>
+              (<code>(<span title="Optional">Optional</span>[<span title="str">str</span>], <span title="可选">可选</span>)</code>, 默认：
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>子类别名称，None 时返回该主类别下所有子类别的模型。</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">返回：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="List">List</span>[<span title="str">str</span>]</code>
+          –
+          <div class="doc-md-description">
+            <p>List[str]: 匹配的模型名称列表，若类别不存在则返回空列表。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\assets\objects\loader.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span>
+<span class="normal">419</span>
+<span class="normal">420</span>
+<span class="normal">421</span>
+<span class="normal">422</span>
+<span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_models_by_category</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">category</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">subcategory</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    按类别和子类别获取模型名称列表。</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        category (str): 主类别名称（需在 self.categories 中）。</span>
+<span class="sd">        subcategory (Optional[str], 可选): 子类别名称，None 时返回该主类别下所有子类别的模型。</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List[str]: 匹配的模型名称列表，若类别不存在则返回空列表。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">category</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">categories</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="k">if</span> <span class="n">subcategory</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># Collect every model under the specified category</span>
+        <span class="n">models</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">sub</span><span class="p">,</span> <span class="n">model_list</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">categories</span><span class="p">[</span><span class="n">category</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">models</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">model_list</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">models</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Return models for the requested subcategory</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">categories</span><span class="p">[</span><span class="n">category</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">subcategory</span><span class="p">,</span> <span class="p">[])</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="drivence.assets.objects.loader.ObjectsLoader.get_object_list" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_object_list</span><span class="p">(</span><span class="n">nums</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+
+<a href="#drivence.assets.objects.loader.ObjectsLoader.get_object_list" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>获取可用模型列表（新接口，推荐使用）。</p>
+<p>功能与 get_car_list 一致，命名更通用（支持非车辆类模型）。</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>nums</code></b>
+              (<code>(<span title="Optional">Optional</span>[<span title="int">int</span>], <span title="可选">可选</span>)</code>, 默认：
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>需返回的模型数量，None 时返回全部模型。</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">返回：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="List">List</span>[<span title="str">str</span>]</code>
+          –
+          <div class="doc-md-description">
+            <p>List[str]: 模型名称列表（全部或随机采样后的子集）。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\assets\objects\loader.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_object_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    获取可用模型列表（新接口，推荐使用）。</span>
+
+<span class="sd">    功能与 get_car_list 一致，命名更通用（支持非车辆类模型）。</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        nums (Optional[int], 可选): 需返回的模型数量，None 时返回全部模型。</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List[str]: 模型名称列表（全部或随机采样后的子集）。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">nums</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">object_list</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">object_list</span><span class="p">,</span> <span class="n">nums</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="drivence.assets.objects.loader.ObjectsLoader.get_scale_ratio" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_scale_ratio</span><span class="p">(</span><span class="n">car_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span></code>
+
+<a href="#drivence.assets.objects.loader.ObjectsLoader.get_scale_ratio" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>获取模型的尺度比例（兼容 ShapeNetLoader 接口）。</p>
+<p>加载模型并对齐后，根据全局配置的 scale_ratio 计算最终尺度比例（支持 'auto' 自动适配）。</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>car_name</code></b>
+              (<code><span title="str">str</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>模型名称。</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">返回：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>float</code></b> (              <code><span title="float">float</span></code>
+)          –
+          <div class="doc-md-description">
+            <p>计算后的尺度比例（数值型）。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\assets\objects\loader.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_scale_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">car_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    获取模型的尺度比例（兼容 ShapeNetLoader 接口）。</span>
+
+<span class="sd">    加载模型并对齐后，根据全局配置的 scale_ratio 计算最终尺度比例（支持 &#39;auto&#39; 自动适配）。</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        car_name (str): 模型名称。</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float: 计算后的尺度比例（数值型）。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mesh_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_mesh_path</span><span class="p">(</span><span class="n">car_name</span><span class="p">)</span>
+    <span class="n">mesh_obj</span> <span class="o">=</span> <span class="n">mesh_utils</span><span class="o">.</span><span class="n">load_mesh</span><span class="p">(</span><span class="n">mesh_path</span><span class="p">)</span>
+    <span class="n">mesh_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_align_mesh_in_lidar</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">)</span>
+    <span class="n">scale_ratio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_scale_ratio_with_name</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale_ratio</span><span class="p">,</span> <span class="n">car_name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">scale_ratio</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="drivence.assets.objects.loader.ObjectsLoader.get_scale_ratio_by_frame" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_scale_ratio_by_frame</span><span class="p">(</span><span class="n">car_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span></code>
+
+<a href="#drivence.assets.objects.loader.ObjectsLoader.get_scale_ratio_by_frame" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>获取帧特异性的模型尺度比例（兼容 ShapeNetLoader 接口）。</p>
+<p>优先使用 frame_lwh_config 中该模型+帧号对应的目标尺寸，其次是 target_lwh_by_type，最后是默认 target_lwh。</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>car_name</code></b>
+              (<code><span title="str">str</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>模型名称。</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>frame_number</code></b>
+              (<code><span title="int">int</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>帧号（用于匹配 frame_lwh_config 中的配置）。</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">返回：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>float</code></b> (              <code><span title="float">float</span></code>
+)          –
+          <div class="doc-md-description">
+            <p>帧特异性的尺度比例（数值型）。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\assets\objects\loader.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_scale_ratio_by_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">car_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    获取帧特异性的模型尺度比例（兼容 ShapeNetLoader 接口）。</span>
+
+<span class="sd">    优先使用 frame_lwh_config 中该模型+帧号对应的目标尺寸，其次是 target_lwh_by_type，最后是默认 target_lwh。</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        car_name (str): 模型名称。</span>
+<span class="sd">        frame_number (int): 帧号（用于匹配 frame_lwh_config 中的配置）。</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float: 帧特异性的尺度比例（数值型）。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mesh_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_mesh_path</span><span class="p">(</span><span class="n">car_name</span><span class="p">)</span>
+    <span class="n">mesh_obj</span> <span class="o">=</span> <span class="n">mesh_utils</span><span class="o">.</span><span class="n">load_mesh</span><span class="p">(</span><span class="n">mesh_path</span><span class="p">)</span>
+    <span class="n">mesh_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_align_mesh_in_lidar</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">)</span>
+    <span class="n">scale_ratio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_scale_ratio_with_name_and_frame</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale_ratio</span><span class="p">,</span> <span class="n">car_name</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">scale_ratio</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="drivence.assets.objects.loader.ObjectsLoader.load_mesh_by_name" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">load_mesh_by_name</span><span class="p">(</span><span class="n">car_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">scale_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">rotation</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">object</span></code>
+
+<a href="#drivence.assets.objects.loader.ObjectsLoader.load_mesh_by_name" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>按模型名称加载网格，并执行对齐、尺度归一化、平移、旋转操作（兼容 ShapeNetLoader 接口）。</p>
+<p>核心流程：加载网格 → LiDAR 坐标系对齐 → 尺度归一化 → 平移 → 旋转，返回处理后的网格对象。</p>
+
+
+<p><span class="doc-section-title">参数：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>car_name</code></b>
+              (<code><span title="str">str</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>模型名称（需在 object_list 中）。</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>scale_ratio</code></b>
+              (<code>(<span title="Optional">Optional</span>[<span title="Union">Union</span>[<span title="float">float</span>, <span title="str">str</span>]], <span title="可选">可选</span>)</code>, 默认：
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>尺度比例，优先级：传入值 &gt; 全局配置 &gt; 自动计算。
+支持固定数值或 'auto'，'auto' 时根据 target_lwh 自动适配尺寸。</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>location</code></b>
+              (<code>(<span title="Optional">Optional</span>[<span title="List">List</span>[<span title="float">float</span>]], <span title="可选">可选</span>)</code>, 默认：
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>平移坐标，格式为 [x, y, z]（单位：米），None 时不平移。</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>rotation</code></b>
+              (<code>(<span title="Optional">Optional</span>[<span title="float">float</span>], <span title="可选">可选</span>)</code>, 默认：
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>绕 Z 轴的旋转角度（单位：度），None 时不旋转。</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">返回：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>object</code></b> (              <code><span title="object">object</span></code>
+)          –
+          <div class="doc-md-description">
+            <p>处理后的网格模型对象（Open3D TriangleMesh 或其他兼容格式，需支持 scale/translate/rotate 方法）。</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">引发：</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="FileNotFoundError">FileNotFoundError</span></code>
+            –
+          <div class="doc-md-description">
+            <p>若模型文件不存在（路径由 get_mesh_path 生成）；</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+              <code><span title="ValueError">ValueError</span></code>
+            –
+          <div class="doc-md-description">
+            <p>若 scale_ratio 为无效值，或 target_lwh 格式错误；</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+              <code><span title="RuntimeError">RuntimeError</span></code>
+            –
+          <div class="doc-md-description">
+            <p>若网格加载、对齐、归一化过程中出错。</p>
+          </div>
+        </li>
+    </ul>
+
+
+            <details class="quote">
+              <summary>源代码位于： <code>drivence\assets\objects\loader.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">load_mesh_by_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">car_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">scale_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                      <span class="n">location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">rotation</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">object</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    按模型名称加载网格，并执行对齐、尺度归一化、平移、旋转操作（兼容 ShapeNetLoader 接口）。</span>
+
+<span class="sd">    核心流程：加载网格 → LiDAR 坐标系对齐 → 尺度归一化 → 平移 → 旋转，返回处理后的网格对象。</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        car_name (str): 模型名称（需在 object_list 中）。</span>
+<span class="sd">        scale_ratio (Optional[Union[float, str]], 可选): 尺度比例，优先级：传入值 &gt; 全局配置 &gt; 自动计算。</span>
+<span class="sd">            支持固定数值或 &#39;auto&#39;，&#39;auto&#39; 时根据 target_lwh 自动适配尺寸。</span>
+<span class="sd">        location (Optional[List[float]], 可选): 平移坐标，格式为 [x, y, z]（单位：米），None 时不平移。</span>
+<span class="sd">        rotation (Optional[float], 可选): 绕 Z 轴的旋转角度（单位：度），None 时不旋转。</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        object: 处理后的网格模型对象（Open3D TriangleMesh 或其他兼容格式，需支持 scale/translate/rotate 方法）。</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        FileNotFoundError: 若模型文件不存在（路径由 get_mesh_path 生成）；</span>
+<span class="sd">        ValueError: 若 scale_ratio 为无效值，或 target_lwh 格式错误；</span>
+<span class="sd">        RuntimeError: 若网格加载、对齐、归一化过程中出错。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># 获取网格路径并加载原始网格</span>
+    <span class="n">mesh_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_mesh_path</span><span class="p">(</span><span class="n">car_name</span><span class="p">)</span>
+    <span class="n">mesh_obj</span> <span class="o">=</span> <span class="n">mesh_utils</span><span class="o">.</span><span class="n">load_mesh</span><span class="p">(</span><span class="n">mesh_path</span><span class="p">)</span>
+    <span class="n">mesh_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_align_mesh_in_lidar</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">)</span>
+
+    <span class="c1"># Resolve scaling</span>
+    <span class="n">scale_ratio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_scale_ratio_with_name</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">,</span> <span class="n">scale_ratio</span><span class="p">,</span> <span class="n">car_name</span><span class="p">)</span>
+    <span class="n">mesh_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_normalize_mesh</span><span class="p">(</span><span class="n">mesh_obj</span><span class="p">,</span> <span class="n">scale_ratio</span><span class="o">=</span><span class="n">scale_ratio</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="n">rotation</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mesh_obj</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
